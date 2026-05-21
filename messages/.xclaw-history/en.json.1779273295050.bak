@@ -1,0 +1,419 @@
+{
+  "navigation": {
+    "products": "Products",
+    "helpDesk": "Help Desk",
+    "aiAgent": "AI Agent",
+    "workspace": "Workspace",
+    "asr": "Speech-to-Text",
+    "tts": "Text-to-Speech",
+    "solutions": "Solutions",
+    "customerSupport": "Customer Support",
+    "internalKnowledge": "Internal Knowledge",
+    "meetingExecution": "Meeting Execution",
+    "realEstate": "Real Estate",
+    "financialServices": "Financial Services",
+    "retailEcommerce": "Retail & E-commerce",
+    "customers": "Customers",
+    "pricing": "Pricing",
+    "about": "About",
+    "contact": "Contact",
+    "bookDemo": "Book Demo",
+    "privacyPolicy": "Privacy Policy",
+    "builtByXperc": "Built by Xperc"
+  },
+  "hero": {
+    "headline": "Your AI shouldn't just answer questions. It should complete the work.",
+    "subheadline": "Syrix connects large language models directly to your CRM, ERP, HRM, email, and knowledge bases — so your AI agents can read, write, and act across every system through simple natural language commands.",
+    "cta": "Book Demo"
+  },
+  "problem": {
+    "headline": "Your enterprise has AI. Your people are still doing the manual work.",
+    "body": "Most enterprises have adopted generative AI for Q&A and content creation. But there's a fundamental gap between an AI that can answer questions and an AI that can execute business processes.",
+    "before": "BEFORE",
+    "after": "AFTER",
+    "beforeDescription": "Sales rep gets qualified lead at 11pm\n→ AI answers product question ✓\n→ But someone still manually: creates CRM record, notifies account manager\n→ 4 manual steps. 1 human who could have been sleeping.",
+    "afterDescription": "Same lead at 11pm with Syrix\n→ AI qualifies lead, creates CRM record, notifies team\n→ Zero human intervention. Closed-loop automation."
+  },
+  "howItWorks": {
+    "headline": "How Syrix Works",
+    "step1": { "title": "Connect", "description": "Syrix connects to your existing systems — CRM, ERP, HRM, email, internal knowledge bases — in days, not months. No rip-and-replace." },
+    "step2": { "title": "Instruct", "description": "Your team communicates in natural language. No complex configuration. No training required." },
+    "step3": { "title": "Execute", "description": "Syrix executes across applications autonomously — creating records, updating systems, sending notifications, completing workflows — all without manual intervention." }
+  },
+  "productSuite": { "headline": "The Syrix Ecosystem" },
+  "metrics": { "headline": "Built for results" },
+  "cta": {
+    "headline": "Ready to make AI actually work for you?",
+    "subtext": "Schedule a demo to see how Syrix can transform your operations.",
+    "cta": "Book Demo"
+  },
+  "products": {
+    "headline": "One Platform. Five Products. Infinite Possibilities.",
+    "subtext": "Syrix is an integrated ecosystem of AI-powered products that work together to automate your business operations end-to-end."
+  },
+  "helpDesk": {
+    "headline": "Deploy an agent that doesn't just respond to customers — it resolves their issues, updates your CRM, and escalates only when necessary.",
+    "subtext": "Syrix Help Desk is an AI-first customer service and sales automation platform that operates as a digital employee — available 24/7.",
+    "cta": "Book Demo",
+    "capabilities": {
+      "rag": "RAG-powered knowledge retrieval from your product docs",
+      "crm": "Autonomous CRM lead creation and record updates",
+      "email": "Automated email workflows (follow-up, confirmation, escalation)",
+      "escalation": "Intelligent human escalation by sentiment, complexity, and risk",
+      "multiChannel": "Multi-channel deployment (web widget, email, Zalo)"
+    },
+    "journey": "Website Visit → AI Consultation → Identity Verification → Lead Qualified → CRM Logged → Sales Notified",
+    "integration": "300+ app integrations via MCP (Model Context Protocol)",
+    "faq": {
+      "q1": "How long does deployment take?",
+      "a1": "Typically 3-6 weeks for the first solution, depending on data readiness and integration complexity.",
+      "q2": "What systems do you integrate with?",
+      "a2": "Syrix connects to any system with an API — CRM, ERP, HRM, email, knowledge bases, and 300+ apps via the Model Context Protocol.",
+      "q3": "Is my customer data secure?",
+      "a3": "Yes. Syrix operates in a private environment with VPC deployment, SSO integration, and comprehensive audit trails.",
+      "q4": "When does a human step in?",
+      "a4": "You configure escalation rules based on sentiment analysis, topic complexity, customer tier, and risk level.",
+      "q5": "What happens if the AI doesn't know the answer?",
+      "a5": "Syrix is built on a strict RAG policy — it only answers from verified company documents."
+    },
+    "trust": "Every agent decision is logged with a full audit trail. High-risk actions require human approval gates."
+  },
+  "aiAgent": {
+    "headline": "Your company's private brain. Accurate, secure, always on.",
+    "subtext": "Syrix AI Agent ingests your internal documents and builds a private, encrypted knowledge base.",
+    "cta": "Book Demo",
+    "capabilities": {
+      "privateRetrieval": "Private knowledge retrieval from any internal document",
+      "crossDeptSynthesis": "Cross-departmental synthesis in a single answer",
+      "zeroRetention": "Zero data retention — fully private environment"
+    },
+    "security": {
+      "vpc": "VPC Deployment — Runs in your virtual private cloud, fully isolated",
+      "sso": "SSO Integration — Works with your existing identity provider",
+      "audit": "Audit Trails — Every query and response is logged for compliance",
+      "encryption": "Encryption at rest and in transit — AES-256 + TLS 1.3"
+    },
+    "faq": {
+      "q1": "What document formats are supported?",
+      "a1": "PDF, DOCX, TXT, Markdown, Notion export, Confluence, SharePoint.",
+      "q2": "How often is the knowledge base updated?",
+      "a2": "You can trigger updates manually or set up automatic sync on a schedule.",
+      "q3": "Can I control which documents the AI accesses?",
+      "a3": "Yes. You organize documents into collections and assign them to agents.",
+      "q4": "How accurate are the answers?",
+      "a4": "Syrix AI only generates answers based on retrieved document passages. Every answer includes citations."
+    }
+  },
+  "workspace": {
+    "headline": "One hub. Every agent. All your workflows.",
+    "subtext": "Syrix Workspace eliminates app switching. Chat becomes your centralized operational hub.",
+    "cta": "Book Demo",
+    "sentinel": "Real-time visibility into your AI workforce",
+    "sentinelContent": "The Sentinel Dashboard gives you a live view of every AI agent's status.",
+    "capabilities": {
+      "taskAssignment": "Natural language task assignment to AI agents",
+      "summarization": "Automated thread and conversation summarization",
+      "quickActions": "Quick action triggers (MCP Execution Bar)"
+    },
+    "workflow": "Manager approves in chat → Workspace routes to AI Agent → ERP updated → Finance system notified",
+    "faq": {
+      "q1": "How is Workspace different from Slack/Teams?",
+      "a1": "Workspace is not a messaging app — it's an operational hub.",
+      "q2": "Can I integrate existing Slack/Teams conversations?",
+      "a2": "Yes. Workspace can connect to Slack and Teams.",
+      "q3": "What workflows can be automated?",
+      "a3": "Any workflow that can be described in natural language: report generation, lead creation, approval routing."
+    }
+  },
+  "asr": {
+    "headline": "Speak. Syrix handles the rest.",
+    "subtext": "Syrix Speech-to-Text converts spoken language into structured actions.",
+    "cta": "Book Demo",
+    "meetingIntelligence": "Meeting Intelligence",
+    "voiceCommand": "Voice Command for Managers",
+    "scenarios": {
+      "postMeeting": "Sales Director finishes a 75-minute client call. Summary generated. Zero manual input.",
+      "betweenMeetings": "COO verbally requests a contract delta summary. All completed in 7 minutes.",
+      "hrCreator": "HR Manager records a 15-minute voice walkthrough of a new policy. No typing required."
+    },
+    "differentiation": {
+      "dimension": "Dimension",
+      "genericTranscription": "Generic Transcription",
+      "syrix": "Syrix Speech-to-Text",
+      "output": "Output",
+      "downstream": "Downstream",
+      "businessContext": "Business Context",
+      "dataResidency": "Data Residency",
+      "actionExtraction": "Action Extraction",
+      "approvalWorkflow": "Approval Workflow"
+    },
+    "ecosystem": "Speech-to-Text → Meeting summaries → Workspace → Decisions/knowledge → AI Agent"
+  },
+  "tts": {
+    "headline": "Turn any text into natural, lifelike speech.",
+    "subtext": "Syrix Text-to-Speech converts system outputs, notifications, and knowledge base articles into natural-sounding voice.",
+    "cta": "Book Demo",
+    "capabilities": [
+      "Multi-language natural voice output",
+      "Accessibility support for visually impaired users",
+      "Voice notifications triggered by system events",
+      "Voice response in customer-facing channels",
+      "Custom voice branding options"
+    ],
+    "useCases": [
+      "Read aloud customer support responses for phone integration",
+      "Voice notifications: 'New qualified lead from Acme Corp — $50K deal potential'",
+      "Accessibility: employees with visual impairments can have any document read aloud",
+      "Approval confirmation: 'PO-2024-3892 approved. Finance notified.'"
+    ]
+  },
+  "solutions": {
+    "headline": "Real problems. Real solutions.",
+    "subtext": "Syrix addresses the most common operational challenges enterprises face."
+  },
+  "pricing": {
+    "headline": "Transparent pricing. Pay for what you use.",
+    "subtext": "Syrix combines predictable base licensing with modular usage-based billing. No hidden fees.",
+    "tiers": {
+      "starter": {
+        "name": "Starter",
+        "bestFor": "Small teams getting started with AI",
+        "price": "Contact us",
+        "includes": ["1 AI solution (Help Desk, AI Agent, or ASR)", "Up to 3 concurrent sessions", "Standard support (response < 24h)", "Basic integration setup"]
+      },
+      "growth": {
+        "name": "Growth",
+        "bestFor": "Growing mid-market companies",
+        "price": "Contact us",
+        "includes": ["Up to 2 AI solutions", "Up to 10 concurrent sessions", "Priority support (response < 4h)", "SaaS add-ons available", "30-day hypercare post-deployment"]
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "bestFor": "Large organizations at scale",
+        "price": "Custom",
+        "includes": ["Unlimited AI solutions", "Custom concurrent session capacity", "Dedicated AI consultant", "VPC deployment + SSO", "Monthly performance reports", "Quarterly strategic review", "SLA: response < 2 hours"]
+      }
+    },
+    "usage": {
+      "helpdesk": "AI Helpdesk — Pay per peak concurrent session",
+      "helpdeskPrice": "$20/concurrent session/month",
+      "helpdeskAnalogy": "Think phone lines. Buy 10 lines, 10 customers chat simultaneously.",
+      "automation": "Automation — Pay per run",
+      "automationPrice": "First 3,000 runs/month: 500 VND/run (~$0.02)\n3,001+ runs/month: 250 VND/run (~$0.01)",
+      "saas": "SaaS Add-ons — Per user per month",
+      "saasItems": [
+        { "name": "OKR", "price": "$1-3/user/month" },
+        { "name": "PM", "price": "$1-3/user/month" },
+        { "name": "Leave Management", "price": "$1/user/month" },
+        { "name": "Timesheet", "price": "$1/user/month" },
+        { "name": "Basic Ops Bundle", "price": "$2/user" },
+        { "name": "Full Ops Bundle", "price": "$4/user" },
+        { "name": "Advanced Ops Bundle", "price": "$8/user" }
+      ]
+    },
+    "sampleBill": "Example: Real Estate company, 30 employees",
+    "setup": {
+      "helpdesk": "AI Helpdesk (Medium): 40,000,000 VND",
+      "okr": "SaaS OKR add-on: +20,000,000 VND",
+      "totalSetup": "Total setup: 60,000,000 VND"
+    },
+    "monthly": {
+      "helpdesk": "Help Desk (peak 8 sessions): ~4,000,000 VND",
+      "automation": "Automation (2,500 runs): ~1,250,000 VND",
+      "okr": "OKR Basic (30 users × $1): ~750,000 VND",
+      "pm": "PM Basic (30 users × $1): ~750,000 VND",
+      "leave": "Leave (30 users × $1): ~750,000 VND",
+      "timesheet": "Timesheet (30 users × $1): ~750,000 VND",
+      "totalMonthly": "Total monthly: ~8,250,000 VND"
+    },
+    "comparison": "vs. Global alternatives:",
+    "comparisonText": "• AI Helpdesk: Up to 50x cheaper than per-conversation pricing\n• Automation: Competitive with open-source alternatives\n• OKR software: 60-80% cheaper than dedicated tools\n• PM software: 70-90% cheaper than dedicated tools\n\nEnterprise deployments typically see 40-60% cost savings vs. building in-house.",
+    "faq": {
+      "q1": "What is the contract length?",
+      "a1": "Starter and Growth tiers are month-to-month. Enterprise is minimum 3-month commitment.",
+      "q2": "Is there a free trial?",
+      "a2": "We don't offer self-serve trials. We start with a free AI Audit (60-minute session).",
+      "q3": "What payment methods do you accept?",
+      "a3": "Bank transfer for setup fees. Usage is invoiced monthly with net-7 payment terms."
+    }
+  },
+  "customerSupportSolution": {
+    "company": "FinSprint — fintech startup, 200 employees",
+    "decisionMaker": "Mai Tran, VP of Customer Success",
+    "challenge": "500 tickets/day, 4-hour average response time, 15 support agents",
+    "before": [
+      "500 daily support tickets across email, chat, and Zalo",
+      "4-hour average first response time",
+      "15 full-time support agents — 60% of time spent on repetitive queries",
+      "Lead qualification manual: every inbound interest requires a human to verify",
+      "After-hours inquiries go unanswered until next morning",
+      "Customer churn rate: 12% attributed to slow response"
+    ],
+    "solution": [
+      "Products deployed: Help Desk + AI Agent",
+      "Flow: Inbound inquiry (any channel)",
+      "→ Help Desk agent: RAG retrieval from product KB → instant accurate response",
+      "→ For complex issues: intelligent escalation to human",
+      "→ Lead detection: automatic CRM qualification → Sales notified",
+      "→ Follow-up emails automated",
+      "→ All decisions logged in audit trail"
+    ],
+    "impact": [
+      "First response time: 4 hours → under 10 minutes",
+      "Tickets auto-resolved: 80% (400 out of 500 daily)",
+      "Support team reduced: 15 agents → 5 (focused on complex cases)",
+      "Lead conversion rate: +35% (every inquiry handled instantly, even at 2 AM)",
+      "Customer satisfaction: +22% (measured by post-resolution survey)",
+      "Annual cost savings: ~$240K in reduced headcount"
+    ]
+  },
+  "internalKnowledgeSolution": {
+    "company": "LandVista — real estate firm, 500 employees",
+    "decisionMaker": "Anh Phong, Director of Operations",
+    "challenge": "Employees spend 30-45 minutes/day searching for policies",
+    "before": [
+      "500 employees across 12 offices, each with different local policies",
+      "Average 35 minutes/day spent searching internal documents",
+      "New hire onboarding: 2 weeks before productive",
+      "Knowledge silos: HR doesn't know Finance policies",
+      "15% of employee queries go unanswered or get wrong answers",
+      "3 HR staff dedicated to answering repetitive policy questions"
+    ],
+    "solution": [
+      "Products deployed: AI Agent + Workspace",
+      "Flow: Employee types question in Workspace",
+      "→ AI Agent retrieves from all connected knowledge collections simultaneously",
+      "→ Cross-departmental synthesis in one unified answer",
+      "→ Cited answers with source links",
+      "→ Feedback loop: employees can rate answers"
+    ],
+    "impact": [
+      "Policy search time: 35 minutes → 30 seconds",
+      "New hire onboarding: 2 weeks → 3 days",
+      "Internal search time reduced by 40%",
+      "HR policy questions automated: staff reduced from 3 to 1",
+      "Employee satisfaction with knowledge access: +45%",
+      "First contact resolution for internal queries: 92%"
+    ]
+  },
+  "meetingExecutionSolution": {
+    "company": "FlowTech — B2B SaaS, 100 employees",
+    "decisionMaker": "Minh Hoang, COO",
+    "challenge": "1-2 hours post-meeting admin per meeting",
+    "before": [
+      "15+ meetings per week across the organization",
+      "Each meeting generates 1-2 hours of post-meeting admin",
+      "Action items lost or forgotten — 30% of decisions never executed",
+      "Cross-functional meetings require updates to 3+ systems",
+      "No centralized record of decisions made",
+      "Follow-up takes 2-3 days of email ping-pong"
+    ],
+    "solution": [
+      "Products deployed: Speech-to-Text + Workspace",
+      "Flow: Meeting starts",
+      "→ STT transcribes in real-time with speaker identification",
+      "→ AI generates structured summary",
+      "→ Action items auto-assigned in Workspace with deadlines",
+      "→ System updates triggered automatically",
+      "→ Approved actions executed via voice confirmation"
+    ],
+    "impact": [
+      "Post-meeting admin: 1-2 hours → 0 minutes (fully automated)",
+      "Action items executed: 30% lost → 95% tracked and completed",
+      "System updates per meeting: 3 manual → 3 automatic",
+      "Cross-functional alignment: email ping-pong eliminated",
+      "Knowledge capture: every decision stored and searchable in AI Agent KB"
+    ]
+  },
+  "about": {
+    "headline": "Built by AI practitioners. Made for the real world.",
+    "body": "Syrix was founded by the team behind Xperc — a consulting firm that has deployed AI solutions for enterprises across Vietnam, from fintech to real estate to manufacturing. We saw the same pattern everywhere: companies invested in AI but couldn't make it execute real work.\n\nSo we built Syrix — not as another AI tool, but as an execution platform that bridges the gap between AI that talks and AI that does.\n\nOur team combines deep expertise in AI/ML, enterprise integration, and business process optimization."
+  },
+  "security": {
+    "headline": "Enterprise-grade security. Built into every layer.",
+    "subtext": "Your data never leaves your control. Syrix is designed for organizations that demand the highest standards of security, privacy, and compliance.",
+    "pillars": [
+      { "title": "Private Deployment", "description": "Syrix runs in your Virtual Private Cloud (VPC), fully isolated from other tenants." },
+      { "title": "Data Sovereignty", "description": "All data — documents, queries, responses — stays within your infrastructure." },
+      { "title": "Access Control", "description": "SSO integration with your identity provider (Okta, Azure AD, Google Workspace)." },
+      { "title": "Encryption", "description": "AES-256 encryption at rest. TLS 1.3 in transit." },
+      { "title": "Audit & Compliance", "description": "Every agent action is logged with full traceability." },
+      { "title": "Human-in-the-Loop", "description": "High-risk actions require human approval gates." }
+    ]
+  },
+  "bookDemo": {
+    "headline": "This isn't a sales call. It's a roadmap session.",
+    "subtext": "We'll understand your current stack, identify your biggest operational bottleneck, propose a tailored solution, and show you a live demo — all in under 60 minutes.",
+    "form": {
+      "name": "Full Name *",
+      "email": "Work Email *",
+      "company": "Company Name *",
+      "companySize": "Company Size *",
+      "challenge": "What challenge are you solving? *",
+      "submit": "Book Demo"
+    },
+    "quickContact": "Not ready for a full demo? Reach out directly:"
+  },
+  "contact": {
+    "headline": "Get in touch.",
+    "subtext": "Sales inquiries, partnership opportunities, or just want to learn more — we're here.",
+    "form": {
+      "name": "Full Name *",
+      "email": "Work Email *",
+      "company": "Company Name *",
+      "companySize": "Company Size *",
+      "challenge": "What challenge are you solving? *",
+      "subject": "Subject *",
+      "message": "Message *",
+      "submit": "Send Message"
+    },
+    "quickContact": "Zalo: [insert number]"
+  },
+  "customers": {
+    "headline": "Trusted by enterprises that demand results.",
+    "subtext": "See how leading organizations across industries use Syrix to transform their operations.",
+    "finSprint": {
+      "title": "FinSprint Case Study",
+      "result": "80% ticket auto-resolution, response time 4h → 10min",
+      "implementation": "Deployed Syrix Help Desk + AI Agent to transform their customer support operations."
+    },
+    "landVista": {
+      "title": "LandVista Case Study",
+      "result": "Search time 35min → 30sec, onboarding 2 weeks → 3 days",
+      "implementation": "Deployed Syrix AI Agent + Workspace to eliminate knowledge silos and accelerate onboarding."
+    },
+    "flowTech": {
+      "title": "FlowTech Case Study",
+      "result": "Post-meeting admin → zero, 95% action item execution",
+      "implementation": "Deployed Syrix Speech-to-Text + Workspace to automate meeting execution."
+    }
+  },
+  "privacyPolicy": {
+    "title": "Privacy Policy",
+    "information": "Information We Collect",
+    "usage": "How We Use Your Information",
+    "storage": "Data Storage & Security",
+    "contact": "hello@syrix.ai"
+  },
+  "footer": {
+    "top": "AI that doesn't just answer. It executes.",
+    "products": "Products",
+    "solutions": "Solutions",
+    "company": "Company",
+    "legal": "Legal",
+    "builtByXperc": "Built by Xperc",
+    "copyright": "© 2026 Syrix. All rights reserved."
+  },
+  "common": {
+    "learnMore": "Learn more →",
+    "viewDetails": "View Details →",
+    "bookDemo": "Book Demo",
+    "contactSales": "Contact Sales →",
+    "readyToStart": "Ready to start?",
+    "getStarted": "Get Started"
+  },
+  "meta": {
+    "title": "Syrix AI — AI Execution Platform for Enterprises",
+    "description": "Your AI shouldn't just answer questions. It should complete the work."
+  }
+}

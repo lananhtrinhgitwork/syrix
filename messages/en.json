@@ -1,0 +1,910 @@
+{
+  "navigation": {
+    "products": "Products",
+    "helpDesk": "Help Desk",
+    "aiAgent": "AI Agent",
+    "workspace": "Workspace",
+    "asr": "Speech-to-Text",
+
+    "solutions": "Solutions",
+    "customerSupport": "Customer Support",
+    "internalKnowledge": "Internal Knowledge",
+    "meetingExecution": "Meeting Execution",
+    "realEstate": "Real Estate",
+    "financialServices": "Financial Services",
+    "retailEcommerce": "Retail & E-commerce",
+    "customers": "Customers",
+    "pricing": "Pricing",
+    "about": "About",
+    "contact": "Contact",
+    "bookDemo": "Book Demo",
+    "privacyPolicy": "Privacy Policy",
+    "builtByXperc": "Built by Xperc"
+  },
+  "hero": {
+    "headline": "Your AI shouldn't just answer questions. It should complete the work.",
+    "subheadline": "Syrix connects large language models directly to your CRM, ERP, HRM, email, and knowledge bases — so your AI agents can read, write, and act across every system through simple natural language commands.",
+    "cta": "Book Demo"
+  },
+  "problem": {
+    "headline": "Your enterprise has AI. Your people are still doing the manual work.",
+    "body": "Most enterprises have adopted generative AI for Q&A and content creation. But there's a fundamental gap between an AI that can answer questions and an AI that can execute business processes.",
+    "before": "BEFORE",
+    "after": "AFTER",
+    "beforeDescription": "Sales rep gets qualified lead at 11pm\n→ AI answers product question ✓\n→ But someone still manually: creates CRM record, notifies account manager\n→ 4 manual steps. 1 human who could have been sleeping.",
+    "afterDescription": "Same lead at 11pm with Syrix\n→ AI qualifies lead, creates CRM record, notifies team\n→ Zero human intervention. Closed-loop automation."
+  },
+  "howItWorks": {
+    "headline": "How Syrix Works",
+    "step1": {
+      "title": "Connect",
+      "description": "Syrix connects to your existing systems — CRM, ERP, HRM, email, internal knowledge bases — in days, not months. No rip-and-replace."
+    },
+    "step2": {
+      "title": "Instruct",
+      "description": "Your team communicates in natural language. No complex configuration. No training required."
+    },
+    "step3": {
+      "title": "Execute",
+      "description": "Syrix executes across applications autonomously — creating records, updating systems, sending notifications, completing workflows — all without manual intervention."
+    }
+  },
+  "productSuite": {
+    "headline": "The Syrix Ecosystem"
+  },
+  "metrics": {
+    "headline": "Built for results"
+  },
+  "cta": {
+    "headline": "Ready to make AI actually work for you?",
+    "subtext": "Schedule a demo to see how Syrix can transform your operations.",
+    "cta": "Book Demo"
+  },
+  "products": {
+    "headline": "One Platform. Five Products. Infinite Possibilities.",
+    "subtext": "Syrix is an integrated ecosystem of AI-powered products that work together to automate your business operations end-to-end."
+  },
+  "helpDesk": {
+    "hero": {
+      "badge": "AI-Powered Help Desk",
+      "headline": "Turn your website into a 24/7 sales & support team — without hiring more people.",
+      "subheadline": "Syrix Help Desk is the first Digital Employee for enterprises. It doesn't just answer questions — it closes leads, books appointments, calculates quotes, and hands off to humans when needed.",
+      "ctaPrimary": "Book a Demo",
+      "ctaSecondary": "See How It Works"
+    },
+    "problem": {
+      "title": "Today's chatbots can't close deals.",
+      "items": [
+        "Generic answers, no real action",
+        "Zero knowledge about your products",
+        "Miss leads after hours",
+        "Clunky handoff to humans"
+      ]
+    },
+    "solution": {
+      "title": "Meet Syrix Help Desk — the AI employee that actually works.",
+      "items": [
+        "Answers from your verified documents (RAG)",
+        "Proactively books, quotes, and converts leads",
+        "Works 24/7, handles thousands of conversations",
+        "Seamless human handoff with full context"
+      ]
+    },
+    "capabilities": {
+      "title": "Core capabilities",
+      "pillar1": {
+        "title": "Knowledge-Powered AI",
+        "desc": "Accurate answers drawn exclusively from admin-verified company docs. No hallucinations, no guesswork."
+      },
+      "pillar2": {
+        "title": "Action Execution",
+        "desc": "Connect CRM, calculate quotes, book showings, check inventory — the agent runs MCP tools autonomously."
+      },
+      "pillar3": {
+        "title": "Smart Handoff",
+        "desc": "Automatically detects uncertainty and offers human handoff. Full conversation history transferred in real time."
+      },
+      "pillar4": {
+        "title": "Glass Box Transparency",
+        "desc": "Every reasoning step is visible in the Thinking Log. Admins audit every decision."
+      }
+    },
+    "howItWorks": {
+      "title": "How Syrix Help Desk Operates",
+      "subtitle": "Four seamless layers converting static documentation and live APIs into an autonomous digital employee.",
+      "steps": [
+        {
+          "id": "identity",
+          "tag": "Step 1: Core Configuration",
+          "title": "Agent Identity & Core Instructions",
+          "desc": "Define your agent's executive persona, custom tone of voice, and strict business guardrails. Establish the core rules that govern how the autonomous system greets, authenticates, and routes enterprise customers."
+        },
+        {
+          "id": "knowledge",
+          "tag": "Step 2: Contextual Ingestion",
+          "title": "Deep Vector Knowledge Base",
+          "desc": "Ingest unstructured corporate archives, multi-page policy PDFs, product manuals, and system logs up to 50MB per file. Data is instantly vectorized via advanced RAG pipelines to guarantee zero-hallucination source citations."
+        },
+        {
+          "id": "mcp",
+          "tag": "Step 3: API Integration",
+          "title": "MCP Action Matrix & Live Tools",
+          "desc": "Bind internal databases, core ERP systems, and enterprise CRMs (HubSpot, Salesforce) securely via Model Context Protocol (MCP). Grant your agent the power to execute real-time state changes, like invoice rerouting and license allocation."
+        },
+        {
+          "id": "suggestion",
+          "tag": "Step 4: Intent Engagement",
+          "title": "Contextual Suggestion Chips",
+          "desc": "Deploy dynamic, state-aware clickable suggestion tokens. Guide partners instantly into high-converting transaction funnels or critical problem matrices from the very first interaction."
+        }
+      ]
+    },
+    "features": {
+      "title": "Features that set you apart",
+      "feature1": {
+        "title": "Natural Conversation, Not Menus",
+        "desc": "A visitor types \"Show me apartments in District 1 under 5 billion VND\" — the agent extracts intent, retrieves knowledge, and responds accurately. No rigid menus, no forms."
+      },
+      "feature2": {
+        "title": "Upload & Ask",
+        "desc": "Upload a PDF contract and ask \"What are the payment terms?\" The agent reads the file with multimodal AI and answers in detail."
+      },
+      "feature3": {
+        "title": "Confirmation Cards for High-Stakes Actions",
+        "desc": "Before booking an appointment or placing an order, the agent shows a confirmation card with Summarize / Confirm / Cancel. Mistakes eliminated."
+      },
+      "feature4": {
+        "title": "Real-Time Thinking Log & Progress",
+        "desc": "\"Agent is thinking…\" → \"Step 1: Validating input…\" → \"Step 2: Calculating…\" → Done. Visitors see the agent work, never a frozen screen."
+      },
+      "feature5": {
+        "title": "One-Click Human Takeover",
+        "desc": "When the agent is unsure or the customer asks for a human, a single click transfers the conversation with full context. No repetition."
+      },
+      "feature6": {
+        "title": "Powerful Admin Dashboard",
+        "desc": "View all conversations, assign labels, search history, inspect the Thinking Log, toggle handoff preferences. Complete control."
+      }
+    },
+    "useCases": {
+      "title": "Built for real business challenges",
+      "case1": {
+        "title": "Customer Support",
+        "desc": "Resolve 80% of tickets instantly. Answers from your knowledge base, order lookups, return policies. Seamless handoff to human agents.",
+        "cta": "Explore Customer Support →"
+      },
+      "case2": {
+        "title": "Sales & Lead Conversion",
+        "desc": "Qualify leads, calculate quotes, suggest upsells, book meetings. Works autonomously after hours. Direct CRM integration.",
+        "cta": "Explore Sales Development →"
+      },
+      "case3": {
+        "title": "Real Estate",
+        "desc": "Help buyers search properties, schedule viewings, calculate mortgages — all inside the chat. 24/7 availability for global buyers.",
+        "cta": "Explore Real Estate →"
+      },
+      "case4": {
+        "title": "Financial Services",
+        "desc": "Advise on loan products, calculate interest, check eligibility. Authenticate customers before executing sensitive actions.",
+        "cta": "Explore Financial Services →"
+      }
+    },
+    "smartSuggestions": {
+      "title": "AI that proactively sells",
+      "desc": "Syrix doesn't wait for questions. When a visitor lands, it suggests relevant questions. If details are missing, it asks for them (Slot Filling). It detects buying intent and turns conversations into closing opportunities."
+    },
+    "integrations": {
+      "title": "Connect every business tool",
+      "desc": "Using the Model Context Protocol (MCP), Syrix Help Desk connects to CRM, email, calendar, inventory — any API. Each agent gets least-privilege access."
+    },
+    "trust": {
+      "title": "Built on trust and transparency",
+      "item1": {
+        "title": "Zero-Hallucination",
+        "desc": "Answers come only from admin-approved documents."
+      },
+      "item2": {
+        "title": "Glass Box",
+        "desc": "Full visibility into AI reasoning — every step logged."
+      },
+      "item3": {
+        "title": "Least-Privilege MCP",
+        "desc": "Minimal access rights per agent, maximum security."
+      },
+      "item4": {
+        "title": "Human Override",
+        "desc": "Take over any conversation instantly, anytime."
+      }
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "q1": "How is Syrix different from a chatbot?",
+      "a1": "Syrix doesn't just answer — it takes action. It books, calculates, updates CRM. It's a Digital Employee, not an FAQ machine.",
+      "q2": "Do I need coding skills to set it up?",
+      "a2": "No. Upload documents, choose a tone, connect tools — all from a no-code admin interface.",
+      "q3": "How do you prevent AI mistakes?",
+      "a3": "We use RAG with admin-verified collections. Every answer is traced to approved documents. Zero hallucination.",
+      "q4": "When does the conversation go to a human?",
+      "a4": "The agent auto-detects low confidence, or the visitor can ask. Admin gets instant notification and joins with full context.",
+      "q5": "Can I see what the AI is thinking?",
+      "a5": "Yes. The admin dashboard shows the full Thinking Log: each reasoning step, tool call, and knowledge chunk retrieved.",
+      "q6": "Does the widget slow down my website?",
+      "a6": "Under 100ms load, non-blocking, fully customizable position and theme.",
+      "q7": "Is multi-language supported?",
+      "a7": "Yes — Vietnamese and English out of the box. Configure tone per language.",
+      "q8": "How do I get started?",
+      "a8": "Book a demo. We'll set up a pilot with your real data in 48 hours."
+    },
+    "finalCta": {
+      "headline": "Ready to turn your website into a high-performance sales & support engine?",
+      "cta": "Book a Demo",
+      "trust": "No credit card required. Free pilot available."
+    },
+    "workflow": {
+      "badge": "🚀 XCorp Workflow",
+      "heading": "From MCP to Workflow — Automate at Scale",
+      "subheading": "MCP lets your agent call individual actions. Workflow lets you build complete business automation flows.",
+      "feature1": "700+ pre-built app integrations",
+      "feature2": "Drag-and-drop visual builder",
+      "feature3": "Connect directly to your Agent — zero code",
+      "feature4": "Trigger workflows from agent conversations",
+      "desc": "While MCP handles individual tool calls, XCorp Workflow lets you chain them into powerful multi-step automation — without writing a single line of code. Build business logic that matches your exact needs.",
+      "cta": "🚀 Explore Workflow at xcorp.app →"
+    }
+  },
+  "aiAgent": {
+    "hero": {
+      "badge": "Syrix Agent Builder v2.5",
+      "title": "Build Autonomous AI Agents for Your Enterprise Operations.",
+      "description": "Stop losing 30% of corporate productivity to information silos and mechanical internal workflows. Syrix AI Agent serves as your secure internal brain\u2014connecting directly to your company's data repositories, unifying internal engineering/HR/Ops knowledge, and executing cross-platform organizational tasks autonomously."
+    },
+    "metrics": {
+      "title": "Unify Your Institutional Intelligence",
+      "subtitle": "How replacing legacy internal search engines and heavy ticket queues with autonomous digital employees redefines internal margins.",
+      "items": [
+        { "label": "Information Discovery Speed", "old": "25 Minutes browsing cross-silo folders", "new": "Instant < 2 Seconds Contextual RAG Answers" },
+        { "label": "Internal Request Resolution", "old": "Heavy IT/HR helpdesk ticket backlogs", "new": "80% Autonomous Self-Service Fulfillment" },
+        { "label": "Enterprise Data Sovereignty", "old": "Risk of data leaks in public models", "new": "100% Isolated Tenant Vector Security" }
+      ]
+    },
+    "pillars": {
+      "title": "The Ultimate Internal Brain Platform",
+      "builder": {
+        "tag": "Agentforce Builder Framework",
+        "title": "Low-Code Agent Builder Interface",
+        "description": "Empower your operations or IT managers to configure digital employees without technical overhead. Define specific Topics, assign granular workspace permissions, set strict execution guardrails, and track live test simulations within a unified enterprise control center.",
+        "features": ["Visual topic definition canvases", "Granular access token boundaries", "Real-time builder simulation environments"]
+      },
+      "rag": {
+        "tag": "Glean-Grade Unified Search",
+        "title": "Cross-Silo Knowledge Synchronization",
+        "description": "Syrix connects instantly with your internal file stores, code repositories, Confluence wikis, Slack archives, and multi-page technical compliance PDFs up to 50MB. Utilizing deep vector RAG, it instantly extracts accurate answers complete with precise source path citations.",
+        "features": ["Read-only compliance indexing", "Extension-agnostic document tokenization", "Strict organizational role-based access"]
+      },
+      "mcp": {
+        "tag": "Autonomous Internal Actions",
+        "title": "Internal System Automation via MCP",
+        "description": "Your internal agent does not just process text\u2014it takes action. Through secure Model Context Protocol (MCP) handlers, the agent safely triggers IT deployment routines, updates project tracking pipelines in Jira, processes internal HR records, or registers software access keys natively.",
+        "features": ["Bi-directional internal tool handshakes", "Fault-tolerant network drop recoveries", "Isolated runtime action sandboxes"]
+      }
+    },
+    "interactive": {
+      "title": "Inside the Agent Builder Workspace",
+      "subtitle": "See how easy it is to define topics, link internal repositories, and watch your agent reason through an internal workflow query.",
+      "steps": [
+        {
+          "title": "1. Topic & Boundary Assignment",
+          "desc": "The administrator defines an 'IT Operations Specialist' persona inside the builder canvas, establishing exact behavioral guardrails and natural language instructions."
+        },
+        {
+          "title": "2. Secure Resource Linking",
+          "desc": "The admin selects internal knowledge collections: `Engineering_SOP_v4.pdf` and links the agent to the company's internal server deployment tool via MCP."
+        },
+        {
+          "title": "3. Autonomous Internal Execution",
+          "desc": "An employee asks: 'Our HCMC staging database server dropped connection. How do I reset the container securely?'. The agent processes the internal SOP via RAG, checks server state via MCP, and outputs exact instructions with the verified citation source."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Enterprise Compliance & Architecture FAQ",
+      "subtitle": "Answering critical infrastructure queries from CIOs, Security Directors, and Operations Managers.",
+      "items": [
+        {
+          "q": "How does Syrix ensure that sensitive HR or Financial documents do not leak across different employee tiers?",
+          "a": "Syrix mirrors your enterprise's existing Role-Based Access Control (RBAC) security blueprints. During vector index creation and RAG retrieval cycles, the agent performs a secure metadata verification check against the querying employee's specific identity tokens. If an operator does not possess native read privileges for a source file, the agent acts as if that data block does not exist, keeping information perfectly ring-fenced."
+        },
+        {
+          "q": "Can we deploy the Syrix AI Agent fully inside our isolated corporate private cloud infrastructure?",
+          "a": "Yes. Recognizing strict enterprise compliance architectures, Syrix provides hybrid and fully isolated virtual private cloud (VPC) deployment blueprints. Your company's data collections, underlying vector databases, and Model Context Protocol integrations remain completely inside your designated security parameters, with zero external metadata callbacks."
+        },
+        {
+          "q": "How long does it take for the internal agent to recognize updates made to corporate documentation?",
+          "a": "Updates take effect in near real-time. Because our framework relies on advanced live-vector pipelining rather than static model retraining, modifying an internal policy is as simple as saving a document. The moment a revised SOP file is added to an internal Collection, the old vector nodes are invalidated, and subsequent employee queries leverage the newly updated intelligence within milliseconds."
+        }
+      ]
+    }
+  },
+  "workspace": {
+    "headline": "One hub. Every agent. All your workflows.",
+    "subtext": "Syrix Workspace eliminates app switching. Chat becomes your centralized operational hub.",
+    "cta": "Book Demo",
+    "sentinel": "Real-time visibility into your AI workforce",
+    "sentinelContent": "The Sentinel Dashboard gives you a live view of every AI agent's status.",
+    "capabilities": {
+      "taskAssignment": "Natural language task assignment to AI agents",
+      "summarization": "Automated thread and conversation summarization",
+      "quickActions": "Quick action triggers (MCP Execution Bar)"
+    },
+    "workflow": "Manager approves in chat → Workspace routes to AI Agent → ERP updated → Finance system notified",
+    "faq": {
+      "q1": "How is Workspace different from Slack/Teams?",
+      "a1": "Workspace is not a messaging app — it's an operational hub.",
+      "q2": "Can I integrate existing Slack/Teams conversations?",
+      "a2": "Yes. Workspace can connect to Slack and Teams.",
+      "q3": "What workflows can be automated?",
+      "a3": "Any workflow that can be described in natural language: report generation, lead creation, approval routing."
+    }
+  },
+  "speechToText": {
+    "hero": {
+      "badge": "Syrix Speech to Text Core",
+      "title": "Convert Live Voice Streams Into Clear Corporate Data.",
+      "description": "Stop letting enterprise phone calls and customer audio interactions disappear. Syrix Speech to Text transcribes multi-speaker voice calls, online support sessions, and operational meetings in real-time with up to 99.2% accuracy\u2014ensuring every critical detail is saved."
+    },
+    "metrics": {
+      "title": "Voice Intelligence Metrics",
+      "subtitle": "How replacing manual quality sampling with automated voice processing scales operational visibility.",
+      "items": [
+        { "label": "Transcription Accuracy Rate", "old": "High word errors with generic legacy speech readers", "new": "Near-perfect clarity using specialized enterprise vocabulary" },
+        { "label": "Processing Speed & Latency", "old": "Hours of delay with batch transcription queues", "new": "Instant streaming text outputs under 200ms" },
+        { "label": "Compliance Verification Overhead", "old": "Time-consuming manual call sample listening", "new": "100% Automated text analysis and keyword indexing" }
+      ]
+    },
+    "pillars": {
+      "title": "Engineered for Enterprise Conversations",
+      "diarization": {
+        "tag": "Speaker Separation",
+        "title": "Multi-Speaker Detection & Identity Tracking",
+        "description": "Syrix automatically separates multiple voices on a single call. It clearly isolates your customer's questions from your staff's answers, organizing the text into a clean script format complete with precise timestamps.",
+        "features": ["Overlapping conversation parsing", "Adaptive voice tone matching", "Millisecond-level time marking"]
+      },
+      "vocabulary": {
+        "tag": "Smart Nomenclature",
+        "title": "Custom Business Vocabulary Tuning",
+        "description": "Standard speech engines routinely misspell technical model numbers, internal software IDs, and brand terms. Syrix learns your company's proprietary jargon instantly by reading your uploaded document collections.",
+        "features": ["Instant product serial string filtering", "Automated acronym formatting", "Smart multi-language phrase parsing"]
+      }
+    },
+    "simulator": {
+      "title": "See Streaming Speech to Text in Action",
+      "subtitle": "Click to play a mock customer conversation and watch how Syrix transcribes sentences and extracts action items instantly.",
+      "buttonLabel": "Play Sample Audio Stream",
+      "statusLabel": "Processing Live Audio...",
+      "transcriptSample": "[Client Partner]: Hello, I need to open a high-priority support ticket for our office node in Da Nang, account ID DX-9042. The main server dropped connection right after the update.\n[Digital Assistant]: Gained context. Initiating diagnostic verification for Da Nang server block DX-9042.",
+      "insightSummary": "Automated Action Extracted: Successfully opened a High-Priority Infrastructure Ticket for Node DX-9042."
+    },
+    "useCases": {
+      "title": "Enterprise Use Cases for Speech Intelligence",
+      "items": [
+        {
+          "id": "meeting",
+          "tag": "Automated Meeting Capture",
+          "title": "Intelligent Meeting Summarization & Action Extraction",
+          "desc": "Syrix Speech to Text automatically joins your calendar meetings, transcribes every speaker in real time, and extracts structured summaries\u2014decisions, action items, and open questions. Outputs are pushed directly to your Internal AI Agent knowledge base and routed to Slack via MCP tools, so every meeting becomes a documented, searchable asset."
+        },
+        {
+          "id": "executive",
+          "tag": "On-the-Go Executive Workflow",
+          "title": "Voice-Driven Operations via Internal AI Agent & Slack",
+          "desc": "Executives and managers can dictate requests hands-free: \"Summarize the Q3 forecast and send it to the finance team.\" Syrix transcribes the voice command, routes it through the Internal AI Agent for context retrieval and reasoning, then executes follow-up actions\u2014updating CRM records, dispatching Slack notifications, or triggering approval workflows\u2014all through secure MCP connections."
+        }
+      ]
+    }
+  },
+  "solutions": {
+    "hub": {
+      "title": "Enterprise Solutions Built for Autonomy",
+      "subtitle": "Deploy industry-grade Digital Employees across core operational verticals to eliminate friction and drive revenue."
+    },
+    "customerSupport": {
+      "badge": "Operations & Service",
+      "heroTitle": "Automate 80% of Enterprise Support Tickets Without Brittle Scripts.",
+      "heroDesc": "Transform your post-sales operations. Syrix handles multi-channel tier-1 customer support requests autonomously\u2014reading asset logs, verifying service boundaries via RAG, and safely executing account modifications through Model Context Protocol (MCP) integrations.",
+      "tabs": [
+        { "title": "Inbound Automation", "desc": "Instantly parse and resolve highly technical B2B client inquiries under 2 seconds with automatic data isolation layers." },
+        { "title": "API Task Execution", "desc": "Empower the agent to interact with internal ERP/billing gateways to process address changes or invoice rerouting directly." },
+        { "title": "Seamless Escalation", "desc": "Silent human takeover with auto-generated conversation briefings ensures zero customer friction during complex handovers." }
+      ]
+    },
+    "sales": {
+      "badge": "Revenue Generation",
+      "heroTitle": "Accelerate Deal Velocity With Autonomous Sales Engagement.",
+      "heroDesc": "Never let an enterprise sales lead turn cold. Syrix Sales Agent acts as your frontline business development representative\u2014parsing massive RFI/RFP documents up to 50MB, independently mapping prospect pain points, checking pricing tiers, and drafting professional quotes connected directly to HubSpot or Salesforce CRM systems.",
+      "tabs": [
+        { "title": "RFP & Document Parsing", "desc": "Instantly analyze complex enterprise request-for-proposal documents and extract critical feature requirements matching your product specs." },
+        { "title": "Smart Pricing Matrices", "desc": "Evaluate prospective volume scale parameters and dynamically calculate enterprise contract discount rates from core collections." },
+        { "title": "CRM Tool Execution", "desc": "Automatically populate lead pipelines, log communication records, and dispatch custom digital contract drafts directly via MCP." }
+      ]
+    },
+    "internalKnowledge": {
+      "badge": "Corporate Intelligence",
+      "heroTitle": "Unify Fragmented Corporate Silos Into a Single Secure Brain.",
+      "heroDesc": "Stop losing 30% of employee productivity to internal data searching overhead. Syrix Internal Knowledge Agent unifies engineering wikis, HR policies, Confluence databases, and team Slack logs into an absolute secure multi-tenant RAG vector repository.",
+      "tabs": [
+        { "title": "Cross-Silo Discovery", "desc": "Search across scattered enterprise application folders simultaneously and extract perfect contextual answers with precise source path citations." },
+        { "title": "Secure Access Levels", "desc": "Strictly mirrors your corporate Role-Based Access Control (RBAC) maps\u2014employees only access information they possess privileges to read." },
+        { "title": "Real-Time Asset Updates", "desc": "Drop a newly updated corporate SOP document into a collection, and the agent's core brain updates instantly in milliseconds with zero retraining." }
+      ]
+    },
+    "meetingExecution": {
+      "badge": "Workspace Productivity",
+      "heroTitle": "Convert Live Audio Streams Into Actionable System Commands.",
+      "heroDesc": "Redefine organizational alignment. Syrix processes multi-speaker enterprise meeting recordings, extracts exact context traces via speaker separation, and works alongside your internal AI agent to automatically trigger cross-platform task deployment keys.",
+      "tabs": [
+        { "title": "Automated Minutes", "desc": "Ditch manual tracking logs. Instantly convert 2-hour conversational data into brief executive summaries with structured checkmarks." },
+        { "title": "Jira & Slack Synchronization", "desc": "The agent reads extracted action items and independently calls MCP tools to deploy engineering tasks or dispatch Slack notifications." },
+        { "title": "On-the-Go Commands", "desc": "Record quick voice memos during a commute; Syrix transcribes the input instantly and commands the AI Agent to execute internal workflows." }
+      ]
+    }
+  },
+  "solutionsV3": {
+    "customerSupport": {
+      "badge": "Operations & Customer Experience",
+      "heroTitle": "Resolve 80% of Enterprise Support Tickets Autonomously.",
+      "heroDesc": "Imagine a B2B client facing an order crisis at 2 AM. Instead of waiting for business hours, Syrix Help Desk steps in instantly. With no brittle scripts and zero hallucinations, the agent reads your uploaded product manuals via RAG to provide precise answers, while utilizing secure MCP tools to interact with your live database and update orders under 2 seconds.",
+      "storyText": "Success Story: Deflected 80% of inbound queue backlogs, optimized CSAT score to 98%, and eliminated enterprise night-shift operational overhead completely.",
+      "kpis": [
+        { "label": "Response Velocity", "old": "45-Minute average queue hold time", "new": "Instant contextual resolution < 2 seconds" },
+        { "label": "Satisfaction Rate (CSAT)", "old": "72% using rigid legacy keyword bots", "new": "98% driven by precise vector RAG sources" }
+      ],
+      "tabs": [
+        { "tab": "Operational Pain", "title": "Queue Bottlenecks & High Churn Risks", "desc": "Global clients abandon brands when legacy support tools fail to interpret technical queries and human agents are offline during off-hours." },
+        { "tab": "How Syrix Solves It", "title": "Autonomous Execution via MCP Tools", "desc": "Syrix analyzes intent, extracts exact compliance answers using RAG, and safely triggers backend API tools to resolve issues without human overhead." },
+        { "tab": "Value Delivered", "title": "Frictionless Support & Resource Optimization", "desc": "Build long-term trust with enterprise partners while liberating human representatives to handle high-value account accounts." }
+      ]
+    },
+    "sales": {
+      "badge": "Revenue & ROI Optimization",
+      "heroTitle": "24/7 Sales Agent: Never Let a Deal Turn Cold After Hours.",
+      "heroDesc": "Prospects visit your platform at midnight looking for enterprise pricing. Human representatives cannot stay online 24/7 without massive budget overhead. Syrix Sales Agent acts as an always-on business development representative\u2014parsing product document collections, answering questions, and automatically scheduling viewings or deep consulting sessions directly through HubSpot CRM via MCP.",
+      "storyText": "Success Story: Boosted pipeline conversion rates by 35% and maximized corporate marketing ROI by capturing every off-hour opportunity instantly.",
+      "kpis": [
+        { "label": "Conversion Rate", "old": "Lost 40% of leads arriving after hours", "new": "35% Average increase in pipeline velocity" },
+        { "label": "Cost Efficiency (ROI)", "old": "Heavy budget required for global coverage", "new": "Maximized ROI with an infinite scaling agent" }
+      ],
+      "useCases": [
+        { "tab": "The Executive Pain", "title": "Stalled Leads & Wasted Marketing Budgets", "desc": "Spending budget on lead generation only to lose high-value corporate prospects because no sales rep can follow up immediately during weekends or nights." },
+        { "tab": "How Syrix Solves It", "title": "Automated Conversational Quote & Booking", "desc": "The agent evaluates client volume scale, checks pricing matrices, reveals free calendar spots from CRM, and dispatches dynamic sample contract drafts instantly." },
+        { "tab": "Value Delivered", "title": "Continuous High-Velocity Revenue Pipelines", "desc": "Scale enterprise sales capabilities globally, lower your customer acquisition cost, and capture every deal opportunity 24/7." }
+      ]
+    },
+    "internalChatbot": {
+      "badge": "Corporate Brain & Automation",
+      "heroTitle": "Internal AI Assistant: Liberate Employees From Unstructured Data Chaos.",
+      "heroDesc": "Stop losing 30% of employee productivity to information searching and tedious IT/HR ticketing delays. Syrix Internal Chatbot unifies your engineering wikis, HR policies, Confluence databases, and Slack history into an isolated secure RAG repository. Employees get instant answers complete with file source paths, while the agent independently accesses platforms like Jira or XCORP via MCP to track tasks or reset credentials.",
+      "storyText": "Success Story: Resolved 70% of routine internal inquiries via automated self-service, liberating IT and HR departments to focus on core core infrastructure.",
+      "kpis": [
+        { "label": "Discovery Speed", "old": "25 Minutes browsing scattered network folders", "new": "Under 2 seconds precise vector RAG lookup" },
+        { "label": "Ticket Deflection Rate", "old": "Overloaded human internal IT queues", "new": "70% Ticket reduction via automated self-service" }
+      ],
+      "useCases": [
+        { "tab": "Staff Friction", "title": "Fragmented Knowledge Sapping Efficiency", "desc": "New hires drown in unindexed corporate onboarding documentation, while developers waste valuable hours searching for historical software error logs." },
+        { "tab": "How Syrix Solves It", "title": "Deep Integration With Slack, Jira & XCORP", "desc": "Embedded right within your internal workspace. When staff request code help or task status reviews, the agent calls secure MCP tools to execute commands directly." },
+        { "tab": "Value Delivered", "title": "Ironclad Compliance & High Productivity", "desc": "Enforce strict corporate Role-Based Access Control (RBAC) boundaries while accelerating daily project delivery benchmarks across all departments." }
+      ]
+    },
+    "meetingExecution": {
+      "badge": "Executive Workspace Velocity",
+      "heroTitle": "Voice-to-Task Core: Convert Speech Into Actionable Workflows.",
+      "heroDesc": "Designed for busy executives who cannot afford operational delays. Ditch manual transcription overhead; Syrix Speech to Text processes meeting audio, isolates speaker channels, and outputs an executive summary checklist. When commuting, record a quick voice memo; Syrix transcribes the input under 200ms, commanding the Internal AI Agent to trigger MCP tools to deploy tasks, create Jira tickets, or send structured Slack alerts.",
+      "storyText": "Success Story: Completely removed remote task deployment friction, keeping infrastructure pipelines moving continuously without any operational lag.",
+      "kpis": [
+        { "label": "Meeting Summarization", "old": "Hours spent writing manual post-meeting logs", "new": "Instant automated milestone checklist mapping" },
+        { "label": "Task Launch Friction", "old": "Typing long jira descriptions on a mobile screen", "new": "Voice-activated internal tool API execution" }
+      ],
+      "useCases": [
+        { "tab": "The Manager Pain", "title": "Context Decay & Lost Strategic Directives", "desc": "Managers on the move cannot open dashboards to log tickets on mobile, causing critical ideas and time-sensitive tasks to be delayed or lost entirely." },
+        { "tab": "How Syrix Solves It", "title": "Speech to Text & Internal AI Agent Synergy", "desc": "The platform ingests real-time meeting logs or mobile voice streams, recognizes specialized technical jargon, and pipes structured data into the agent matrix." },
+        { "tab": "Value Delivered", "title": "Unrivaled Operational Momentum", "desc": "Save 5+ hours per manager every week, achieve 100% execution tracking on technical commitments, and maximize organizational execution speed." }
+      ]
+    }
+  },
+  "solutionsV4": {
+    "customerSupport": {
+      "badge": "Operations & CSAT Support",
+      "synergyTitle": "Synergy: Syrix Help Desk \u00d7 Model Context Protocol Gateway",
+      "synergyDesc": "The perfect handshake between front-end conversational widgets and structural back-end API nodes, turning a traditional chat bubble into a fully autonomous 24/7 digital employee.",
+      "useCases": [
+        {
+          "id": "inboundCrisis",
+          "tag": "Use Case 01: Night-Shift Queue Bottlenecks",
+          "title": "Autonomous Multi-Channel Tier-1 Ticket Resolution at 2 AM",
+          "pain": "B2B enterprise clients experience system critical downtime outside standard business hours. Legacy keyword-matching chatbots output repetitive FAQ answers, aggravating clients. Having no technical staff online during night shifts leads to strict SLA breaches and high customer churn risks.",
+          "solution": "Syrix Help Desk instantly takes control of the interaction. The core engine pulls from a 50MB unstructured technical manual collection via Vector RAG, outputting precise troubleshooting paths with zero hallucinations. The agent independently triggers secure MCP tools to reset access tokens and repair endpoints directly inside your live database.",
+          "value": "Deflects 80% of inbound queue backlogs, drives CSAT scores to 98%, eliminates night-shift engineering overhead, and preserves enterprise brand equity."
+        },
+        {
+          "id": "billingDispute",
+          "tag": "Use Case 02: Billing Overrides & Administrative Tasks",
+          "title": "Automated ERP & Invoice Modifications via Corporate Tools",
+          "pain": "An enterprise account requests an immediate update to their billing address and a recalculation of their annual logistics discount tier. Support representatives must manually open 3 detached applications (ERP, CRM, Excel matrices) to verify data, wasting 30 minutes per interaction and causing data entry errors.",
+          "solution": "The agent executes real-time natural language intent tracking. Without human intervention, the agent references your private pricing guidelines, calls secure MCP infrastructure methods like `updateBillingAddress()` and `recalculateInvoice()`, updates your system ERP, and renders the newly compiled PDF invoice directly in the chat frame.",
+          "value": "Processing time drops from 30 minutes to 2 seconds. System data entry errors reach absolute zero. Support workforce output multiplies by 4x."
+        }
+      ]
+    },
+    "sales": {
+      "badge": "Revenue Generation",
+      "synergyTitle": "Synergy: Syrix Help Desk \u00d7 AI Agent Core \u00d7 HubSpot CRM",
+      "synergyDesc": "A complete autonomous revenue loop: automatically capturing off-hour opportunities, providing deep RAG consultative support, and logging meetings directly inside your CRM.",
+      "useCases": [
+        {
+          "id": "rfpParsing",
+          "tag": "Use Case 01: Off-Hour Pipeline Acceleration",
+          "title": "Instant 50MB RFP File Ingestion & Dynamic Contract Quoting",
+          "pain": "A high-value enterprise lead uploads a highly complex Request for Proposal (RFP) sheet at 11 PM requiring an urgent response strategy. Your sales engineering team is offline. Delaying follow-up until morning allows the prospect to lose patience and sign a contract with a global competitor.",
+          "solution": "The frontline Sales Agent intercepts the file asset. The engine runs deep vector RAG pipelines to scan the complete document context, validating item requirements against your product specs. The agent calculates maximum annual volume discount thresholds (25%) from secure policy matrices, generates a formal proposal draft, and dispatches the link to the client.",
+          "value": "Boosts off-hour lead conversion rates by 35%, translates late-night traffic into formal pipeline opportunities, and maximizes marketing ROI."
+        },
+        {
+          "id": "autoBooking",
+          "tag": "Use Case 02: Real Estate & Account Booking",
+          "title": "Continuous Nurturing & Automated CRM Calendar Booking",
+          "pain": "A corporate prospect browses luxury real estate assets or service tiers during weekends. They want to lock an onsite viewing appointment, but legacy contact forms force them to wait for manual representative confirmation, resulting in a 40% drop-off rate.",
+          "solution": "Leveraging secure MCP integration hooks connected to your HubSpot CRM, the Sales Agent actively scans open corporate calendar slots, displays an interactive scheduling calendar card right in the message screen, locks the chosen slot, and triggers automated email confirmations complete with map navigation paths.",
+          "value": "Completely removes appointment scheduling friction. Successful booking actions rise by 55% without spending any budget on human scheduling coordinators."
+        }
+      ]
+    },
+    "internalKnowledge": {
+      "badge": "Corporate Brain & Compliance",
+      "synergyTitle": "Synergy: Syrix AI Agent \u00d7 System Vector Ingestion Collections",
+      "synergyDesc": "An isolated, secure organizational neural network unifying detached file assets into a single access point governed by strict access maps.",
+      "useCases": [
+        {
+          "id": "itHelpdesk",
+          "tag": "Use Case 01: Infrastructure Backlogs",
+          "title": "IT Helpdesk Automation & Voice-Activated Server Tool Execution",
+          "pain": "A newly boarded developer spends 3 hours searching across unindexed wiki directories for environment setups, or stalls project velocity waiting for system administrators to approve a ticket to reset a crashed database staging container.",
+          "solution": "The Internal Agent functions right inside your team's Slack workspace. Staff issue natural language requests; the AI queries Confluence repositories via RAG to output perfect instructions with source paths under 2 seconds. Simultaneously, it validates operator clearances, calls secure Jira/XCORP MCP tools, and automatically deploys the server container reset routine.",
+          "value": "Reduces employee onboarding duration by 60%, deflicts 70% of routine internal IT helpdesk queues, and ensures continuous software engineering velocity."
+        },
+        {
+          "id": "hrCompliance",
+          "tag": "Use Case 02: Policy Mapping & Sovereignty",
+          "title": "Corporate Compliance Auditing & Secure SOP Document Discovery",
+          "pain": "HR professionals are constantly overwhelmed by repetitive employee inquiries regarding insurance, family leave metrics, and complex legal compliance frameworks, leaving zero time for talent retention and staff training.",
+          "solution": "All corporate guidelines and internal SOP files up to 50MB are securely index-tokenized into multi-tenant isolated Collections. The platform strictly enforces your corporate Role-Based Access Control (RBAC) maps; employees only extract answers they possess native permissions to view, preventing salary or executive record leaks.",
+          "value": "HR teams are cleared of administrative noise. Enterprise tri-tree data remains fully ring-fenced within your private corporate boundary, with zero leakage to public open-source training streams."
+        }
+      ]
+    },
+    "meetingExecution": {
+      "badge": "Executive Workspace Velocity",
+      "synergyTitle": "Synergy: Speech to Text \u00d7 AI Agent Core Brain \u00d7 Tool Action Matrix",
+      "synergyDesc": "A continuous system converting voice streams into operational software commands, empowering managers to coordinate enterprise pipelines completely hands-free.",
+      "useCases": [
+        {
+          "id": "meetingExtraction",
+          "tag": "Use Case 01: Post-Meeting Friction",
+          "title": "Automated Multi-Speaker Meeting Summarization & Jira Synchronization",
+          "pain": "Following 2-hour strategic corporate meetings, administrative assistants spend half a day compiling summaries. Commitments made between engineering and operations teams evaporate due to context decay, tasks are unassigned, and project momentum stalls.",
+          "solution": "Syrix Speech to Text processes raw meeting records, parsing up to 8 unique speaker streams via advanced diarization models under 200ms. The integrated AI agent analyzes contextual targets, structures the conversation into an executive summary checklist (Tasks, Owners, Deadlines), and calls MCP tools to deploy engineering tasks into Jira.",
+          "value": "Saves 5+ hours per week per corporate manager. Technical commitment tracking reaches an absolute 100% rate, boosting enterprise execution velocity by 25%."
+        },
+        {
+          "id": "commuteCommands",
+          "tag": "Use Case 02: Hands-Free Executive Hub",
+          "title": "On-the-Go Voice Command Ingestion & Automated Multi-Platform Routing",
+          "pain": "C-levels and operational directors commuting or traveling cannot open dashboards to log tickets or type long text instructions on mobile. Immediate strategic insights and high-priority infrastructure directives are delayed or lost completely.",
+          "solution": "The executive records a short voice memo: 'Open a high-priority ticket on Jira to build a data backup flow for XCorp and notify the Slack squad'. Syrix transcribes the input with precise domain-jargon recognition under 200ms, commanding the AI Agent to independently log the Jira task and route a formatted notification directly into the team Slack channel.",
+          "value": "Enforces zero friction internal task deployment. Executes multi-platform operations via voice. Keeps critical infrastructure pipelines moving while managers are offline."
+        }
+      ]
+    }
+  },
+  "pricing": {
+    "headline": "Transparent pricing. Pay for what you use.",
+    "subtext": "Syrix combines predictable base licensing with modular usage-based billing. No hidden fees.",
+    "tiers": {
+      "starter": {
+        "name": "Starter",
+        "bestFor": "Small teams getting started with AI",
+        "price": "Contact us",
+        "includes": [
+          "1 AI solution (Help Desk, AI Agent, or ASR)",
+          "Up to 3 concurrent sessions",
+          "Standard support (response < 24h)",
+          "Basic integration setup"
+        ]
+      },
+      "growth": {
+        "name": "Growth",
+        "bestFor": "Growing mid-market companies",
+        "price": "Contact us",
+        "includes": [
+          "Up to 2 AI solutions",
+          "Up to 10 concurrent sessions",
+          "Priority support (response < 4h)",
+          "SaaS add-ons available",
+          "30-day hypercare post-deployment"
+        ]
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "bestFor": "Large organizations at scale",
+        "price": "Custom",
+        "includes": [
+          "Unlimited AI solutions",
+          "Custom concurrent session capacity",
+          "Dedicated AI consultant",
+          "VPC deployment + SSO",
+          "Monthly performance reports",
+          "Quarterly strategic review",
+          "SLA: response < 2 hours"
+        ]
+      }
+    },
+    "usage": {
+      "helpdesk": "AI Helpdesk — Pay per peak concurrent session",
+      "helpdeskPrice": "$20/concurrent session/month",
+      "helpdeskAnalogy": "Think phone lines. Buy 10 lines, 10 customers chat simultaneously.",
+      "automation": "Automation — Pay per run",
+      "automationPrice": "First 3,000 runs/month: 500 VND/run (~$0.02)\n3,001+ runs/month: 250 VND/run (~$0.01)",
+      "saas": "SaaS Add-ons — Per user per month",
+      "saasItems": [
+        {
+          "name": "OKR",
+          "price": "$1-3/user/month"
+        },
+        {
+          "name": "PM",
+          "price": "$1-3/user/month"
+        },
+        {
+          "name": "Leave Management",
+          "price": "$1/user/month"
+        },
+        {
+          "name": "Timesheet",
+          "price": "$1/user/month"
+        },
+        {
+          "name": "Basic Ops Bundle",
+          "price": "$2/user"
+        },
+        {
+          "name": "Full Ops Bundle",
+          "price": "$4/user"
+        },
+        {
+          "name": "Advanced Ops Bundle",
+          "price": "$8/user"
+        }
+      ]
+    },
+    "sampleBill": "Example: Real Estate company, 30 employees",
+    "setup": {
+      "helpdesk": "AI Helpdesk (Medium): 40,000,000 VND",
+      "okr": "SaaS OKR add-on: +20,000,000 VND",
+      "totalSetup": "Total setup: 60,000,000 VND"
+    },
+    "monthly": {
+      "helpdesk": "Help Desk (peak 8 sessions): ~4,000,000 VND",
+      "automation": "Automation (2,500 runs): ~1,250,000 VND",
+      "okr": "OKR Basic (30 users × $1): ~750,000 VND",
+      "pm": "PM Basic (30 users × $1): ~750,000 VND",
+      "leave": "Leave (30 users × $1): ~750,000 VND",
+      "timesheet": "Timesheet (30 users × $1): ~750,000 VND",
+      "totalMonthly": "Total monthly: ~8,250,000 VND"
+    },
+    "comparison": "vs. Global alternatives:",
+    "comparisonText": "• AI Helpdesk: Up to 50x cheaper than per-conversation pricing\n• Automation: Competitive with open-source alternatives\n• OKR software: 60-80% cheaper than dedicated tools\n• PM software: 70-90% cheaper than dedicated tools\n\nEnterprise deployments typically see 40-60% cost savings vs. building in-house.",
+    "faq": {
+      "q1": "What is the contract length?",
+      "a1": "Starter and Growth tiers are month-to-month. Enterprise is minimum 3-month commitment.",
+      "q2": "Is there a free trial?",
+      "a2": "We don't offer self-serve trials. We start with a free AI Audit (60-minute session).",
+      "q3": "What payment methods do you accept?",
+      "a3": "Bank transfer for setup fees. Usage is invoiced monthly with net-7 payment terms."
+    }
+  },
+  "customerSupportSolution": {
+    "company": "FinSprint — fintech startup, 200 employees",
+    "decisionMaker": "Mai Tran, VP of Customer Success",
+    "challenge": "500 tickets/day, 4-hour average response time, 15 support agents",
+    "before": [
+      "500 daily support tickets across email, chat, and Zalo",
+      "4-hour average first response time",
+      "15 full-time support agents — 60% of time spent on repetitive queries",
+      "Lead qualification manual: every inbound interest requires a human to verify",
+      "After-hours inquiries go unanswered until next morning",
+      "Customer churn rate: 12% attributed to slow response"
+    ],
+    "solution": [
+      "Products deployed: Help Desk + AI Agent",
+      "Flow: Inbound inquiry (any channel)",
+      "→ Help Desk agent: RAG retrieval from product KB → instant accurate response",
+      "→ For complex issues: intelligent escalation to human",
+      "→ Lead detection: automatic CRM qualification → Sales notified",
+      "→ Follow-up emails automated",
+      "→ All decisions logged in audit trail"
+    ],
+    "impact": [
+      "First response time: 4 hours → under 10 minutes",
+      "Tickets auto-resolved: 80% (400 out of 500 daily)",
+      "Support team reduced: 15 agents → 5 (focused on complex cases)",
+      "Lead conversion rate: +35% (every inquiry handled instantly, even at 2 AM)",
+      "Customer satisfaction: +22% (measured by post-resolution survey)",
+      "Annual cost savings: ~$240K in reduced headcount"
+    ]
+  },
+  "internalKnowledgeSolution": {
+    "company": "LandVista — real estate firm, 500 employees",
+    "decisionMaker": "Anh Phong, Director of Operations",
+    "challenge": "Employees spend 30-45 minutes/day searching for policies",
+    "before": [
+      "500 employees across 12 offices, each with different local policies",
+      "Average 35 minutes/day spent searching internal documents",
+      "New hire onboarding: 2 weeks before productive",
+      "Knowledge silos: HR doesn't know Finance policies",
+      "15% of employee queries go unanswered or get wrong answers",
+      "3 HR staff dedicated to answering repetitive policy questions"
+    ],
+    "solution": [
+      "Products deployed: AI Agent + Workspace",
+      "Flow: Employee types question in Workspace",
+      "→ AI Agent retrieves from all connected knowledge collections simultaneously",
+      "→ Cross-departmental synthesis in one unified answer",
+      "→ Cited answers with source links",
+      "→ Feedback loop: employees can rate answers"
+    ],
+    "impact": [
+      "Policy search time: 35 minutes → 30 seconds",
+      "New hire onboarding: 2 weeks → 3 days",
+      "Internal search time reduced by 40%",
+      "HR policy questions automated: staff reduced from 3 to 1",
+      "Employee satisfaction with knowledge access: +45%",
+      "First contact resolution for internal queries: 92%"
+    ]
+  },
+  "meetingExecutionSolution": {
+    "company": "FlowTech — B2B SaaS, 100 employees",
+    "decisionMaker": "Minh Hoang, COO",
+    "challenge": "1-2 hours post-meeting admin per meeting",
+    "before": [
+      "15+ meetings per week across the organization",
+      "Each meeting generates 1-2 hours of post-meeting admin",
+      "Action items lost or forgotten — 30% of decisions never executed",
+      "Cross-functional meetings require updates to 3+ systems",
+      "No centralized record of decisions made",
+      "Follow-up takes 2-3 days of email ping-pong"
+    ],
+    "solution": [
+      "Products deployed: Speech-to-Text + Workspace",
+      "Flow: Meeting starts",
+      "→ STT transcribes in real-time with speaker identification",
+      "→ AI generates structured summary",
+      "→ Action items auto-assigned in Workspace with deadlines",
+      "→ System updates triggered automatically",
+      "→ Approved actions executed via voice confirmation"
+    ],
+    "impact": [
+      "Post-meeting admin: 1-2 hours → 0 minutes (fully automated)",
+      "Action items executed: 30% lost → 95% tracked and completed",
+      "System updates per meeting: 3 manual → 3 automatic",
+      "Cross-functional alignment: email ping-pong eliminated",
+      "Knowledge capture: every decision stored and searchable in AI Agent KB"
+    ]
+  },
+  "about": {
+    "headline": "Built by AI practitioners. Made for the real world.",
+    "body": "Syrix was founded by the team behind Xperc — a consulting firm that has deployed AI solutions for enterprises across Vietnam, from fintech to real estate to manufacturing. We saw the same pattern everywhere: companies invested in AI but couldn't make it execute real work.\n\nSo we built Syrix — not as another AI tool, but as an execution platform that bridges the gap between AI that talks and AI that does.\n\nOur team combines deep expertise in AI/ML, enterprise integration, and business process optimization."
+  },
+  "security": {
+    "headline": "Enterprise-grade security. Built into every layer.",
+    "subtext": "Your data never leaves your control. Syrix is designed for organizations that demand the highest standards of security, privacy, and compliance.",
+    "pillars": [
+      {
+        "title": "Private Deployment",
+        "description": "Syrix runs in your Virtual Private Cloud (VPC), fully isolated from other tenants."
+      },
+      {
+        "title": "Data Sovereignty",
+        "description": "All data — documents, queries, responses — stays within your infrastructure."
+      },
+      {
+        "title": "Access Control",
+        "description": "SSO integration with your identity provider (Okta, Azure AD, Google Workspace)."
+      },
+      {
+        "title": "Encryption",
+        "description": "AES-256 encryption at rest. TLS 1.3 in transit."
+      },
+      {
+        "title": "Audit & Compliance",
+        "description": "Every agent action is logged with full traceability."
+      },
+      {
+        "title": "Human-in-the-Loop",
+        "description": "High-risk actions require human approval gates."
+      }
+    ]
+  },
+  "bookDemo": {
+    "headline": "This isn't a sales call. It's a roadmap session.",
+    "subtext": "We'll understand your current stack, identify your biggest operational bottleneck, propose a tailored solution, and show you a live demo — all in under 60 minutes.",
+    "form": {
+      "name": "Full Name *",
+      "email": "Work Email *",
+      "company": "Company Name *",
+      "companySize": "Company Size *",
+      "challenge": "What challenge are you solving? *",
+      "submit": "Book Demo"
+    },
+    "quickContact": "Not ready for a full demo? Reach out directly:"
+  },
+  "contact": {
+    "headline": "Get in touch.",
+    "subtext": "Sales inquiries, partnership opportunities, or just want to learn more — we're here.",
+    "form": {
+      "name": "Full Name *",
+      "email": "Work Email *",
+      "company": "Company Name *",
+      "companySize": "Company Size *",
+      "challenge": "What challenge are you solving? *",
+      "subject": "Subject *",
+      "message": "Message *",
+      "submit": "Send Message"
+    },
+    "quickContact": "Zalo: [insert number]"
+  },
+  "customers": {
+    "headline": "Trusted by enterprises that demand results.",
+    "subtext": "See how leading organizations across industries use Syrix to transform their operations.",
+    "finSprint": {
+      "title": "FinSprint Case Study",
+      "result": "80% ticket auto-resolution, response time 4h → 10min",
+      "implementation": "Deployed Syrix Help Desk + AI Agent to transform their customer support operations."
+    },
+    "landVista": {
+      "title": "LandVista Case Study",
+      "result": "Search time 35min → 30sec, onboarding 2 weeks → 3 days",
+      "implementation": "Deployed Syrix AI Agent + Workspace to eliminate knowledge silos and accelerate onboarding."
+    },
+    "flowTech": {
+      "title": "FlowTech Case Study",
+      "result": "Post-meeting admin → zero, 95% action item execution",
+      "implementation": "Deployed Syrix Speech-to-Text + Workspace to automate meeting execution."
+    }
+  },
+  "privacyPolicy": {
+    "title": "Privacy Policy",
+    "information": "Information We Collect",
+    "usage": "How We Use Your Information",
+    "storage": "Data Storage & Security",
+    "contact": "hello@syrix.ai"
+  },
+  "footer": {
+    "top": "AI that doesn't just answer. It executes.",
+    "products": "Products",
+    "solutions": "Solutions",
+    "company": "Company",
+    "legal": "Legal",
+    "builtByXperc": "Built by Xperc",
+    "copyright": "© 2026 Syrix. All rights reserved."
+  },
+  "common": {
+    "learnMore": "Learn more →",
+    "viewDetails": "View Details →",
+    "bookDemo": "Book Demo",
+    "contactSales": "Contact Sales →",
+    "readyToStart": "Ready to start?",
+    "getStarted": "Get Started"
+  },
+  "meta": {
+    "title": "Syrix AI — AI Execution Platform for Enterprises",
+    "description": "Your AI shouldn't just answer questions. It should complete the work."
+  }
+}

@@ -1,0 +1,2 @@
+- bỏ section "Built on trust and transparency" và "Connect every business tool" và "Features that set you apart"
+- Đẩy section "From MCP to Workflow — Automate at Scale" lên trên, ngay liền dưới section "How Syrix Help Desk Works"

@@ -1,0 +1,355 @@
+# SYRIX HELP DESK — SECTION: HOW IT WORKS (IMPROVED)
+
+> **Goal:** Redesign the "How It Works" section with rich illustrations for each step, emphasizing MCP connectivity and Workflow as a standout feature.  
+> **Inspiration:** Glean's "Agent Orchestration" page + Activepieces-style workflow visualization  
+> **Location:** `/components/product/help-desk/HowItWorksSection.tsx` (complete rewrite)  
+> **Translations:** Use `helpDesk.howItWorks` keys from `messages/en.json` & `messages/vi.json`
+
+---
+
+## 1. OVERVIEW & DESIGN IMPROVEMENTS
+
+**Key Changes from Previous Version:**
+1. **Each step now has a visual illustration/mockup** — not just text
+2. **MCP Tools step highlights app connectivity** — shows examples of 100+ apps that can be connected
+3. **Workflow module is prominently featured** — highlighted as a powerful automation builder with 700+ apps
+4. **Visual flow is clearer** — arrow-based diagram showing data flow from setup → agent execution → workflow automation
+
+---
+
+## 2. LAYOUT STRUCTURE
+
+```tsx
+<section className="py-24 bg-card">
+  <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    {/* Header */}
+    <motion.div className="mb-14 text-center">
+      <h2 className="text-3xl font-bold sm:text-4xl">{t('howItWorks.title')}</h2>
+    </motion.div>
+
+    {/* Visual Flow Diagram */}
+    <div className="mx-auto max-w-6xl">
+      <HowItWorksDiagram t={t} />
+    </div>
+
+    {/* Workflow Highlight Section */}
+    <motion.div className="mt-16 text-center">
+      <WorkflowHighlightSection t={t} />
+    </motion.div>
+  </div>
+</section>
+```
+
+---
+
+## 3. DIAGRAM STRUCTURE (LEFT TO RIGHT)
+
+```
+┌────────────┐     ┌────────────┐     ┌────────────┐     ┌─────────────────────┐
+│  Step 1    │     │  Step 2    │     │  Step 3    │     │  Step 4 (MCP+WF)   │
+│  Instructions │   │ Knowledge  │     │   MCP Tools│     │  Workflow Integration│
+│  [Illustration] │ │  [Illustration]│ │ [App Grid]  │     │  [Workflow Builder] │
+└────────────┘     └────────────┘     └────────────┘     └─────────────────────┘
+       │                │                │                │
+       └────────────────┼────────────────┼────────────────┘
+                        ▼                ▼
+                  ┌──────────────────────┐
+                  │   AGENT IS RUNNING   │
+                  │   [Chat Mockup]      │
+                  └──────────────────────┘
+                        │
+                        ▼
+                  ┌──────────────────────┐
+                  │  AUTOMATED WORKFLOW  │
+                  │  [Workflow Diagram]  │
+                  └──────────────────────┘
+```
+
+---
+
+## 4. STEP 1: INSTRUCTIONS (AGENT ROLE)
+
+### Illustration Concept
+- **Visual:** A person typing into a configuration interface
+- **Elements:** 
+  - Code editor or settings panel
+  - Role definition text area
+  - Tone selector (Professional/Friendly/Direct)
+  - Behavior checkboxes
+
+```tsx
+<InstructionsIllustration t={t} />
+```
+
+### Content
+| Field | Content |
+|-------|---------|
+| **Icon** | `<Briefcase className="h-5 w-5" />` |
+| **Title** | `t('howItWorks.step1.title')` |
+| **Description** | `t('howItWorks.step1.desc')` |
+| **Accent** | `text-cyan-400` |
+
+---
+
+## 5. STEP 2: KNOWLEDGE COLLECTIONS
+
+### Illustration Concept
+- **Visual:** Document upload and indexing process
+- **Elements:**
+  - File upload zone (PDF, DOCX, URLs)
+  - Indexing progress bar
+  - Document preview thumbnails
+  - Knowledge graph visualization
+
+```tsx
+<KnowledgeIllustration t={t} />
+```
+
+### Content
+| Field | Content |
+|-------|---------|
+| **Icon** | `<BookOpen className="h-5 w-5" />` |
+| **Title** | `t('howItWorks.step2.title')` |
+| **Description** | `t('howItWorks.step2.desc')` |
+| **Accent** | `text-emerald-400` |
+
+---
+
+## 6. STEP 3: MCP TOOLS (CONNECT TO 100+ APPS)
+
+### Illustration Concept
+- **Visual:** Grid of app icons connecting to central MCP hub
+- **Elements:**
+  - Central MCP hub (glowing circle)
+  - 10-12 app icons in grid (CRM, Calendar, Payment, Email, etc.)
+  - Connection lines showing data flow
+  - "700+ apps" badge
+
+```tsx
+<MCPToolsIllustration t={t} />
+```
+
+### Content
+| Field | Content |
+|-------|---------|
+| **Icon** | `<Wrench className="h-5 w-5" />` |
+| **Title** | `t('howItWorks.step3.title')` |
+| **Description** | `t('howItWorks.step3.desc')` |
+| **Accent** | `text-amber-400` |
+
+### App Examples to Show:
+- Salesforce, HubSpot (CRM)
+- Google Calendar, Outlook (Calendar)
+- Stripe, PayPal (Payments)
+- Gmail, Slack (Communication)
+- Shopify, WooCommerce (E-commerce)
+- Notion, Confluence (Knowledge)
+- Salesforce Service Cloud, Zendesk (Support)
+
+---
+
+## 7. STEP 4: WORKFLOW INTEGRATION (HIGHLIGHT)
+
+### Illustration Concept
+- **Visual:** Workflow builder interface with automation nodes
+- **Elements:**
+  - Workflow canvas with draggable nodes
+  - "700+ Apps" badge prominently displayed
+  - XCorp branding/logo
+  - Active automation example (e.g., "Lead → CRM → Email → SMS")
+  - Connection to Agent Help Desk
+
+```tsx
+<WorkflowIllustration t={t} />
+```
+
+### Content
+| Field | Content |
+|-------|---------|
+| **Icon** | `<Settings className="h-5 w-5" />` |
+| **Title** | `t('howItWorks.step4.title')` |
+| **Description** | `t('howItWorks.step4.desc')` |
+| **Accent** | `text-purple-400` |
+| **Badge** | "700+ Apps" |
+| **CTA** | `t('howItWorks.workflow.cta')` |
+
+### Workflow Features to Highlight:
+- **700+ app integrations** — biggest in the industry
+- **Visual workflow builder** — drag-and-drop automation
+- **Direct Agent connection** — zero-code integration
+- **Complex business flows** — multi-step, conditional logic
+- **ActivePieces-style** — industry-leading automation platform
+
+---
+
+## 8. AGENT RUNNING SECTION (CENTER)
+
+### Visual
+- **Chat widget mockup** showing agent in action
+- **Status indicators:** "Agent is thinking...", "Processing...", "Done"
+- **Thinking log preview** showing steps
+
+```tsx
+<AgentRunningIllustration t={t} />
+```
+
+---
+
+## 9. AUTOMATED WORKFLOW SECTION (BOTTOM)
+
+### Visual
+- **Workflow execution diagram**
+- **Example flow:** Lead → Validate → Calculate → Book → Notify
+- **Status:** "Automated execution"
+
+```tsx
+<AutomatedWorkflowIllustration t={t} />
+```
+
+---
+
+## 10. TRANSLATION KEYS
+
+### English (`messages/en.json`)
+```json
+"howItWorks": {
+  "title": "How Syrix Help Desk Works",
+  "step1": {
+    "title": "1. Set Instructions",
+    "desc": "Define your agent's role, tone, and behavior. Configure how it should respond to customers."
+  },
+  "step2": {
+    "title": "2. Upload Knowledge",
+    "desc": "Upload product docs, policies, FAQs. Syrix indexes them and answers from verified sources only."
+  },
+  "step3": {
+    "title": "3. Connect MCP Tools",
+    "desc": "Connect to 100+ apps via Model Context Protocol. Agent executes actions autonomously."
+  },
+  "step3_apps": [
+    "CRM (Salesforce, HubSpot)",
+    "Calendar (Google, Outlook)",
+    "Payments (Stripe, PayPal)",
+    "Communication (Gmail, Slack)",
+    "E-commerce (Shopify, WooCommerce)",
+    "Knowledge (Notion, Confluence)"
+  ],
+  "step4": {
+    "title": "4. Workflow Integration",
+    "desc": "Connect XCorp Workflow for automated multi-step tasks. Build complex business flows with 700+ app integrations."
+  },
+  "step4_apps": "700+ apps",
+  "workflow": {
+    "title": "Powerful Workflow Automation",
+    "desc": "Create complex business automation flows. Connect directly to your agent with zero-code setup.",
+    "cta": "Explore Workflow →"
+  }
+}
+```
+
+### Vietnamese (`messages/vi.json`)
+```json
+"howItWorks": {
+  "title": "Syrix Help Desk hoạt động như thế nào",
+  "step1": {
+    "title": "1. Thiết lập Hướng dẫn",
+    "desc": "Định nghĩa vai trò, giọng điệu và hành vi của agent. Cấu hình cách nó phản hồi với khách hàng."
+  },
+  "step2": {
+    "title": "2. Tải lên Kiến thức",
+    "desc": "Tải lên tài liệu sản phẩm, chính sách, FAQ. Syrix lập chỉ mục và trả lời chỉ từ nguồn đã xác minh."
+  },
+  "step3": {
+    "title": "3. Kết nối Công cụ MCP",
+    "desc": "Kết nối với 100+ ứng dụng qua Model Context Protocol. Agent thực thi hành động tự động."
+  },
+  "step3_apps": [
+    "CRM (Salesforce, HubSpot)",
+    "Lịch (Google, Outlook)",
+    "Thanh toán (Stripe, PayPal)",
+    "Giao tiếp (Gmail, Slack)",
+    "Thương mại điện tử (Shopify, WooCommerce)",
+    "Kiến thức (Notion, Confluence)"
+  ],
+  "step4": {
+    "title": "4. Tích hợp Workflow",
+    "desc": "Kết nối XCorp Workflow cho các tác vụ tự động đa bước. Tạo luồng kinh doanh phức tạp với 700+ tích hợp ứng dụng."
+  },
+  "step4_apps": "700+ ứng dụng",
+  "workflow": {
+    "title": "Tự động hóa Workflow Mạnh mẽ",
+    "desc": "Tạo các luồng tự động kinh doanh phức tạp. Kết nối trực tiếp với agent của bạn với cài đặt không cần code.",
+    "cta": "Khám phá Workflow →"
+  }
+}
+```
+
+---
+
+## 11. HELPER COMPONENTS TO CREATE
+
+1. `InstructionsIllustration.tsx` — Configuration interface visual
+2. `KnowledgeIllustration.tsx` — Document upload & indexing visual
+3. `MCPToolsIllustration.tsx` — App grid with connection lines
+4. `WorkflowIllustration.tsx` — Workflow builder with 700+ badge
+5. `AgentRunningIllustration.tsx` — Agent chat mockup
+6. `AutomatedWorkflowIllustration.tsx` — Workflow execution diagram
+7. `AppGrid.tsx` — Reusable app icon grid component
+
+---
+
+## 12. DESIGN TOKENS
+
+| Token | Value | Usage |
+|-------|-------|-------|
+| `bg-card` | `#12121a` | Section background |
+| `bg-background` | `#0a0a0f` | Step cards |
+| `primary` | `#3b82f6` | Main accent |
+| `cyan-400` | `#22d3ee` | Step 1 accent |
+| `emerald-400` | `#34d399` | Step 2 accent |
+| `amber-400` | `#fbbf24` | Step 3 accent |
+| `purple-400` | `#a78bfa` | Step 4 accent |
+| `border` | `#1f1f2e` | Card borders |
+
+---
+
+## 13. ANIMATION SPEC
+
+**Responsiveness:**
+- Mobile: Stack vertically, simplified illustrations
+- Desktop: Horizontal flow with full diagrams
+
+**Animation:**
+- Steps: `initial: opacity:0/y:20` → `whileInView: opacity:1/y:0`
+- Stagger: `delay: i * 0.15`
+- Viewport: `once: true`
+- MCP App Grid: Animate connections on load
+- Workflow Badge: Pulse animation
+
+---
+
+## 14. DELIVERABLES
+
+✅ `messages/en.json` — Update `helpDesk.howItWorks` with detailed translations  
+✅ `messages/vi.json` — Mirror with Vietnamese translations  
+✅ `components/product/help-desk/HowItWorksSection.tsx` — Complete rewrite  
+✅ Helper components (7 files)  
+✅ `npm run build` — Pass without errors
+
+---
+
+## 15. KEY DIFFERENCES FROM PREVIOUS VERSION
+
+| Aspect | Previous | Improved |
+|--------|----------|----------|
+| **Illustrations** | Text-only | Rich visual diagrams |
+| **MCP Tools** | Generic description | App grid with 100+ examples |
+| **Workflow** | Basic CTA section | Prominent highlight with 700+ badge |
+| **ActivePieces comparison** | None | Mentioned as industry-leading |
+| **Visual flow** | Simple arrows | Rich diagrams with data flow |
+| **Step 3 apps** | No examples | 6 specific app categories shown |
+| **Step 4 emphasis** | Standard | Highlighted as unique selling point |
+
+---
+
+**Ready for agent to code.** Copy-paste this improved todo4.md into your agent prompt.

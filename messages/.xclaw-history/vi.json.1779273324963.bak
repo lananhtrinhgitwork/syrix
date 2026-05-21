@@ -1,0 +1,419 @@
+{
+  "navigation": {
+    "products": "Sản phẩm",
+    "helpDesk": "Hỗ trợ khách hàng",
+    "aiAgent": "Trí tuệ nhân tạo",
+    "workspace": "Không gian làm việc",
+    "asr": "Nhận diện giọng nói",
+    "tts": "Chuyển đổi văn bản",
+    "solutions": "Giải pháp",
+    "customerSupport": "Hỗ trợ khách hàng",
+    "internalKnowledge": "Kiến thức nội bộ",
+    "meetingExecution": "Thực thi cuộc họp",
+    "realEstate": "Bất động sản",
+    "financialServices": "Dịch vụ tài chính",
+    "retailEcommerce": "Thương mại điện tử",
+    "customers": "Khách hàng",
+    "pricing": "Bảng giá",
+    "about": "Về chúng tôi",
+    "contact": "Liên hệ",
+    "bookDemo": "Đặt Demo",
+    "privacyPolicy": "Chính sách bảo mật",
+    "builtByXperc": "Thiết kế bởi Xperc"
+  },
+  "hero": {
+    "headline": "AI của bạn không chỉ nên trả lời câu hỏi. Nó nên hoàn thành công việc.",
+    "subheadline": "Syrix kết nối các mô hình ngôn ngữ lớn trực tiếp với CRM, ERP, HRM, email và cơ sở dữ liệu kiến thức của bạn.",
+    "cta": "Đặt Demo"
+  },
+  "problem": {
+    "headline": "Doanh nghiệp của bạn đã có AI. Nhân viên của bạn vẫn làm việc thủ công.",
+    "body": "Hầu hết các doanh nghiệp đã áp dụng AI tạo sinh cho câu hỏi và tạo nội dung. Nhưng có một khoảng cách cơ bản giữa AI có thể trả lời câu hỏi và AI có thể thực thi quy trình kinh doanh.",
+    "before": "TRƯỚC",
+    "after": "SAU",
+    "beforeDescription": "Sale rep nhận lead đã qualifies lúc 11pm\n→ AI trả lời câu hỏi về sản phẩm ✓\n→ Nhưng vẫn phải thủ công: tạo bản ghi CRM, thông báo cho account manager\n→ 4 bước thủ công. 1 người có thể đã ngủ rồi.",
+    "afterDescription": "Cùng lead lúc 11pm với Syrix\n→ AI qualifies lead, tạo bản ghi CRM, thông báo cho nhóm\n→ Không can thiệp con người. Tự động khép kín."
+  },
+  "howItWorks": {
+    "headline": "Cách Syrix hoạt động",
+    "step1": { "title": "Kết nối", "description": "Syrix kết nối với các hệ thống hiện có của bạn — CRM, ERP, HRM, email, cơ sở dữ liệu kiến thức nội bộ — trong vài ngày, không phải vài tháng." },
+    "step2": { "title": "Hướng dẫn", "description": "Đội ngũ của bạn giao tiếp bằng ngôn ngữ tự nhiên. Không cần cấu hình phức tạp." },
+    "step3": { "title": "Thực thi", "description": "Syrix thực thi qua các ứng dụng tự động — tạo bản ghi, cập nhật hệ thống, gửi thông báo, hoàn thành quy trình." }
+  },
+  "productSuite": { "headline": "Hệ sinh thái Syrix" },
+  "metrics": { "headline": "Được xây dựng để đạt kết quả" },
+  "cta": {
+    "headline": "Sẵn sàng để làm cho AI thực sự hoạt động cho bạn?",
+    "subtext": "Lên lịch demo để xem Syrix có thể cải thiện các hoạt động của bạn như thế nào.",
+    "cta": "Đặt Demo"
+  },
+  "products": {
+    "headline": "Một nền tảng. Năm sản phẩm. Vô số khả năng.",
+    "subtext": "Syrix là một hệ sinh thái tích hợp của các sản phẩm hỗ trợ AI có hoạt động cùng nhau để tự động hóa các hoạt động kinh doanh của bạn từ đầu đến cuối."
+  },
+  "helpDesk": {
+    "headline": "Triển khai một agent không chỉ phản hồi khách hàng — nó giải quyết vấn đề của họ, cập nhật CRM của bạn, và chỉ nâng cao khi cần thiết.",
+    "subtext": "Syrix Help Desk là một nền tảng dịch vụ khách hàng và tự động hóa bán hàng thiên về AI hoạt động như một nhân viên số — có sẵn 24/7.",
+    "cta": "Đặt Demo",
+    "capabilities": {
+      "rag": "Tìm kiếm kiến thức được hỗ trợ bởi RAG từ cơ sở dữ liệu kiến thức sản phẩm của bạn",
+      "crm": "Tạo và cập nhật bản ghi lead CRM tự động",
+      "email": "Tự động hóa quy trình email (theo dõi, xác nhận, nâng cao)",
+      "escalation": "Nâng cao con người thông minh dựa trên cảm xúc, độ phức tạp và rủi ro",
+      "multiChannel": "Triển khai cùng agent qua widget web, email, và Zalo"
+    },
+    "journey": "Website truy cập → AI tư vấn → Xác minh danh tính → Lead đã qualifies → CRM đã tạo → Sales đã thông báo",
+    "integration": "300+ ứng dụng tích hợp qua MCP (Giao thức bối cảnh mô hình)",
+    "faq": {
+      "q1": "Tốn bao lâu để triển khai?",
+      "a1": "Thường là 3-6 tuần cho giải pháp đầu tiên, phụ thuộc vào sẵn sàng dữ liệu và độ phức tạp của tích hợp.",
+      "q2": "Bạn tích hợp với hệ thống nào?",
+      "a2": "Syrix kết nối với bất kỳ hệ thống nào có API — CRM, ERP, HRM, email, cơ sở dữ liệu kiến thức, và 300+ ứng dụng qua Giao thức bối cảnh mô hình.",
+      "q3": "Dữ liệu khách hàng của tôi có an toàn không?",
+      "a3": "Có. Syrix hoạt động trong môi trường riêng có VPC, tích hợp SSO, và các bản ghi kiểm tra toàn diện.",
+      "q4": "Khi nào con người bước vào?",
+      "a4": "Bạn cấu hình các quy tắc nâng cao dựa trên phân tích cảm xúc, độ phức tạp của chủ đề, phân khúc khách hàng.",
+      "q5": "Nếu AI không biết câu trả lời thì sao?",
+      "a5": "Syrix được xây dựng trên chính sách RAG nghiêm ngặt — nó chỉ trả lời từ tài liệu xác minh của công ty."
+    },
+    "trust": "Mọi quyết định của agent đều được ghi lại với đầy đủ bản ghi kiểm tra. Các hành động có rủi ro cao yêu cầu cổng phê duyệt con người."
+  },
+  "aiAgent": {
+    "headline": "Bộ não riêng tư của công ty bạn. Chính xác, an toàn, luôn sẵn sàng.",
+    "subtext": "Syrix AI Agent tiêu thụ tài liệu nội bộ của bạn và xây dựng cơ sở dữ liệu kiến thức riêng được mã hóa.",
+    "cta": "Đặt Demo",
+    "capabilities": {
+      "privateRetrieval": "Tìm kiếm kiến thức riêng từ bất kỳ tài liệu nội bộ nào",
+      "crossDeptSynthesis": "Kết hợp chéo nhiều phòng ban trong một câu trả lời",
+      "zeroRetention": "Không lưu trữ truy vấn hoặc phản hồi trên máy chủ bên ngoài"
+    },
+    "security": {
+      "vpc": "Triển khai trong mạng riêng tư ảo, hoàn toàn tách biệt",
+      "sso": "Tích hợp với nhà cung cấp danh tính hiện có của bạn",
+      "audit": "Mọi truy vấn và phản hồi đều được ghi lại cho tuân thủ",
+      "encryption": "Mã hóa tại nghỉ và khi chuyển, AES-256 + TLS 1.3"
+    },
+    "faq": {
+      "q1": "Các định dạng tài liệu nào được hỗ trợ?",
+      "a1": "PDF, DOCX, TXT, Markdown, Notion xuất, Confluence, SharePoint.",
+      "q2": "Cơ sở dữ liệu kiến thức được cập nhật bao lâu?",
+      "a2": "Bạn có thể kích hoạt cập nhật thủ công hoặc đặt lịch đồng bộ tự động.",
+      "q3": "Tôi có thể kiểm soát tài liệu nào AI truy cập không?",
+      "a3": "Có. Bạn tổ chức tài liệu thành bộ sưu tập và gán chúng cho agent.",
+      "q4": "Câu trả lời chính xác như thế nào?",
+      "a4": "Syrix AI chỉ tạo câu trả lời dựa trên các đoạn tài liệu đã truy xuất."
+    }
+  },
+  "workspace": {
+    "headline": "Một trung tâm. Mọi agent. Tất cả quy trình làm việc của bạn.",
+    "subtext": "Syrix Workspace loại bỏ việc chuyển đổi ứng dụng. Chat trở thành trung tâm hoạt động tập trung.",
+    "cta": "Đặt Demo",
+    "sentinel": "Thị giác thời gian thực vào lực lượng AI của bạn",
+    "sentinelContent": "Trang tổng quan Sentinel cung cấp một cái nhìn trực tiếp về trạng thái của mọi AI agent.",
+    "capabilities": {
+      "taskAssignment": "Nhân viên hướng dẫn agent bằng ngôn ngữ giao tiếp",
+      "summarization": "Tóm tắt cuộc hội thoại và luồng tự động",
+      "quickActions": "Kích hoạt quy trình nhanh (MCP Execution Bar)"
+    },
+    "workflow": "Quản lý duyệt trong chat → Workspace định hướng đến AI Agent → ERP đã cập nhật → Hệ thống tài chính đã thông báo",
+    "faq": {
+      "q1": "Workspace khác với Slack/Teams như thế nào?",
+      "a1": "Workspace không phải là ứng dụng nhắn tin — nó là trung tâm hoạt động.",
+      "q2": "Tôi có thể tích hợp các cuộc hội thoại Slack/Teams hiện có không?",
+      "a2": "Có. Workspace có thể kết nối với Slack và Teams.",
+      "q3": "Các quy trình nào có thể tự động hóa?",
+      "a3": "Bất kỳ quy trình nào có thể mô tả bằng ngôn ngữ tự nhiên: tạo báo cáo, tạo lead, định hướng duyệt."
+    }
+  },
+  "asr": {
+    "headline": "Nói. Syrix lo phần còn lại.",
+    "subtext": "Syrix Speech-to-Text chuyển ngôn ngữ nói thành hành động có cấu trúc.",
+    "cta": "Đặt Demo",
+    "meetingIntelligence": "Thông minh cuộc họp",
+    "voiceCommand": "Lệnh giọng nói cho quản lý",
+    "scenarios": {
+      "postMeeting": "Giám đốc Sale hoàn thành cuộc gọi khách hàng 75 phút. Tóm tắt được tạo.",
+      "betweenMeetings": "COO yêu cầu bằng miệng tóm tắt delta hợp đồng.",
+      "hrCreator": "Giám đốc HR ghi âm 15 phút đi qua chính sách mới."
+    },
+    "differentiation": {
+      "dimension": "Kích thước",
+      "genericTranscription": "Chuyển văn bản chung",
+      "syrix": "Syrix Speech-to-Text",
+      "output": "Văn bản thô",
+      "downstream": "Biến động",
+      "businessContext": "Bối cảnh kinh doanh",
+      "dataResidency": "Chỉ lưu trữ đám mây",
+      "actionExtraction": "Không có",
+      "approvalWorkflow": "Không có"
+    },
+    "ecosystem": "Speech-to-Text → Tóm tắt cuộc họp → Workspace → Quyết định/kiến thức → AI Agent"
+  },
+  "tts": {
+    "headline": "Chuyển bất kỳ văn bản nào thành giọng nói tự nhiên và sống động.",
+    "subtext": "Syrix Text-to-Speech chuyển đầu ra hệ thống, thông báo và bài viết cơ sở dữ liệu kiến thức thành giọng nói tự nhiên.",
+    "cta": "Đặt Demo",
+    "capabilities": [
+      "Đầu ra giọng nói tự nhiên đa ngôn ngữ (Tiếng Việt, Tiếng Anh và hơn thế nữa)",
+      "Hỗ trợ khả năng tiếp cận cho người dùng thị lực yếu",
+      "Thông báo giọng nói được kích hoạt bởi sự kiện hệ thống",
+      "Giọng nói phản hồi trong kênh hướng tới khách hàng",
+      "Lựa chọn thương hiệu giọng nói tùy chỉnh"
+    ],
+    "useCases": [
+      "Đọc lại phản hồi hỗ trợ khách hàng cho tích hợp điện thoại",
+      "Thông báo giọng nói: 'Lead mới đã qualifies từ Acme Corp — tiềm năng giao dịch 50K'",
+      "Khả năng tiếp cận: nhân viên với thị lực yếu có thể có bất kỳ tài liệu hoặc chính sách nào được đọc aloud",
+      "Xác nhận duyệt: 'PO-2024-3892 đã phê duyệt. Tài chính đã thông báo.'"
+    ]
+  },
+  "solutions": {
+    "headline": "Vấn đề thực sự. Giải pháp thực sự.",
+    "subtext": "Syrix giải quyết các thách thức vận hành lớn nhất mà các doanh nghiệp phải đối mặt."
+  },
+  "pricing": {
+    "headline": "Bảng giá minh bạch. Trả cho những gì bạn sử dụng.",
+    "subtext": "Syrix kết hợp cấp phép cơ sở với thanh toán dựa trên mức sử dụng. Không phí ẩn.",
+    "tiers": {
+      "starter": {
+        "name": "Starter",
+        "bestFor": "Nhóm nhỏ bắt đầu với AI",
+        "price": "Liên hệ chúng tôi",
+        "includes": ["1 giải pháp AI (Help Desk, AI Agent hoặc ASR)", "Tối đa 3 phiên đồng thời", "Hỗ trợ tiêu chuẩn (phản hồi < 24h)", "Cài đặt tích hợp cơ bản"]
+      },
+      "growth": {
+        "name": "Growth",
+        "bestFor": "Các công ty mid-market đang phát triển",
+        "price": "Liên hệ chúng tôi",
+        "includes": ["Tối đa 2 giải pháp AI", "Tối đa 10 phiên đồng thời", "Hỗ trợ ưu tiên (phản hồi < 4h)", "Thêm SaaS sẵn có", "Hypercare 30 ngày sau triển khai"]
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "bestFor": "Các tổ chức lớn ở quy mô",
+        "price": "Tùy chỉnh",
+        "includes": ["Vô hạn giải pháp AI", "Sức chứa phiên đồng thời tùy chỉnh", "Tư vấn AI riêng", "Triển khai VPC + SSO", "Báo cáo hiệu suất hàng tháng", "Đánh giá chiến lược hàng quý", "SLA: phản hồi < 2 giờ"]
+      }
+    },
+    "usage": {
+      "helpdesk": "AI Helpdesk — trả theo phiên đồng thời đỉnh",
+      "helpdeskPrice": "$20/concurrent session/month",
+      "helpdeskAnalogy": "Hãy tưởng tượng đường dây điện thoại. Mua 10 đường, 10 khách hàng chat đồng thời.",
+      "automation": "Tự động hóa — trả theo lần chạy",
+      "automationPrice": "Lần chạy đầu tiên 3,000: 500 VND/run (~$0.02)\n3,001+ lần chạy: 250 VND/run (~$0.01)",
+      "saas": "Thêm SaaS — theo người mỗi tháng",
+      "saasItems": [
+        { "name": "OKR", "price": "$1-3/user/month" },
+        { "name": "PM", "price": "$1-3/user/month" },
+        { "name": "Leave Management", "price": "$1/user/month" },
+        { "name": "Timesheet", "price": "$1/user/month" },
+        { "name": "Basic Ops Bundle", "price": "$2/user" },
+        { "name": "Full Ops Bundle", "price": "$4/user" },
+        { "name": "Advanced Ops Bundle", "price": "$8/user" }
+      ]
+    },
+    "sampleBill": "Ví dụ: Công ty bất động sản, 30 nhân viên",
+    "setup": {
+      "helpdesk": "AI Helpdesk (Medium): 40,000,000 VND",
+      "okr": "Thêm SaaS OKR: +20,000,000 VND",
+      "totalSetup": "Tổng thiết lập: 60,000,000 VND"
+    },
+    "monthly": {
+      "helpdesk": "Help Desk (8 phiên đỉnh): ~4,000,000 VND",
+      "automation": "Tự động hóa (2,500 lần chạy): ~1,250,000 VND",
+      "okr": "OKR Basic (30 người × $1): ~750,000 VND",
+      "pm": "PM Basic (30 người × $1): ~750,000 VND",
+      "leave": "Leave (30 người × $1): ~750,000 VND",
+      "timesheet": "Timesheet (30 người × $1): ~750,000 VND",
+      "totalMonthly": "Tổng tháng: ~8,250,000 VND"
+    },
+    "comparison": "So sánh thị trường",
+    "comparisonText": "• AI Helpdesk: Lên đến 50 lần rẻ hơn theo giá per-conversation\n• Tự động hóa: Cạnh tranh với các lựa chọn mã nguồn mở\n• OKR software: 60-80% rẻ hơn các công cụ chuyên biệt\n• PM software: 70-90% rẻ hơn các công cụ chuyên biệt\n\nCác triển khai doanh nghiệp thường thấy tiết kiệm chi phí 40-60%.",
+    "faq": {
+      "q1": "Thời hạn hợp đồng là bao lâu?",
+      "a1": "Starter và Growth theo tháng. Enterprise tối thiểu 3 tháng cam kết.",
+      "q2": "Có bản dùng thử miễn phí không?",
+      "a2": "Chúng tôi không cung cấp bản dùng thử tự phục vụ. Chúng tôi bắt đầu với Audit AI miễn phí.",
+      "q3": "Bạn chấp nhận phương thức thanh toán nào?",
+      "a3": "Chuyển khoản ngân hàng cho phí thiết lập. Sử dụng được invoiced hàng tháng với net-7."
+    }
+  },
+  "customerSupportSolution": {
+    "company": "FinSprint — công ty fintech, 200 nhân viên",
+    "decisionMaker": "Mai Tran, Phó Giám đốc Chăm sóc Khách hàng",
+    "challenge": "500 vé/ngày, thời gian phản hồi trung bình 4 giờ, 15 nhân viên hỗ trợ",
+    "before": [
+      "500 vé hỗ trợ hàng ngày qua email, chat và Zalo",
+      "Thời gian phản hồi đầu tiên trung bình 4 giờ",
+      "15 nhân viên toàn thời gian — 60% thời gian dành cho các truy vấn lặp lại",
+      "Định danh lead thủ công: mọi đầu vào quan tâm yêu cầu con người để xác minh",
+      "Hỏi ngoài giờ không được trả lời cho đến sáng hôm sau",
+      "Tỷ lệ churn khách hàng: 12% do phản hồi chậm"
+    ],
+    "solution": [
+      "Triển khai sản phẩm: Help Desk + AI Agent",
+      "Đầu vào (bất kỳ kênh nào)",
+      "→ Agent Help Desk: truy xuất từ KB sản phẩm bằng RAG → phản hồi chính xác ngay lập tức",
+      "→ Cho các vấn đề phức tạp: nâng cao thông minh đến con người",
+      "→ Phát hiện lead: định danh CRM tự động → Sales đã thông báo",
+      "→ Email tiếp theo được tự động hóa",
+      "→ Mọi quyết định đều được ghi lại trong bản ghi kiểm tra"
+    ],
+    "impact": [
+      "Thời gian phản hồi đầu tiên: 4 giờ → dưới 10 phút",
+      "Vé tự động giải quyết: 80% (400/500 hàng ngày)",
+      "Đội hỗ trợ giảm: 15 agent → 5 (tập trung vào các trường hợp phức tạp)",
+      "Tỷ lệ chuyển đổi lead: +35% (mọi đầu vào được xử lý ngay lập tức)",
+      "Sự hài lòng khách hàng: +22% (đo lường qua khảo sát sau giải quyết)",
+      "Tiết kiệm chi phí hàng năm: ~240K trong giảm nhân sự"
+    ]
+  },
+  "internalKnowledgeSolution": {
+    "company": "LandVista — công ty bất động sản, 500 nhân viên",
+    "decisionMaker": "Anh Phong, Giám đốc Vận hành",
+    "challenge": "Nhân viên dành 30-45 phút/ngày tìm kiếm chính sách",
+    "before": [
+      "500 nhân viên trong 12 văn phòng, mỗi văn phòng có chính sách địa phương khác nhau",
+      "Trung bình 35 phút/ngày dành để tìm kiếm tài liệu nội bộ",
+      "Bắt đầu nhân viên mới: 2 tuần trước khi có hiệu quả",
+      "Kho kiến thức cô lập: HR không biết chính sách tài chính",
+      "15% truy vấn nhân viên không được trả lời hoặc nhận câu trả lời sai",
+      "3 nhân viên HR được dành riêng để trả lời các truy vấn chính sách lặp lại"
+    ],
+    "solution": [
+      "Triển khai sản phẩm: AI Agent + Workspace",
+      "Nhân viên nhập câu hỏi trong Workspace",
+      "→ Agent AI truy xuất từ tất cả bộ sưu tập kiến thức đã kết nối đồng thời",
+      "→ Kết hợp chéo nhiều phòng ban trong một câu trả lời thống nhất",
+      "→ Câu trả lời được trích dẫn với liên kết nguồn",
+      "→ Vòng phản hồi: nhân viên có thể đánh giá câu trả lời"
+    ],
+    "impact": [
+      "Thời gian tìm kiếm chính sách: 35 phút → 30 giây",
+      "Bắt đầu nhân viên mới: 2 tuần → 3 ngày",
+      "Thời gian tìm kiếm nội bộ giảm 40%",
+      "Câu hỏi chính sách nhân viên tự động hóa: nhân sự giảm từ 3 xuống 1",
+      "Sự hài lòng nhân viên với tiếp cận kiến thức: +45%",
+      "Giải quyết vấn đề lần đầu tiên cho truy vấn nội bộ: 92%"
+    ]
+  },
+  "meetingExecutionSolution": {
+    "company": "FlowTech — B2B SaaS, 100 nhân viên",
+    "decisionMaker": "Minh Hoang, COO",
+    "challenge": "1-2 giờ hành chính sau mỗi cuộc họp",
+    "before": [
+      "15+ cuộc họp mỗi tuần trong toàn tổ chức",
+      "Mỗi cuộc họp tạo ra 1-2 giờ hành chính sau cuộc họp",
+      "Nhiệm vụ bị mất hoặc quên — 30% quyết định không bao giờ được thực thi",
+      "Cuộc họp đa phòng ban yêu cầu cập nhật 3+ hệ thống",
+      "Không có bản ghi tập trung về các quyết định",
+      "Theo dõi mất 2-3 ngày email ping-pong"
+    ],
+    "solution": [
+      "Triển khai sản phẩm: Speech-to-Text + Workspace",
+      "Cuộc họp bắt đầu",
+      "→ STT chuyển danh sách trong thời gian thực với nhận dạng người nói",
+      "→ AI tạo tóm tắt có cấu trúc",
+      "→ Nhiệm vụ tự động gán trong Workspace với hạn chót",
+      "→ Cập nhật hệ thống được kích hoạt tự động",
+      "→ Các hành động được duyệt được thực thi qua xác nhận giọng nói"
+    ],
+    "impact": [
+      "Hành chính sau cuộc họp: 1-2 giờ → 0 phút (tự động hóa hoàn toàn)",
+      "Nhiệm vụ được thực thi: 30% mất → 95% được theo dõi và hoàn thành",
+      "Cập nhật hệ thống mỗi cuộc họp: 3 thủ công → 3 tự động",
+      "Sự đồng bộ đa phòng ban: xóa bỏ email ping-pong",
+      "Thu thập kiến thức: mọi quyết định được lưu và có thể tìm kiếm trong AI Agent KB"
+    ]
+  },
+  "about": {
+    "headline": "Được xây dựng bởi các thực tập sinh AI. Được làm cho thế giới thực.",
+    "body": "Syrix được thành lập bởi đội phía sau Xperc — một công ty tư vấn đã triển khai các giải pháp AI cho các doanh nghiệp trên toàn Việt Nam.\n\nVì vậy chúng tôi đã xây dựng Syrix — không phải là một công cụ AI khác, mà là một nền tảng thực thi lấp đầy khoảng cách giữa AI nói chuyện và AI làm việc.\n\nĐội ngũ của chúng tôi kết hợp chuyên sâu về AI/ML, tích hợp doanh nghiệp và tối ưu hóa quy trình kinh doanh."
+  },
+  "security": {
+    "headline": "Bảo mật cấp doanh nghiệp. Được xây dựng vào từng lớp.",
+    "subtext": "Dữ liệu của bạn không bao giờ rời khỏi kiểm soát của bạn.",
+    "pillars": [
+      { "title": "Triển khai riêng tư", "description": "Syrix chạy trong VPC của bạn, hoàn toàn tách biệt." },
+      { "title": "Souvereignty dữ liệu", "description": "Mọi dữ liệu vẫn trong hạ tầng của bạn." },
+      { "title": "Kiểm soát truy cập", "description": "Tích hợp SSO với nhà cung cấp danh tính của bạn." },
+      { "title": "Mã hóa", "description": "Mã hóa AES-256 khi nghỉ. TLS 1.3 khi chuyển." },
+      { "title": "Kiểm tra và tuân thủ", "description": "Mọi hành động agent được ghi lại." },
+      { "title": "Con người trong vòng lặp", "description": "Các hành động rủi ro cao yêu cầu phê duyệt con người." }
+    ]
+  },
+  "bookDemo": {
+    "headline": "Đây không phải là cuộc gọi bán hàng. Đây là phiên bản bản đồ lộ trình.",
+    "subtext": "Chúng tôi sẽ hiểu ngăn xếp hiện tại của bạn, xác định rào cản vận hành lớn nhất, đề xuất giải pháp được điều chỉnh và cho bạn thấy một demo trực tiếp.",
+    "form": {
+      "name": "Họ và tên *",
+      "email": "Email công việc *",
+      "company": "Tên công ty *",
+      "companySize": "Quy mô công ty *",
+      "challenge": "Mục tiêu bạn đang giải quyết là gì? *",
+      "submit": "Đặt Demo"
+    },
+    "quickContact": "Không sẵn sàng cho một demo đầy đủ? Liên hệ trực tiếp:"
+  },
+  "contact": {
+    "headline": "Liên hệ.",
+    "subtext": "Yêu cầu bán hàng, cơ hội đối tác, hoặc chỉ muốn học thêm — chúng tôi ở đây.",
+    "form": {
+      "name": "Họ và tên *",
+      "email": "Email công việc *",
+      "company": "Tên công ty *",
+      "companySize": "Quy mô công ty *",
+      "challenge": "Mục tiêu bạn đang giải quyết là gì? *",
+      "subject": "Chủ đề *",
+      "message": "Tin nhắn *",
+      "submit": "Gửi tin nhắn"
+    },
+    "quickContact": "Zalo: [Chèn số]"
+  },
+  "customers": {
+    "headline": "Được tin tưởng bởi các doanh nghiệp đòi hỏi kết quả.",
+    "subtext": "Xem cách các tổ chức dẫn đầu trong các ngành sử dụng Syrix.",
+    "finSprint": {
+      "title": "Case Study FinSprint",
+      "result": "80% ticket tự động giải quyết, thời gian phản hồi 4h → 10 phút",
+      "implementation": "Triển khai Syrix Help Desk + AI Agent để chuyển đổi hoạt động hỗ trợ khách hàng."
+    },
+    "landVista": {
+      "title": "Case Study LandVista",
+      "result": "Thời gian tìm kiếm 35 phút → 30 giây, onboarding 2 tuần → 3 ngày",
+      "implementation": "Triển khai Syrix AI Agent + Workspace để loại bỏ rào cản kiến thức."
+    },
+    "flowTech": {
+      "title": "Case Study FlowTech",
+      "result": "Hành chính sau cuộc họp → không, 95% nhiệm vụ hành động được thực thi",
+      "implementation": "Triển khai Syrix Speech-to-Text + Workspace để tự động hóa thực thi cuộc họp."
+    }
+  },
+  "privacyPolicy": {
+    "title": "Chính sách bảo mật",
+    "information": "Thông tin chúng tôi thu thập",
+    "usage": "Cách chúng tôi sử dụng thông tin của bạn",
+    "storage": "Lưu trữ dữ liệu và bảo mật",
+    "contact": "Liên hệ hello@syrix.ai"
+  },
+  "footer": {
+    "top": "AI không chỉ trả lời. Nó thực thi.",
+    "products": "Sản phẩm",
+    "solutions": "Giải pháp",
+    "company": "Công ty",
+    "legal": "Pháp lý",
+    "builtByXperc": "Thiết kế bởi Xperc",
+    "copyright": "© 2026 Syrix. Tất cả quyền được bảo lưu."
+  },
+  "common": {
+    "learnMore": "Tìm hiểu thêm →",
+    "viewDetails": "Xem chi tiết →",
+    "bookDemo": "Đặt Demo",
+    "contactSales": "Liên hệ Sales →",
+    "readyToStart": "Sẵn sàng bắt đầu?",
+    "getStarted": "Bắt đầu ngay"
+  },
+  "meta": {
+    "title": "Syrix AI — AI Execution Platform for Enterprises",
+    "description": "Your AI shouldn't just answer questions. It should complete the work."
+  }
+}
