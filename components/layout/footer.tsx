@@ -49,7 +49,6 @@ export default function Footer() {
             <ul className="space-y-3">
               <li><Link href="/about" className="text-sm text-muted-foreground hover:text-white transition-colors">{t('navigation.about')}</Link></li>
               <li><Link href="/security" className="text-sm text-muted-foreground hover:text-white transition-colors">Trust Center</Link></li>
-              <li><Link href="/customers" className="text-sm text-muted-foreground hover:text-white transition-colors">{t('navigation.customers')}</Link></li>
               <li><Link href="/contact" className="text-sm text-muted-foreground hover:text-white transition-colors">{t('navigation.contact')}</Link></li>
             </ul>
           </div>
