@@ -5,6 +5,7 @@ import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { ArrowRight, Lock, Shield, Database, FileText, Check, Users } from 'lucide-react';
 import CTA from '@/components/layout/cta';
+import Certifications from '@/components/trust-center/Certifications';
 
 export default function Security() {
   const t = useTranslations();
@@ -22,7 +23,7 @@ export default function Security() {
               transition={{ duration: 0.6 }}
               className="mb-6 text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl"
             >
-              {t('security.headline')}
+              Trust Centre
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -30,7 +31,7 @@ export default function Security() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="mb-10 text-lg text-muted-foreground md:text-xl"
             >
-              {t('security.subtext')}
+              Your data never leaves your control. XPERC is designed for organizations that demand the highest standards of security, privacy, and compliance.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -88,6 +89,9 @@ export default function Security() {
           </div>
         </div>
       </section>
+
+      {/* Certifications */}
+      <Certifications />
 
       {/* CTA */}
       <CTA />

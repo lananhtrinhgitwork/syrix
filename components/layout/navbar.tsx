@@ -1,11 +1,92 @@
 'use client';
 
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { useLocale, useTranslations } from 'next-intl';
 import { useState, useEffect, useRef } from 'react';
 import { Menu, X, Globe, ChevronDown } from 'lucide-react';
 import Logo from '@/components/ui/logo';
+
+function DropdownMenu({
+  name,
+  label,
+  items,
+  openDropdown,
+  toggleDropdown,
+  setOpenDropdown,
+  isActive,
+  localeHref,
+  closeMobileMenu,
+}: {
+  name: string;
+  label: string;
+  items: { label: string; href: string }[];
+  openDropdown: string | null;
+  toggleDropdown: (name: string) => void;
+  setOpenDropdown: (name: string | null) => void;
+  isActive: (path: string) => boolean;
+  localeHref: (path: string) => string;
+  closeMobileMenu: () => void;
+}) {
+  const localRef = useRef<HTMLDivElement>(null);
+  const router = useRouter();
+
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (localRef.current && !localRef.current.contains(e.target as Node)) {
+        setOpenDropdown(null);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [setOpenDropdown]);
+
+  return (
+    <div 
+      className="relative" 
+      ref={localRef}
+      onMouseEnter={() => setOpenDropdown(name)}
+      onMouseLeave={() => setOpenDropdown(null)}
+    >
+      <button
+        onClick={() => toggleDropdown(name)}
+        className={`flex items-center gap-1 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+          isActive(items[0]?.href?.split('/').slice(0, 2).join('/') || '')
+            ? 'text-primary'
+            : 'text-muted-foreground hover:text-foreground'
+        }`}
+      >
+        {label}
+        <ChevronDown className={`h-3.5 w-3.5 transition-transform duration-200 ${openDropdown === name ? 'rotate-180' : ''}`} />
+      </button>
+      {openDropdown === name && (
+        <div className="absolute top-full left-0 pt-2 w-56 z-50">
+          <div className="rounded-xl border border-white/10 bg-[#0a0a0f]/95 backdrop-blur-xl shadow-2xl shadow-black/50 overflow-hidden">
+          <div className="py-2">
+            {items.map((item) => (
+              <Link
+                key={item.href}
+                href={localeHref(item.href)}
+                className={`block px-4 py-3 text-sm transition-all ${
+                  isActive(item.href) ? 'text-primary bg-primary/5' : 'text-muted-foreground hover:text-foreground hover:bg-white/5'
+                }`}
+                onClick={(e) => {
+                  e.preventDefault();
+                  router.push(localeHref(item.href));
+                  setOpenDropdown(null);
+                  closeMobileMenu();
+                }}
+              >
+                {item.label}
+              </Link>
+            ))}
+          </div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
 
 export default function Navbar() {
   const t = useTranslations();
@@ -31,61 +112,6 @@ export default function Navbar() {
     return cleanPath === path || cleanPath.startsWith(path + '/');
   };
 
-  const DropdownMenu = ({ name, items, label }: { name: string; items: { label: string; href: string }[]; label: string }) => {
-    const localRef = useRef<HTMLDivElement>(null);
-
-    useEffect(() => {
-      const handleClickOutside = (e: MouseEvent) => {
-        if (localRef.current && !localRef.current.contains(e.target as Node)) {
-          setOpenDropdown(null);
-        }
-      };
-      document.addEventListener('mousedown', handleClickOutside);
-      return () => document.removeEventListener('mousedown', handleClickOutside);
-    }, []);
-
-    return (
-      <div className="relative" ref={localRef}>
-        <button
-          onClick={() => toggleDropdown(name)}
-          onMouseEnter={() => setOpenDropdown(name)}
-          className={`flex items-center gap-1 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
-            isActive(items[0]?.href?.split('/').slice(0, 2).join('/') || '') 
-              ? 'text-primary' 
-              : 'text-muted-foreground hover:text-foreground'
-          }`}
-        >
-          {label}
-          <ChevronDown className={`h-3.5 w-3.5 transition-transform duration-200 ${openDropdown === name ? 'rotate-180' : ''}`} />
-        </button>
-        {openDropdown === name && (
-          <div
-            onMouseLeave={() => setOpenDropdown(null)}
-            className="absolute top-full left-0 mt-1 w-56 rounded-xl border border-white/10 bg-[#0a0a0f]/95 backdrop-blur-xl shadow-2xl shadow-black/50 overflow-hidden z-50"
-          >
-            <div className="py-2">
-              {items.map((item) => (
-                <Link
-                  key={item.href}
-                  href={localeHref(item.href)}
-                  className={`block px-4 py-3 text-sm transition-all ${
-                    isActive(item.href) ? 'text-primary bg-primary/5' : 'text-muted-foreground hover:text-foreground hover:bg-white/5'
-                  }`}
-                  onClick={() => {
-                    setOpenDropdown(null);
-                    setIsMenuOpen(false);
-                  }}
-                >
-                  {item.label}
-                </Link>
-              ))}
-            </div>
-          </div>
-        )}
-      </div>
-    );
-  };
-
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0a0a0f]/80 backdrop-blur-md border-b border-white/5">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -103,9 +129,14 @@ export default function Navbar() {
               items={[
                 { label: t('navigation.helpDesk'), href: '/products/help-desk' },
                 { label: t('navigation.aiAgent'), href: '/products/ai-agent' },
-                { label: t('navigation.workspace'), href: '/products/workspace' },
                 { label: t('navigation.asr'), href: '/products/asr' },
               ]}
+              openDropdown={openDropdown}
+              toggleDropdown={toggleDropdown}
+              setOpenDropdown={setOpenDropdown}
+              isActive={isActive}
+              localeHref={localeHref}
+              closeMobileMenu={() => setIsMenuOpen(false)}
             />
             <DropdownMenu
               name="solutions"
@@ -116,6 +147,12 @@ export default function Navbar() {
                 { label: t('navigation.internalKnowledge'), href: '/solutions/internal-knowledge' },
                 { label: t('navigation.meetingExecution'), href: '/solutions/meeting-execution' },
               ]}
+              openDropdown={openDropdown}
+              toggleDropdown={toggleDropdown}
+              setOpenDropdown={setOpenDropdown}
+              isActive={isActive}
+              localeHref={localeHref}
+              closeMobileMenu={() => setIsMenuOpen(false)}
             />
             <Link
               href={localeHref('/pricing')}
@@ -173,7 +210,6 @@ export default function Navbar() {
               <MobileNavSection title={t('navigation.products')} items={[
                 { label: t('navigation.helpDesk'), href: localeHref('/products/help-desk') },
                 { label: t('navigation.aiAgent'), href: localeHref('/products/ai-agent') },
-                { label: t('navigation.workspace'), href: localeHref('/products/workspace') },
                 { label: t('navigation.asr'), href: localeHref('/products/asr') },
               ]} onNavigate={() => setIsMenuOpen(false)} />
               <MobileNavSection title={t('navigation.solutions')} items={[

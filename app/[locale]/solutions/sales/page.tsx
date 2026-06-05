@@ -1,184 +1,146 @@
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
-import { useTranslations } from 'next-intl';
-import Link from 'next/link';
-import { ArrowRight, TrendingUp, Cpu, Terminal, AlertTriangle, CheckCircle, MessageSquare } from 'lucide-react';
-
-interface UseCaseItemStructure {
-  id: string;
-  tag: string;
-  title: string;
-  pain: string;
-  solution: string;
-  value: string;
-}
-
-function TerminalEmulator() {
-  const lines = [
-    '[RAG ENGINE] SCANNING 50MB RFP DOCUMENT...',
-    '[MATCHING] VALIDATING FEATURE REQUIREMENTS VS PRODUCT SPECS...',
-    '[PRICING] CALCULATING MAX DISCOUNT: 25% (ANNUAL VOLUME)',
-    '[MCP HUBSPOT] CALLING createQuote() ON CRM...',
-    '[QUOTE] GENERATED QUOTE #Q-2026-4432',
-    '[EMAIL] DISPATCHED TO CLIENT - RESPONSE WINDOW: 48H',
-  ];
-  const [visibleLines, setVisibleLines] = useState(0);
-  const intervalRef = useRef<NodeJS.Timeout | null>(null);
-
-  useEffect(() => {
-    intervalRef.current = setInterval(() => {
-      setVisibleLines((prev) => {
-        if (prev >= lines.length) { if (intervalRef.current) clearInterval(intervalRef.current); return prev; }
-        return prev + 1;
-      });
-    }, 450);
-    return () => { if (intervalRef.current) clearInterval(intervalRef.current); };
-  }, []);
-
-  return (
-    <div className="overflow-hidden rounded-xl border border-emerald-500/20 bg-black/80 shadow-lg">
-      <div className="flex items-center gap-2 border-b border-white/10 bg-white/[0.03] px-3 py-2">
-        <Terminal className="h-3.5 w-3.5 text-emerald-400" />
-        <span className="text-[10px] font-semibold text-white/50 uppercase tracking-wider">Sales Console</span>
-      </div>
-      <div className="p-3 font-mono text-[11px] leading-relaxed">
-        {lines.slice(0, visibleLines).map((line, i) => (
-          <p key={i} className={`${line.includes('GENERATED') || line.includes('DISPATCHED') ? 'text-emerald-400' : line.includes('CALCULATING') ? 'text-amber-400' : line.includes('SCANNING') ? 'text-cyan-400' : 'text-white/60'}`}>
-            {line}{i === visibleLines - 1 && visibleLines < lines.length && <span className="inline-block h-3.5 w-1.5 bg-emerald-400/70 ml-1 animate-pulse" />}
-          </p>
-        ))}
-      </div>
-    </div>
-  );
-}
-
-function TimelineNode({ icon: Icon, color, title, description, status }: { icon: any; color: string; title: string; description: string; status: string }) {
-  return (
-    <div className="flex-1">
-      <div className={`rounded-xl border ${color === 'red' ? 'border-red-500/20 bg-red-500/[0.04]' : color === 'cyan' ? 'border-cyan-500/20 bg-cyan-500/[0.04]' : 'border-emerald-500/20 bg-emerald-500/[0.04]'} p-5`}>
-        <div className="mb-3 flex items-center gap-2">
-          <Icon className={`h-5 w-5 ${color === 'red' ? 'text-red-400' : color === 'cyan' ? 'text-cyan-400' : 'text-emerald-400'}`} />
-          <span className={`text-xs font-bold uppercase tracking-widest ${color === 'red' ? 'text-red-400' : color === 'cyan' ? 'text-cyan-400' : 'text-emerald-400'}`}>{status}</span>
-        </div>
-        <h4 className="mb-2 text-sm font-bold text-white">{title}</h4>
-        <p className="text-xs leading-relaxed text-muted-foreground">{description}</p>
-      </div>
-    </div>
-  );
-}
+import { useTranslations, useLocale } from 'next-intl';
+import { TrendingUp, ArrowRight, Zap, Target, Search, CheckCircle2 } from 'lucide-react';
+import { ProductHero } from '@/components/ui/product-hero';
+import { ArchitectureDiagram } from '@/components/ui/architecture-diagram';
+import { FeatureTabs } from '@/components/ui/feature-tabs';
+import { FAQSection } from '@/components/ui/faq-section';
+import { UseCaseFlow } from '@/components/ui/use-case-flow';
+import { EcosystemGrid } from '@/components/ui/ecosystem-grid';
+import { MetricsBanner } from '@/components/ui/metrics-banner';
 
 export default function SalesSolution() {
-  const t = useTranslations('solutionsV4');
-  const tRaw = t.raw;
-  const useCasesList = (tRaw('sales.useCases') as UseCaseItemStructure[]) || [];
+  const t = useTranslations('solutions.sales');
+  const locale = useLocale();
+
+  const faqs = locale === 'vi' ? [
+    { question: "Syrix Sales Agent hoạt động như thế nào?", answer: "Nó đọc tài liệu sản phẩm của bạn, tự động phân tích nhu cầu của khách hàng, tính toán báo giá và đặt lịch họp thẳng vào CRM." },
+    { question: "Có cần nhân viên sales can thiệp không?", answer: "Không. Syrix có thể tự động 100% trong việc qualify leads (đánh giá tiềm năng) và chốt lịch hẹn. Nhân viên sales chỉ cần tham gia khi có lịch họp đã được chốt." },
+    { question: "Nó có thể lấy dữ liệu tồn kho hoặc bảng giá động không?", answer: "Có, thông qua kết nối MCP (Model Context Protocol), Agent có thể truy cập thời gian thực vào bảng giá, tồn kho và các API nội bộ khác của bạn." },
+  ] : [
+    { question: "How does Syrix Sales Agent work?", answer: "It reads your product documentation, automatically analyzes customer needs, calculates quotes, and books meetings directly into your CRM." },
+    { question: "Does it require human sales intervention?", answer: "No. Syrix can be 100% autonomous in qualifying leads and securing appointments. Human reps only step in when a meeting is booked." },
+    { question: "Can it pull live inventory or dynamic pricing?", answer: "Yes, via MCP (Model Context Protocol) integration, the Agent can access real-time pricing, inventory, and other internal APIs securely." },
+  ];
+
+  const HeroVisual = (
+    <div className="flex flex-col gap-4 p-4 h-[300px] justify-center">
+      <div className="bg-card p-4 rounded-xl border border-white/10 text-sm shadow-xl flex flex-col gap-3">
+         <div className="flex justify-between items-center border-b border-white/5 pb-2">
+            <span className="text-muted-foreground text-xs">New Lead: ACME Corp</span>
+            <span className="text-emerald-400 text-xs">Qualifying...</span>
+         </div>
+         <div className="flex items-center gap-2">
+            <Search className="w-4 h-4 text-primary" />
+            <span>Scanning 50MB RFP Document</span>
+         </div>
+         <div className="flex items-center gap-2">
+            <Zap className="w-4 h-4 text-primary" />
+            <span>Calculating volume discounts</span>
+         </div>
+         <div className="mt-2 bg-emerald-500/10 text-emerald-500 p-2 rounded text-xs flex justify-between items-center border border-emerald-500/20">
+            <span>Proposal Drafted & CRM Updated</span>
+            <ArrowRight className="w-4 h-4" />
+         </div>
+      </div>
+    </div>
+  );
 
   return (
-    <div className="min-h-screen pb-32">
-      <section className="border-b border-white/5 bg-gradient-to-b from-[#0a0a0f] to-[#12121a]/20 py-16">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid items-center gap-12 lg:grid-cols-5">
-            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="lg:col-span-2">
-              <span className="mb-4 inline-block rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1 text-xs font-semibold text-emerald-400">{t('sales.badge')}</span>
-              <h1 className="mb-4 text-3xl font-extrabold text-white">{t('sales.synergyTitle')}</h1>
-              <p className="text-base leading-relaxed text-muted-foreground">{t('sales.synergyDesc')}</p>
-            </motion.div>
-            <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: 0.2 }} className="lg:col-span-3">
-              <div className="flex items-center justify-center gap-3 rounded-2xl border border-white/10 bg-[#12121a]/50 p-6 backdrop-blur-sm">
-                <div className="flex flex-col items-center gap-1.5 rounded-xl border border-cyan-500/30 bg-cyan-500/10 px-4 py-3">
-                  <MessageSquare className="h-5 w-5 text-cyan-400" />
-                  <span className="text-[10px] font-semibold text-cyan-400">Help Desk</span>
-                </div>
-                <svg className="h-6 w-12 shrink-0 text-white/30" viewBox="0 0 40 10" fill="none"><path d="M0 5 L25 5" stroke="currentColor" strokeWidth="1.5" strokeDasharray="4 3" className="animate-pulse" /><path d="M22 1 L28 5 L22 9" stroke="currentColor" strokeWidth="1.5" /></svg>
-                <div className="flex flex-col items-center gap-1.5 rounded-xl border border-amber-500/30 bg-amber-500/10 px-4 py-3">
-                  <Cpu className="h-5 w-5 text-amber-400" />
-                  <span className="text-[10px] font-semibold text-amber-400">AI Agent</span>
-                </div>
-                <svg className="h-6 w-12 shrink-0 text-white/30" viewBox="0 0 40 10" fill="none"><path d="M0 5 L25 5" stroke="currentColor" strokeWidth="1.5" strokeDasharray="4 3" className="animate-pulse" /><path d="M22 1 L28 5 L22 9" stroke="currentColor" strokeWidth="1.5" /></svg>
-                <div className="flex flex-col items-center gap-1.5 rounded-xl border border-emerald-500/30 bg-emerald-500/10 px-4 py-3">
-                  <TrendingUp className="h-5 w-5 text-emerald-400" />
-                  <span className="text-[10px] font-semibold text-emerald-400">HubSpot CRM</span>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
+    <main className="min-h-screen pb-32">
+      {/* 1. Hero */}
+      <ProductHero 
+        badge="Revenue Generation"
+        title="Accelerate Deals with Autonomous Sales Engagement."
+        description="Never let a high-value lead turn cold. Syrix acts as an always-on BDR, parsing complex RFPs, calculating custom quotes, and booking meetings directly into your CRM."
+        ctaPrimary="Boost Sales Velocity"
+        mockupContent={HeroVisual}
+      />
 
-      {useCasesList.map((item, idx) => {
-        if (idx === 0) {
-          return (
-            <section key={item.id} className="py-24">
-              <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="mx-auto max-w-6xl">
-                  <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-4">
-                    <span className="inline-block text-xs font-bold uppercase tracking-widest text-emerald-400">{item.tag}</span>
-                    <h2 className="mt-2 text-2xl font-bold text-white md:text-3xl">{item.title}</h2>
-                  </motion.div>
-                  <div className="grid items-start gap-12 lg:grid-cols-2">
-                    <motion.div initial={{ opacity: 0, x: -15 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}>
-                      <div className="space-y-8">
-                        <div>
-                          <h4 className="mb-2 flex items-center gap-2 text-sm font-semibold text-red-400"><AlertTriangle className="h-4 w-4" /> The Pain</h4>
-                          <p className="text-sm leading-relaxed text-muted-foreground">{item.pain}</p>
-                        </div>
-                        <div>
-                          <h4 className="mb-2 flex items-center gap-2 text-sm font-semibold text-cyan-400"><Cpu className="h-4 w-4" /> How Syrix Solves</h4>
-                          <p className="text-sm leading-relaxed text-white/90">{item.solution}</p>
-                        </div>
-                        <div className="rounded-xl border border-emerald-500/10 bg-emerald-500/5 p-4">
-                          <h4 className="mb-2 flex items-center gap-2 text-sm font-semibold text-emerald-400"><CheckCircle className="h-4 w-4" /> Business Value</h4>
-                          <p className="text-sm leading-relaxed text-emerald-300/90">{item.value}</p>
-                        </div>
-                      </div>
-                    </motion.div>
-                    <motion.div initial={{ opacity: 0, x: 15 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.2 }}>
-                      <TerminalEmulator />
-                    </motion.div>
-                  </div>
-                </div>
-              </div>
-            </section>
-          );
-        } else {
-          return (
-            <section key={item.id} className="bg-card py-24">
-              <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="mx-auto max-w-6xl">
-                  <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-4">
-                    <span className="inline-block text-xs font-bold uppercase tracking-widest text-amber-400">{item.tag}</span>
-                    <h2 className="mt-2 text-2xl font-bold text-white md:text-3xl">{item.title}</h2>
-                  </motion.div>
-                  <div className="relative mt-10 flex flex-col gap-6 md:flex-row md:gap-3">
-                    <div className="absolute left-[19px] top-0 h-full w-[2px] bg-white/5 md:left-0 md:top-1/2 md:h-[2px] md:w-full" />
-                    <TimelineNode icon={AlertTriangle} color="red" status="Pain" title="The Bottleneck" description={item.pain} />
-                    <TimelineNode icon={Cpu} color="cyan" status="Execution" title="How Syrix Solves" description={item.solution} />
-                    <TimelineNode icon={CheckCircle} color="green" status="Value" title="Business Impact" description={item.value} />
-                  </div>
-                </div>
-              </div>
-            </section>
-          );
-        }
-      })}
+      {/* 2. Metrics */}
+      <MetricsBanner 
+        metrics={[
+          { value: "35%", label: "Increase in Pipeline Velocity" },
+          { value: "24/7", label: "Lead Qualification" },
+          { value: "100%", label: "CRM Sync Accuracy" }
+        ]}
+      />
 
-      <section className="relative overflow-hidden py-24">
-        <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 via-background to-background" />
-        <div className="absolute top-1/2 left-1/2 h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full bg-emerald-500/20 blur-3xl" />
-        <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-3xl text-center">
-            <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="mb-6 text-3xl font-bold sm:text-4xl">
-              Accelerate your enterprise sales cycle.
-            </motion.h2>
-            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.2 }}>
-              <Link href="/book-demo" className="group inline-flex items-center gap-2 rounded-xl bg-emerald-500 px-8 py-4 text-lg font-semibold text-white shadow-xl shadow-emerald-500/20 transition-all hover:bg-emerald-500/90 hover:scale-105 hover:shadow-emerald-500/30">
-                Book a Demo <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
-              </Link>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-    </div>
+      {/* 3. Architecture */}
+      <ArchitectureDiagram 
+        title="The Automated Sales Funnel" 
+        description="How Syrix turns raw inbound traffic into qualified, booked pipeline." 
+      />
+
+      {/* 4. Features Tabs */}
+      <FeatureTabs 
+        title="Close Deals While You Sleep"
+        tabs={[
+          {
+            id: 'rfp',
+            title: 'Instant RFP Parsing',
+            description: 'Ingest 50MB PDF requests, cross-reference with your product specs, and generate customized responses.',
+            visual: (
+              <div className="p-6 flex flex-col items-center justify-center h-full">
+                <Search className="w-12 h-12 text-primary opacity-50 mb-4 animate-pulse" />
+                <span className="text-sm text-center font-mono">Extracting requirements from <br/>ACME_Requirements_v2.pdf</span>
+              </div>
+            )
+          },
+          {
+            id: 'quote',
+            title: 'Dynamic Quoting',
+            description: 'Syrix evaluates client size and calculates pricing tiers securely without human bottlenecks.',
+            visual: (
+              <div className="w-full max-w-xs p-6 bg-card border border-white/10 rounded-lg flex flex-col gap-2">
+                 <div className="flex justify-between text-xs text-muted-foreground border-b border-white/5 pb-2">
+                   <span>Enterprise Tier</span>
+                   <span>Volume: 50k</span>
+                 </div>
+                 <div className="flex justify-between text-lg font-bold text-emerald-400 pt-2">
+                   <span>Final Quote:</span>
+                   <span>$4,500/mo</span>
+                 </div>
+              </div>
+            )
+          },
+          {
+            id: 'booking',
+            title: 'Automated CRM Booking',
+            description: 'Locks calendar slots and updates HubSpot/Salesforce via secure MCP.',
+            visual: (
+              <div className="flex items-center justify-center h-full">
+                 <div className="bg-emerald-500/10 text-emerald-500 border border-emerald-500/30 px-6 py-3 rounded-lg text-sm font-medium flex items-center gap-2">
+                    <CheckCircle2 className="w-5 h-5" /> Meeting Booked in HubSpot
+                 </div>
+              </div>
+            )
+          }
+        ]}
+      />
+
+      {/* 5. Use Cases */}
+      <UseCaseFlow 
+        title="Always-On Revenue Pipelines"
+        useCases={[
+          {
+            title: "Off-Hour Pipeline Acceleration",
+            description: "A high-value enterprise lead uploads a complex RFP at 11 PM. Delaying follow-up until morning risks losing the deal. Syrix intercepts the file, runs deep vector RAG to validate specs, calculates a 25% volume discount, and dispatches a formal proposal draft instantly.",
+            visual: (
+               <div className="p-6 text-center h-full flex flex-col items-center justify-center">
+                  <TrendingUp className="w-16 h-16 text-primary mb-4" />
+                  <span className="text-lg font-bold text-white">Capture 100% of After-Hours Traffic</span>
+               </div>
+            )
+          }
+        ]}
+      />
+
+      {/* 6. Ecosystem */}
+      <EcosystemGrid title="Integrates with your Revenue Stack" />
+
+      <FAQSection title={locale === 'vi' ? "Câu hỏi thường gặp" : "Frequently Asked Questions"} faqs={faqs} />
+    </main>
   );
 }

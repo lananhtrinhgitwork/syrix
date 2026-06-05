@@ -12,36 +12,26 @@ export default function Products() {
   const products = [
     {
       title: t('navigation.helpDesk'),
-      tagline: t('helpDesk.capabilities.rag'),
+      tagline: 'Autonomous Tier-1 Support',
       capabilities: [
-        t('helpDesk.capabilities.rag'),
-        t('helpDesk.capabilities.crm'),
-        t('helpDesk.capabilities.email'),
-        t('helpDesk.capabilities.escalation'),
-        t('helpDesk.capabilities.multiChannel'),
+        'RAG-powered knowledge retrieval',
+        'Autonomous CRM lead creation',
+        'Intelligent escalation',
+        'Multi-channel deployment',
       ],
       href: '/products/help-desk',
     },
     {
       title: t('navigation.aiAgent'),
-      tagline: t('aiAgent.capabilities.privateRetrieval'),
+      tagline: 'Internal Corporate Intelligence',
       capabilities: [
-        t('aiAgent.capabilities.privateRetrieval'),
-        t('aiAgent.capabilities.crossDeptSynthesis'),
-        t('aiAgent.capabilities.zeroRetention'),
+        'Private knowledge retrieval',
+        'Cross-departmental synthesis',
+        'Zero data retention',
       ],
       href: '/products/ai-agent',
     },
-    {
-      title: t('navigation.workspace'),
-      tagline: t('workspace.capabilities.taskAssignment'),
-      capabilities: [
-        t('workspace.capabilities.taskAssignment'),
-        t('workspace.capabilities.summarization'),
-        t('workspace.capabilities.quickActions'),
-      ],
-      href: '/products/workspace',
-    },
+
     {
       title: t('navigation.asr'),
       tagline: 'Speak. Syrix handles the rest.',
@@ -145,7 +135,7 @@ export default function Products() {
                 {[
                   { useCase: 'Customer query resolution', products: ['helpDesk'] },
                   { useCase: 'Internal policy search', products: ['aiAgent'] },
-                  { useCase: 'Multi-system workflow automation', products: ['workspace'] },
+
                   { useCase: 'Meeting transcription & summary', products: ['asr'] },
                   { useCase: 'Lead qualification & CRM update', products: ['helpDesk'] },
                   { useCase: 'Cross-department knowledge synthesis', products: ['aiAgent'] },

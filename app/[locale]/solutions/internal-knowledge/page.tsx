@@ -1,184 +1,136 @@
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
-import { useTranslations } from 'next-intl';
-import Link from 'next/link';
-import { ArrowRight, Database, Cpu, Terminal, AlertTriangle, CheckCircle, Shield } from 'lucide-react';
-
-interface UseCaseItemStructure {
-  id: string;
-  tag: string;
-  title: string;
-  pain: string;
-  solution: string;
-  value: string;
-}
-
-function TerminalEmulator() {
-  const lines = [
-    '[RAG QUERY] SEARCHING: SERVER_CONTAINER_RESET PROCEDURE...',
-    '[RETRIEVAL] MATCH: engineering_sop_v4.pdf - SECTION 3.2',
-    '[RBAC CHECK] OPERATOR CLEARANCE: CONFIRMED (TIER-2)',
-    '[MCP JIRA] CALLING createTicket() WITH PRIORITY P1...',
-    '[MCP XCORP] EXECUTING remoteContainerReset() ON STAGING...',
-    '[TICKET] TASK #JIRA-4423 CREATED - STATUS: IN_PROGRESS',
-  ];
-  const [visibleLines, setVisibleLines] = useState(0);
-  const intervalRef = useRef<NodeJS.Timeout | null>(null);
-
-  useEffect(() => {
-    intervalRef.current = setInterval(() => {
-      setVisibleLines((prev) => {
-        if (prev >= lines.length) { if (intervalRef.current) clearInterval(intervalRef.current); return prev; }
-        return prev + 1;
-      });
-    }, 450);
-    return () => { if (intervalRef.current) clearInterval(intervalRef.current); };
-  }, []);
-
-  return (
-    <div className="overflow-hidden rounded-xl border border-emerald-500/20 bg-black/80 shadow-lg">
-      <div className="flex items-center gap-2 border-b border-white/10 bg-white/[0.03] px-3 py-2">
-        <Terminal className="h-3.5 w-3.5 text-emerald-400" />
-        <span className="text-[10px] font-semibold text-white/50 uppercase tracking-wider">Agent Console</span>
-      </div>
-      <div className="p-3 font-mono text-[11px] leading-relaxed">
-        {lines.slice(0, visibleLines).map((line, i) => (
-          <p key={i} className={`${line.includes('CREATED') || line.includes('EXECUTING') ? 'text-emerald-400' : line.includes('CALLING') ? 'text-amber-400' : line.includes('SEARCHING') || line.includes('MATCH') ? 'text-cyan-400' : 'text-white/60'}`}>
-            {line}{i === visibleLines - 1 && visibleLines < lines.length && <span className="inline-block h-3.5 w-1.5 bg-emerald-400/70 ml-1 animate-pulse" />}
-          </p>
-        ))}
-      </div>
-    </div>
-  );
-}
-
-function TimelineNode({ icon: Icon, color, title, description, status }: { icon: any; color: string; title: string; description: string; status: string }) {
-  return (
-    <div className="flex-1">
-      <div className={`rounded-xl border ${color === 'red' ? 'border-red-500/20 bg-red-500/[0.04]' : color === 'cyan' ? 'border-cyan-500/20 bg-cyan-500/[0.04]' : 'border-emerald-500/20 bg-emerald-500/[0.04]'} p-5`}>
-        <div className="mb-3 flex items-center gap-2">
-          <Icon className={`h-5 w-5 ${color === 'red' ? 'text-red-400' : color === 'cyan' ? 'text-cyan-400' : 'text-emerald-400'}`} />
-          <span className={`text-xs font-bold uppercase tracking-widest ${color === 'red' ? 'text-red-400' : color === 'cyan' ? 'text-cyan-400' : 'text-emerald-400'}`}>{status}</span>
-        </div>
-        <h4 className="mb-2 text-sm font-bold text-white">{title}</h4>
-        <p className="text-xs leading-relaxed text-muted-foreground">{description}</p>
-      </div>
-    </div>
-  );
-}
+import { useTranslations, useLocale } from 'next-intl';
+import { Database, ShieldCheck, Network, FolderSearch, Lock } from 'lucide-react';
+import { ProductHero } from '@/components/ui/product-hero';
+import { FAQSection } from '@/components/ui/faq-section';
+import { ArchitectureDiagram } from '@/components/ui/architecture-diagram';
+import { FeatureTabs } from '@/components/ui/feature-tabs';
+import { UseCaseFlow } from '@/components/ui/use-case-flow';
+import { EcosystemGrid } from '@/components/ui/ecosystem-grid';
+import { MetricsBanner } from '@/components/ui/metrics-banner';
 
 export default function InternalKnowledgeSolution() {
-  const t = useTranslations('solutionsV4');
-  const tRaw = t.raw;
-  const useCasesList = (tRaw('internalKnowledge.useCases') as UseCaseItemStructure[]) || [];
+  const t = useTranslations('solutions.internalKnowledge');
+  const locale = useLocale();
+
+  const faqs = locale === 'vi' ? [
+    { question: "Agent có tuân thủ phân quyền nội bộ không?", answer: "Tuyệt đối tuân thủ. Syrix ánh xạ trực tiếp với sơ đồ Role-Based Access Control (RBAC) của bạn. Nhân viên không có quyền sẽ không thể tìm thấy tài liệu đó." },
+    { question: "Có cần đào tạo lại model khi có tài liệu mới không?", answer: "Không. Khi tài liệu được thêm vào, nó sẽ được cập nhật vào vector database trong vài mili-giây, Agent sẽ có kiến thức mới lập tức." }
+  ] : [
+    { question: "Does the Agent respect internal access rights?", answer: "Absolutely. Syrix maps directly to your Role-Based Access Control (RBAC). Employees without permission will never see restricted documents." },
+    { question: "Do we need to retrain the model when new docs are added?", answer: "No. When a document is added, it's synced to the vector database in milliseconds, updating the Agent's knowledge instantly." }
+  ];
+
+  const HeroVisual = (
+    <div className="flex flex-col gap-4 p-4 h-[300px] justify-center items-center relative">
+      <Database className="w-16 h-16 text-primary z-10" />
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+         <div className="w-40 h-40 border border-primary/20 rounded-full animate-ping opacity-20" />
+         <div className="w-60 h-60 border border-cyan-500/20 rounded-full animate-ping opacity-10 animation-delay-500" />
+      </div>
+      <div className="text-center z-10 mt-4 bg-[#0a0a0f]/80 p-3 rounded border border-white/10 backdrop-blur-md">
+         <div className="text-sm font-mono text-cyan-400">Searching 1.2M internal documents...</div>
+         <div className="text-xs text-muted-foreground mt-1">Returned exact answer in 1.4s</div>
+      </div>
+    </div>
+  );
 
   return (
-    <div className="min-h-screen pb-32">
-      <section className="border-b border-white/5 bg-gradient-to-b from-[#0a0a0f] to-[#12121a]/20 py-16">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid items-center gap-12 lg:grid-cols-5">
-            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="lg:col-span-2">
-              <span className="mb-4 inline-block rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1 text-xs font-semibold text-emerald-400">{t('internalKnowledge.badge')}</span>
-              <h1 className="mb-4 text-3xl font-extrabold text-white">{t('internalKnowledge.synergyTitle')}</h1>
-              <p className="text-base leading-relaxed text-muted-foreground">{t('internalKnowledge.synergyDesc')}</p>
-            </motion.div>
-            <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: 0.2 }} className="lg:col-span-3">
-              <div className="flex items-center justify-center gap-3 rounded-2xl border border-white/10 bg-[#12121a]/50 p-6 backdrop-blur-sm">
-                <div className="flex flex-col items-center gap-1.5 rounded-xl border border-cyan-500/30 bg-cyan-500/10 px-4 py-3">
-                  <Cpu className="h-5 w-5 text-cyan-400" />
-                  <span className="text-[10px] font-semibold text-cyan-400">AI Agent</span>
-                </div>
-                <svg className="h-6 w-12 shrink-0 text-white/30" viewBox="0 0 40 10" fill="none"><path d="M0 5 L25 5" stroke="currentColor" strokeWidth="1.5" strokeDasharray="4 3" className="animate-pulse" /><path d="M22 1 L28 5 L22 9" stroke="currentColor" strokeWidth="1.5" /></svg>
-                <div className="flex flex-col items-center gap-1.5 rounded-xl border border-amber-500/30 bg-amber-500/10 px-4 py-3">
-                  <Database className="h-5 w-5 text-amber-400" />
-                  <span className="text-[10px] font-semibold text-amber-400">Vector Collections</span>
-                </div>
-                <svg className="h-6 w-12 shrink-0 text-white/30" viewBox="0 0 40 10" fill="none"><path d="M0 5 L25 5" stroke="currentColor" strokeWidth="1.5" strokeDasharray="4 3" className="animate-pulse" /><path d="M22 1 L28 5 L22 9" stroke="currentColor" strokeWidth="1.5" /></svg>
-                <div className="flex flex-col items-center gap-1.5 rounded-xl border border-emerald-500/30 bg-emerald-500/10 px-4 py-3">
-                  <Shield className="h-5 w-5 text-emerald-400" />
-                  <span className="text-[10px] font-semibold text-emerald-400">RBAC Gate</span>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
+    <main className="min-h-screen pb-32">
+      {/* 1. Hero */}
+      <ProductHero 
+        badge="Corporate Intelligence"
+        title="Unify Fragmented Silos into a Secure Brain."
+        description="Stop losing 30% of employee productivity to data searching. Unify engineering wikis, HR policies, and Slack logs into a secure RAG repository with strict access control."
+        ctaPrimary="Build Internal Hub"
+        mockupContent={HeroVisual}
+      />
 
-      {useCasesList.map((item, idx) => {
-        if (idx === 0) {
-          return (
-            <section key={item.id} className="py-24">
-              <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="mx-auto max-w-6xl">
-                  <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-4">
-                    <span className="inline-block text-xs font-bold uppercase tracking-widest text-emerald-400">{item.tag}</span>
-                    <h2 className="mt-2 text-2xl font-bold text-white md:text-3xl">{item.title}</h2>
-                  </motion.div>
-                  <div className="grid items-start gap-12 lg:grid-cols-2">
-                    <motion.div initial={{ opacity: 0, x: -15 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}>
-                      <div className="space-y-8">
-                        <div>
-                          <h4 className="mb-2 flex items-center gap-2 text-sm font-semibold text-red-400"><AlertTriangle className="h-4 w-4" /> The Pain</h4>
-                          <p className="text-sm leading-relaxed text-muted-foreground">{item.pain}</p>
-                        </div>
-                        <div>
-                          <h4 className="mb-2 flex items-center gap-2 text-sm font-semibold text-cyan-400"><Cpu className="h-4 w-4" /> How Syrix Solves</h4>
-                          <p className="text-sm leading-relaxed text-white/90">{item.solution}</p>
-                        </div>
-                        <div className="rounded-xl border border-emerald-500/10 bg-emerald-500/5 p-4">
-                          <h4 className="mb-2 flex items-center gap-2 text-sm font-semibold text-emerald-400"><CheckCircle className="h-4 w-4" /> Business Value</h4>
-                          <p className="text-sm leading-relaxed text-emerald-300/90">{item.value}</p>
-                        </div>
-                      </div>
-                    </motion.div>
-                    <motion.div initial={{ opacity: 0, x: 15 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.2 }}>
-                      <TerminalEmulator />
-                    </motion.div>
-                  </div>
-                </div>
-              </div>
-            </section>
-          );
-        } else {
-          return (
-            <section key={item.id} className="bg-card py-24">
-              <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="mx-auto max-w-6xl">
-                  <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-4">
-                    <span className="inline-block text-xs font-bold uppercase tracking-widest text-amber-400">{item.tag}</span>
-                    <h2 className="mt-2 text-2xl font-bold text-white md:text-3xl">{item.title}</h2>
-                  </motion.div>
-                  <div className="relative mt-10 flex flex-col gap-6 md:flex-row md:gap-3">
-                    <div className="absolute left-[19px] top-0 h-full w-[2px] bg-white/5 md:left-0 md:top-1/2 md:h-[2px] md:w-full" />
-                    <TimelineNode icon={AlertTriangle} color="red" status="Pain" title="The Bottleneck" description={item.pain} />
-                    <TimelineNode icon={Cpu} color="cyan" status="Execution" title="How Syrix Solves" description={item.solution} />
-                    <TimelineNode icon={CheckCircle} color="green" status="Value" title="Business Impact" description={item.value} />
-                  </div>
-                </div>
-              </div>
-            </section>
-          );
-        }
-      })}
+      {/* 2. Metrics */}
+      <MetricsBanner 
+        metrics={[
+          { value: "30%", label: "Productivity Recovered" },
+          { value: "<2s", label: "Enterprise Search Latency" },
+          { value: "100%", label: "RBAC Compliance" }
+        ]}
+      />
 
-      <section className="relative overflow-hidden py-24">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-background" />
-        <div className="absolute top-1/2 left-1/2 h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full bg-emerald-500/20 blur-3xl" />
-        <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-3xl text-center">
-            <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="mb-6 text-3xl font-bold sm:text-4xl">
-              Give every employee instant access to your company&apos;s intelligence.
-            </motion.h2>
-            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.2 }}>
-              <Link href="/book-demo" className="group inline-flex items-center gap-2 rounded-xl bg-primary px-8 py-4 text-lg font-semibold text-white shadow-xl shadow-primary/20 transition-all hover:bg-primary/90 hover:scale-105 hover:shadow-primary/30">
-                Book a Demo <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
-              </Link>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-    </div>
+      {/* 3. Architecture */}
+      <ArchitectureDiagram 
+        title="The Unified Knowledge Protocol" 
+        description="How Syrix creates a single pane of glass without moving your underlying data." 
+      />
+
+      {/* 4. Features Tabs */}
+      <FeatureTabs 
+        title="Intelligence That Respects Boundaries"
+        tabs={[
+          {
+            id: 'search',
+            title: 'Cross-Silo Discovery',
+            description: 'Search across scattered folders simultaneously and extract perfect contextual answers with citations.',
+            visual: (
+              <div className="flex flex-col items-center justify-center h-full">
+                 <FolderSearch className="w-16 h-16 text-primary opacity-50 mb-4 animate-pulse" />
+                 <div className="flex gap-2">
+                   <span className="text-xs border border-white/20 bg-white/5 px-2 py-1 rounded">G-Drive</span>
+                   <span className="text-xs border border-white/20 bg-white/5 px-2 py-1 rounded">Confluence</span>
+                   <span className="text-xs border border-white/20 bg-white/5 px-2 py-1 rounded">Slack</span>
+                 </div>
+              </div>
+            )
+          },
+          {
+            id: 'rbac',
+            title: 'Strict RBAC Security',
+            description: 'Employees only access information they possess privileges to read. Zero data leakage.',
+            visual: (
+              <div className="flex items-center justify-center h-full w-full">
+                 <div className="bg-card border border-white/10 p-6 rounded-xl flex items-center gap-4 shadow-2xl">
+                    <Lock className="w-8 h-8 text-emerald-500" />
+                    <div>
+                      <div className="text-sm font-bold text-emerald-500">Access Verified</div>
+                      <div className="text-xs text-muted-foreground">Identity Token Matches Document ACL</div>
+                    </div>
+                 </div>
+              </div>
+            )
+          },
+          {
+            id: 'realtime',
+            title: 'Real-Time Vector Sync',
+            description: 'Drop an updated SOP into a folder, and the core brain updates instantly in milliseconds.',
+            visual: (
+              <div className="flex flex-col items-center justify-center h-full">
+                 <Network className="w-12 h-12 text-primary mb-4" />
+                 <span className="text-sm font-mono text-cyan-400">Syncing changes... 100%</span>
+              </div>
+            )
+          }
+        ]}
+      />
+
+      {/* 5. Use Cases */}
+      <UseCaseFlow 
+        title="Deploy Across Departments"
+        useCases={[
+          {
+            title: "Corporate Compliance & HR",
+            description: "HR professionals are constantly overwhelmed by repetitive employee inquiries. Syrix indexes all corporate guidelines into isolated collections. Employees get instant answers about insurance or leave, while executive payroll data remains completely ring-fenced.",
+            visual: (
+               <div className="p-6 h-full flex items-center justify-center">
+                  <ShieldCheck className="w-20 h-20 text-emerald-500" />
+               </div>
+            )
+          }
+        ]}
+      />
+
+      {/* 6. Ecosystem */}
+      <EcosystemGrid title="Connects with your Knowledge Stack" />
+
+      <FAQSection title={locale === 'vi' ? "Câu hỏi thường gặp" : "Frequently Asked Questions"} faqs={faqs} />
+    </main>
   );
 }

@@ -28,7 +28,6 @@ export default function Footer() {
             <ul className="space-y-3">
               <li><Link href="/products/help-desk" className="text-sm text-muted-foreground hover:text-white transition-colors">{t('navigation.helpDesk')}</Link></li>
               <li><Link href="/products/ai-agent" className="text-sm text-muted-foreground hover:text-white transition-colors">{t('navigation.aiAgent')}</Link></li>
-              <li><Link href="/products/workspace" className="text-sm text-muted-foreground hover:text-white transition-colors">{t('navigation.workspace')}</Link></li>
               <li><Link href="/products/asr" className="text-sm text-muted-foreground hover:text-white transition-colors">{t('navigation.asr')}</Link></li>
             </ul>
           </div>

@@ -1,184 +1,132 @@
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
-import { useTranslations } from 'next-intl';
-import Link from 'next/link';
-import { ArrowRight, Mic, Cpu, Terminal, AlertTriangle, CheckCircle, MessageSquare } from 'lucide-react';
-
-interface UseCaseItemStructure {
-  id: string;
-  tag: string;
-  title: string;
-  pain: string;
-  solution: string;
-  value: string;
-}
-
-function TerminalEmulator() {
-  const lines = [
-    '[STT ENGINE] PROCESSING 8-CHANNEL MEETING RECORDING...',
-    '[DIARIZATION] SPEAKER SEPARATION COMPLETE (4 UNIQUE IDS)',
-    '[NLP CONTEXT] EXTRACTING: DECISIONS, ACTIONS, DEADLINES...',
-    '[MCP JIRA] CALLING createTasks() FOR 6 ACTION ITEMS...',
-    '[MCP SLACK] DISPATCHING NOTIFICATION TO #engineering-team...',
-    '[EXECUTIVE SUMMARY] READY - TASKS: 6 | OWNERS: 4 | DUE: 14D',
-  ];
-  const [visibleLines, setVisibleLines] = useState(0);
-  const intervalRef = useRef<NodeJS.Timeout | null>(null);
-
-  useEffect(() => {
-    intervalRef.current = setInterval(() => {
-      setVisibleLines((prev) => {
-        if (prev >= lines.length) { if (intervalRef.current) clearInterval(intervalRef.current); return prev; }
-        return prev + 1;
-      });
-    }, 450);
-    return () => { if (intervalRef.current) clearInterval(intervalRef.current); };
-  }, []);
-
-  return (
-    <div className="overflow-hidden rounded-xl border border-cyan-500/20 bg-black/80 shadow-lg">
-      <div className="flex items-center gap-2 border-b border-white/10 bg-white/[0.03] px-3 py-2">
-        <Terminal className="h-3.5 w-3.5 text-cyan-400" />
-        <span className="text-[10px] font-semibold text-white/50 uppercase tracking-wider">Execution Console</span>
-      </div>
-      <div className="p-3 font-mono text-[11px] leading-relaxed">
-        {lines.slice(0, visibleLines).map((line, i) => (
-          <p key={i} className={`${line.includes('READY') || line.includes('COMPLETE') ? 'text-emerald-400' : line.includes('CALLING') || line.includes('DISPATCHING') ? 'text-amber-400' : line.includes('PROCESSING') || line.includes('EXTRACTING') ? 'text-cyan-400' : 'text-white/60'}`}>
-            {line}{i === visibleLines - 1 && visibleLines < lines.length && <span className="inline-block h-3.5 w-1.5 bg-cyan-400/70 ml-1 animate-pulse" />}
-          </p>
-        ))}
-      </div>
-    </div>
-  );
-}
-
-function TimelineNode({ icon: Icon, color, title, description, status }: { icon: any; color: string; title: string; description: string; status: string }) {
-  return (
-    <div className="flex-1">
-      <div className={`rounded-xl border ${color === 'red' ? 'border-red-500/20 bg-red-500/[0.04]' : color === 'cyan' ? 'border-cyan-500/20 bg-cyan-500/[0.04]' : 'border-emerald-500/20 bg-emerald-500/[0.04]'} p-5`}>
-        <div className="mb-3 flex items-center gap-2">
-          <Icon className={`h-5 w-5 ${color === 'red' ? 'text-red-400' : color === 'cyan' ? 'text-cyan-400' : 'text-emerald-400'}`} />
-          <span className={`text-xs font-bold uppercase tracking-widest ${color === 'red' ? 'text-red-400' : color === 'cyan' ? 'text-cyan-400' : 'text-emerald-400'}`}>{status}</span>
-        </div>
-        <h4 className="mb-2 text-sm font-bold text-white">{title}</h4>
-        <p className="text-xs leading-relaxed text-muted-foreground">{description}</p>
-      </div>
-    </div>
-  );
-}
+import { useTranslations, useLocale } from 'next-intl';
+import { Mic, Send, ServerCog, Activity, Headphones } from 'lucide-react';
+import { ProductHero } from '@/components/ui/product-hero';
+import { FAQSection } from '@/components/ui/faq-section';
+import { ArchitectureDiagram } from '@/components/ui/architecture-diagram';
+import { FeatureTabs } from '@/components/ui/feature-tabs';
+import { UseCaseFlow } from '@/components/ui/use-case-flow';
+import { EcosystemGrid } from '@/components/ui/ecosystem-grid';
+import { MetricsBanner } from '@/components/ui/metrics-banner';
 
 export default function MeetingExecutionSolution() {
-  const t = useTranslations('solutionsV4');
-  const tRaw = t.raw;
-  const useCasesList = (tRaw('meetingExecution.useCases') as UseCaseItemStructure[]) || [];
+  const t = useTranslations('solutions.meetingExecution');
+  const locale = useLocale();
+
+  const faqs = locale === 'vi' ? [
+    { question: "Hệ thống có nhận diện được nhiều người nói cùng lúc không?", answer: "Có. Thuật toán Diarization thế hệ mới cho phép tách chính xác nhiều giọng nói chồng chéo trong các cuộc họp đông người." },
+    { question: "Tôi có thể ra lệnh bằng giọng nói khi đang lái xe không?", answer: "Có, bạn chỉ cần đọc một câu tóm tắt, Syrix sẽ phiên dịch giọng nói và tự động tạo ticket Jira hoặc gửi báo cáo vào Slack." }
+  ] : [
+    { question: "Can the system recognize multiple speakers simultaneously?", answer: "Yes. Our next-gen Diarization algorithms accurately separate overlapping voices in crowded meetings." },
+    { question: "Can I issue voice commands while driving?", answer: "Yes, you can record a brief voice memo, and Syrix will transcribe it and automatically create Jira tickets or send Slack updates." }
+  ];
+
+  const HeroVisual = (
+    <div className="flex flex-col gap-4 p-4 h-[300px] justify-center items-center relative">
+      <div className="flex gap-2 mb-6">
+        {[1, 2, 3, 4, 5, 6].map((i) => (
+           <div key={i} className="w-2 bg-cyan-500 rounded-full animate-pulse" style={{ height: `${Math.random() * 40 + 20}px`, animationDelay: `${i * 0.1}s` }} />
+        ))}
+      </div>
+      <div className="bg-emerald-500/10 text-emerald-500 border border-emerald-500/20 px-4 py-2 rounded-full text-xs font-mono flex items-center gap-2">
+         <Send className="w-3 h-3" /> Auto-created Jira Ticket
+      </div>
+    </div>
+  );
 
   return (
-    <div className="min-h-screen pb-32">
-      <section className="border-b border-white/5 bg-gradient-to-b from-[#0a0a0f] to-[#12121a]/20 py-16">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid items-center gap-12 lg:grid-cols-5">
-            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="lg:col-span-2">
-              <span className="mb-4 inline-block rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">{t('meetingExecution.badge')}</span>
-              <h1 className="mb-4 text-3xl font-extrabold text-white">{t('meetingExecution.synergyTitle')}</h1>
-              <p className="text-base leading-relaxed text-muted-foreground">{t('meetingExecution.synergyDesc')}</p>
-            </motion.div>
-            <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: 0.2 }} className="lg:col-span-3">
-              <div className="flex items-center justify-center gap-3 rounded-2xl border border-white/10 bg-[#12121a]/50 p-6 backdrop-blur-sm">
-                <div className="flex flex-col items-center gap-1.5 rounded-xl border border-cyan-500/30 bg-cyan-500/10 px-4 py-3">
-                  <Mic className="h-5 w-5 text-cyan-400" />
-                  <span className="text-[10px] font-semibold text-cyan-400">Speech Input</span>
-                </div>
-                <svg className="h-6 w-12 shrink-0 text-white/30" viewBox="0 0 40 10" fill="none"><path d="M0 5 L25 5" stroke="currentColor" strokeWidth="1.5" strokeDasharray="4 3" className="animate-pulse" /><path d="M22 1 L28 5 L22 9" stroke="currentColor" strokeWidth="1.5" /></svg>
-                <div className="flex flex-col items-center gap-1.5 rounded-xl border border-amber-500/30 bg-amber-500/10 px-4 py-3">
-                  <Cpu className="h-5 w-5 text-amber-400" />
-                  <span className="text-[10px] font-semibold text-amber-400">STT Engine</span>
-                </div>
-                <svg className="h-6 w-12 shrink-0 text-white/30" viewBox="0 0 40 10" fill="none"><path d="M0 5 L25 5" stroke="currentColor" strokeWidth="1.5" strokeDasharray="4 3" className="animate-pulse" /><path d="M22 1 L28 5 L22 9" stroke="currentColor" strokeWidth="1.5" /></svg>
-                <div className="flex flex-col items-center gap-1.5 rounded-xl border border-emerald-500/30 bg-emerald-500/10 px-4 py-3">
-                  <MessageSquare className="h-5 w-5 text-emerald-400" />
-                  <span className="text-[10px] font-semibold text-emerald-400">Jira + Slack</span>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
+    <main className="min-h-screen pb-32">
+      {/* 1. Hero */}
+      <ProductHero 
+        badge="Executive Workspace"
+        title="Convert Voice Streams into System Commands."
+        description="Stop wasting hours on meeting minutes and manual data entry. Syrix processes multi-speaker audio and automatically pushes action items to Jira or Slack."
+        ctaPrimary="Transform Meetings"
+        mockupContent={HeroVisual}
+      />
 
-      {useCasesList.map((item, idx) => {
-        if (idx === 0) {
-          return (
-            <section key={item.id} className="py-24">
-              <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="mx-auto max-w-6xl">
-                  <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-4">
-                    <span className="inline-block text-xs font-bold uppercase tracking-widest text-cyan-400">{item.tag}</span>
-                    <h2 className="mt-2 text-2xl font-bold text-white md:text-3xl">{item.title}</h2>
-                  </motion.div>
-                  <div className="grid items-start gap-12 lg:grid-cols-2">
-                    <motion.div initial={{ opacity: 0, x: -15 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}>
-                      <div className="space-y-8">
-                        <div>
-                          <h4 className="mb-2 flex items-center gap-2 text-sm font-semibold text-red-400"><AlertTriangle className="h-4 w-4" /> The Pain</h4>
-                          <p className="text-sm leading-relaxed text-muted-foreground">{item.pain}</p>
-                        </div>
-                        <div>
-                          <h4 className="mb-2 flex items-center gap-2 text-sm font-semibold text-cyan-400"><Cpu className="h-4 w-4" /> How Syrix Solves</h4>
-                          <p className="text-sm leading-relaxed text-white/90">{item.solution}</p>
-                        </div>
-                        <div className="rounded-xl border border-emerald-500/10 bg-emerald-500/5 p-4">
-                          <h4 className="mb-2 flex items-center gap-2 text-sm font-semibold text-emerald-400"><CheckCircle className="h-4 w-4" /> Business Value</h4>
-                          <p className="text-sm leading-relaxed text-emerald-300/90">{item.value}</p>
-                        </div>
-                      </div>
-                    </motion.div>
-                    <motion.div initial={{ opacity: 0, x: 15 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.2 }}>
-                      <TerminalEmulator />
-                    </motion.div>
-                  </div>
-                </div>
-              </div>
-            </section>
-          );
-        } else {
-          return (
-            <section key={item.id} className="bg-card py-24">
-              <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="mx-auto max-w-6xl">
-                  <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-4">
-                    <span className="inline-block text-xs font-bold uppercase tracking-widest text-amber-400">{item.tag}</span>
-                    <h2 className="mt-2 text-2xl font-bold text-white md:text-3xl">{item.title}</h2>
-                  </motion.div>
-                  <div className="relative mt-10 flex flex-col gap-6 md:flex-row md:gap-3">
-                    <div className="absolute left-[19px] top-0 h-full w-[2px] bg-white/5 md:left-0 md:top-1/2 md:h-[2px] md:w-full" />
-                    <TimelineNode icon={AlertTriangle} color="red" status="Pain" title="The Bottleneck" description={item.pain} />
-                    <TimelineNode icon={Cpu} color="cyan" status="Execution" title="How Syrix Solves" description={item.solution} />
-                    <TimelineNode icon={CheckCircle} color="green" status="Value" title="Business Impact" description={item.value} />
-                  </div>
-                </div>
-              </div>
-            </section>
-          );
-        }
-      })}
+      {/* 2. Metrics */}
+      <MetricsBanner 
+        metrics={[
+          { value: "5hrs", label: "Saved per manager / week" },
+          { value: "100%", label: "Commitment Tracking" },
+          { value: "0", label: "Manual Data Entry" }
+        ]}
+      />
 
-      <section className="relative overflow-hidden py-24">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-background" />
-        <div className="absolute top-1/2 left-1/2 h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full bg-cyan-500/20 blur-3xl" />
-        <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-3xl text-center">
-            <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="mb-6 text-3xl font-bold sm:text-4xl">
-              Turn every meeting into execution.
-            </motion.h2>
-            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.2 }}>
-              <Link href="/book-demo" className="group inline-flex items-center gap-2 rounded-xl bg-primary px-8 py-4 text-lg font-semibold text-white shadow-xl shadow-primary/20 transition-all hover:bg-primary/90 hover:scale-105 hover:shadow-primary/30">
-                Book a Demo <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
-              </Link>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-    </div>
+      {/* 3. Architecture */}
+      <ArchitectureDiagram 
+        title="The Voice-to-Action Protocol" 
+        description="How spoken language translates seamlessly into backend system state changes." 
+      />
+
+      {/* 4. Features Tabs */}
+      <FeatureTabs 
+        title="Unrivaled Operational Momentum"
+        tabs={[
+          {
+            id: 'minutes',
+            title: 'Automated Minutes',
+            description: 'Instantly convert 2-hour conversational data into brief executive summaries with structured checkmarks.',
+            visual: (
+              <div className="w-full max-w-sm p-6 bg-card border border-white/10 rounded-lg shadow-xl text-sm">
+                <div className="font-bold border-b border-white/10 pb-2 mb-2">Meeting: Q3 Planning</div>
+                <ul className="space-y-2 text-muted-foreground">
+                   <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-emerald-500" /> Budget approved for marketing.</li>
+                   <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-emerald-500" /> Hiring paused until Q4.</li>
+                </ul>
+              </div>
+            )
+          },
+          {
+            id: 'jira',
+            title: 'Jira & Slack Sync',
+            description: 'The agent reads extracted action items and calls MCP tools to deploy engineering tasks autonomously.',
+            visual: (
+              <div className="flex flex-col items-center justify-center h-full p-6">
+                 <ServerCog className="w-12 h-12 text-primary mb-4" />
+                 <span className="text-sm text-center">Syncing action items to Jira Board...</span>
+              </div>
+            )
+          },
+          {
+            id: 'voice',
+            title: 'On-the-Go Commands',
+            description: 'Record quick voice memos while commuting. Syrix transcribes it and executes internal workflows.',
+            visual: (
+              <div className="flex flex-col items-center justify-center h-full p-6">
+                 <div className="bg-primary/20 w-16 h-16 rounded-full flex items-center justify-center border border-primary/50 animate-pulse mb-4">
+                    <Mic className="w-8 h-8 text-primary" />
+                 </div>
+                 <div className="text-xs bg-black/50 p-2 rounded">"Open an IT ticket to fix VPN access."</div>
+              </div>
+            )
+          }
+        ]}
+      />
+
+      {/* 5. Use Cases */}
+      <UseCaseFlow 
+        title="Executive Scenarios"
+        useCases={[
+          {
+            title: "Post-Meeting Friction",
+            description: "Following strategic meetings, administrative assistants spend half a day compiling summaries. Commitments evaporate and project momentum stalls. Syrix Speech to Text processes the audio, separates 8 unique speakers, and pushes structured tasks to Jira.",
+            visual: (
+               <div className="p-6 h-full flex flex-col items-center justify-center">
+                  <Activity className="w-16 h-16 text-primary mb-4" />
+                  <div className="text-lg font-bold text-white text-center">Accelerate Project Momentum</div>
+               </div>
+            )
+          }
+        ]}
+      />
+
+      {/* 6. Ecosystem */}
+      <EcosystemGrid title="Connects with your Meeting Stack" />
+
+      <FAQSection title={locale === 'vi' ? "Câu hỏi thường gặp" : "Frequently Asked Questions"} faqs={faqs} />
+    </main>
   );
 }
