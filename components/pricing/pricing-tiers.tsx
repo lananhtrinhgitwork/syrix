@@ -70,7 +70,7 @@ export function PricingTiers() {
   ];
 
   return (
-    <section className="py-24 bg-background">
+    <section className="pb-24 pt-0">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-6xl">
           <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
@@ -88,10 +88,10 @@ export function PricingTiers() {
                 }`}
               >
                 <div className="mb-8">
-                  <h3 className="text-2xl font-serif text-white mb-2">{tier.name}</h3>
+                  <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
                   <p className="text-sm text-gray-400 mb-6">{tier.subtitle}</p>
                   <div className="flex items-baseline gap-1 mb-2">
-                    <span className="text-4xl font-serif text-white tracking-tight">{tier.price}</span>
+                    <span className="text-4xl font-bold text-white tracking-tight">{tier.price}</span>
                     {tier.priceSuffix && <span className="text-sm text-gray-400">{tier.priceSuffix}</span>}
                   </div>
                   <p className="text-sm text-gray-400">{tier.duration}</p>

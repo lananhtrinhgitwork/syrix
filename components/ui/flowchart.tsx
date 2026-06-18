@@ -69,7 +69,7 @@ export function BeforeAfterFlowchart() {
           <div className="h-6 w-0.5 bg-gradient-to-b from-primary/50 to-primary relative">
              <motion.div 
                animate={{ y: [0, 24] }} 
-               transition={{ repeat: Infinity, duration: 1, delay: 0.5 }} 
+               transition={{ repeat: Infinity, duration: 1 }} 
                className="absolute top-0 -left-1 w-2.5 h-2.5 rounded-full bg-cyan-400 blur-[2px]" 
              />
           </div>

@@ -49,19 +49,23 @@ export default function Pricing() {
             </motion.div>
           </div>
         </div>
+        
+        {/* Act 2: The 3 Core Packages (From Figma) */}
+        <div className="mt-12 relative z-10">
+          <PricingTiers />
+        </div>
       </section>
 
-      {/* Act 2: The 3 Core Packages (From Figma) */}
-      <PricingTiers />
-
-      {/* Act 3: Usage-Based Engine */}
-      <UsageExplanation />
+      {/* Act 3 & 4: Usage-Based Engine & On-Premise */}
+      <section className="bg-black border-y border-white/10 relative overflow-hidden py-12">
+        <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))] opacity-20" />
+        <div className="relative z-10">
+          <UsageExplanation />
+        </div>
 
 
       {/* Act 5: Enterprise Customization */}
-      <section className="py-12 bg-black border-y border-white/10 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))] opacity-20" />
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 mt-12 mb-12">
            <div className="max-w-6xl mx-auto bg-gradient-to-r from-[#1a1a24] to-[#0a0a0f] border border-amber-500/20 rounded-2xl p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-[0_0_40px_rgba(245,158,11,0.1)]">
               <div className="flex items-center gap-6">
                  <div className="w-16 h-16 rounded-full bg-amber-500/10 flex items-center justify-center shrink-0">

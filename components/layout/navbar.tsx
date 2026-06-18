@@ -70,12 +70,6 @@ function DropdownMenu({
                 className={`block px-4 py-3 text-sm transition-all ${
                   isActive(item.href) ? 'text-primary bg-primary/5' : 'text-muted-foreground hover:text-foreground hover:bg-white/5'
                 }`}
-                onClick={(e) => {
-                  e.preventDefault();
-                  router.push(localeHref(item.href));
-                  setOpenDropdown(null);
-                  closeMobileMenu();
-                }}
               >
                 {item.label}
               </Link>
@@ -95,6 +89,11 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
 
+  useEffect(() => {
+    setOpenDropdown(null);
+    setIsMenuOpen(false);
+  }, [pathname]);
+
   const localeHref = (path: string) => `/${locale}${path}`;
 
   const toggleDropdown = (name: string) => {
@@ -111,6 +110,8 @@ export default function Navbar() {
     const cleanPath = pathname.replace(/^\/(vi|en)/, '');
     return cleanPath === path || cleanPath.startsWith(path + '/');
   };
+
+  if (pathname.includes('/book-demo') || pathname.includes('/contact')) return null;
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0a0a0f]/80 backdrop-blur-md border-b border-white/5">
@@ -174,13 +175,6 @@ export default function Navbar() {
 
           {/* Right Side Actions */}
           <div className="hidden md:flex items-center gap-3">
-            <button
-              onClick={toggleLocale}
-              className="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-white/5 transition-all duration-200"
-            >
-              <Globe className="h-4 w-4" />
-              <span className="uppercase tracking-wider">{locale}</span>
-            </button>
              <Link
               href={localeHref('/book-demo')}
               className="inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition-all duration-200 hover:bg-primary/90 hover:shadow-primary/40 hover:scale-[1.02]"
@@ -211,24 +205,17 @@ export default function Navbar() {
                 { label: t('navigation.helpDesk'), href: localeHref('/products/help-desk') },
                 { label: t('navigation.aiAgent'), href: localeHref('/products/ai-agent') },
                 { label: t('navigation.asr'), href: localeHref('/products/asr') },
-              ]} onNavigate={() => setIsMenuOpen(false)} />
+              ]} />
               <MobileNavSection title={t('navigation.solutions')} items={[
                 { label: t('navigation.customerSupport'), href: localeHref('/solutions/customer-support') },
                 { label: 'Sales Automation', href: localeHref('/solutions/sales') },
                 { label: t('navigation.internalKnowledge'), href: localeHref('/solutions/internal-knowledge') },
                 { label: t('navigation.meetingExecution'), href: localeHref('/solutions/meeting-execution') },
-              ]} onNavigate={() => setIsMenuOpen(false)} />
-              <MobileNavLink href={localeHref('/pricing')} label={t('navigation.pricing')} onNavigate={() => setIsMenuOpen(false)} />
-              <MobileNavLink href={localeHref('/contact')} label={t('navigation.contact')} onNavigate={() => setIsMenuOpen(false)} />
+              ]} />
+              <MobileNavLink href={localeHref('/pricing')} label={t('navigation.pricing')} />
+              <MobileNavLink href={localeHref('/contact')} label={t('navigation.contact')} />
             </div>
             <div className="mt-auto pt-8 border-t border-white/10 space-y-3">
-              <button
-                onClick={toggleLocale}
-                className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-lg text-sm font-medium text-muted-foreground border border-white/10 hover:text-foreground hover:bg-white/5 transition-all"
-              >
-                <Globe className="h-4 w-4" />
-                {locale === 'vi' ? 'Switch to English' : 'Chuyển sang Tiếng Việt'}
-              </button>
               <Link
                 href={localeHref('/book-demo')}
                 className="block w-full text-center rounded-lg bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition-all hover:bg-primary/90"
@@ -244,7 +231,7 @@ export default function Navbar() {
   );
 }
 
-function MobileNavSection({ title, items, onNavigate }: { title: string; items: { label: string; href: string }[]; onNavigate: () => void }) {
+function MobileNavSection({ title, items }: { title: string; items: { label: string; href: string }[] }) {
   const [expanded, setExpanded] = useState(false);
   return (
     <div>
@@ -262,7 +249,6 @@ function MobileNavSection({ title, items, onNavigate }: { title: string; items: 
               key={item.href}
               href={item.href}
               className="block px-4 py-2.5 rounded-lg text-sm text-muted-foreground hover:text-foreground hover:bg-white/5 transition-colors"
-              onClick={onNavigate}
             >
               {item.label}
             </Link>
@@ -273,12 +259,11 @@ function MobileNavSection({ title, items, onNavigate }: { title: string; items: 
   );
 }
 
-function MobileNavLink({ href, label, onNavigate }: { href: string; label: string; onNavigate: () => void }) {
+function MobileNavLink({ href, label }: { href: string; label: string; }) {
   return (
     <Link
       href={href}
       className="block px-4 py-3 rounded-lg text-sm font-semibold text-foreground hover:bg-white/5 transition-colors"
-      onClick={onNavigate}
     >
       {label}
     </Link>

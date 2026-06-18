@@ -30,7 +30,7 @@ export function ProductHero({ badge, title, description, ctaPrimary, ctaSecondar
             <span className="inline-flex items-center rounded-full bg-primary/10 px-3 py-1 text-sm font-semibold text-primary mb-6 border border-primary/20">
               {badge}
             </span>
-            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl mb-6">
+            <h1 className="text-4xl font-bold tracking-tight md:text-[58px] md:leading-[1.1] mb-6">
               {title}
             </h1>
             <p className="text-lg text-muted-foreground mb-8">
@@ -58,8 +58,7 @@ export function ProductHero({ badge, title, description, ctaPrimary, ctaSecondar
             className="relative"
           >
             {/* Mockup Container */}
-            <div className="relative rounded-2xl border border-white/10 bg-[#0a0a0f]/80 backdrop-blur-xl shadow-2xl p-4 sm:p-6">
-              <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
+            <div className="relative w-full flex items-center justify-center transform lg:scale-110">
               {mockupContent}
             </div>
           </motion.div>

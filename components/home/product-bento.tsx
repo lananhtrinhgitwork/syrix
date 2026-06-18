@@ -16,7 +16,7 @@ export function ProductBentoGrid() {
           <p className="text-lg text-muted-foreground">The Syrix product suite transforms every digital touchpoint into an autonomous, action-oriented intelligence.</p>
         </div>
 
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[250px]">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[210px]">
           
           {/* Help Desk (Large Left) */}
           <motion.div
@@ -35,7 +35,7 @@ export function ProductBentoGrid() {
                    <Bot className="w-6 h-6 text-primary" />
                  </div>
                  <h3 className="text-2xl font-bold mb-2">{t('helpDesk')}</h3>
-                 <p className="text-muted-foreground max-w-sm">Resolve 80% of support tickets instantly. Reads policies, calculates refunds, and acts on ERPs securely.</p>
+                 <p className="text-muted-foreground">Resolve 80% of support tickets instantly. Reads policies, calculates refunds, and acts on ERPs securely.</p>
               </div>
 
               {/* Visual Mockup */}
@@ -44,7 +44,7 @@ export function ProductBentoGrid() {
                     <div className="w-8 h-8 rounded-full bg-cyan-500/20 flex items-center justify-center"><MessageSquare className="w-4 h-4 text-cyan-400" /></div>
                     <div className="bg-primary/20 px-3 py-2 rounded-xl text-xs text-white">Refund my latest order.</div>
                  </div>
-                 <div className="flex gap-2 items-start ml-8">
+                 <div className="flex gap-2 items-start ml-10">
                     <div className="bg-[#1a1a24] px-3 py-2 rounded-xl text-xs text-emerald-400 border border-emerald-500/30">
                       Processing Stripe API... Refund of $49 issued.
                     </div>

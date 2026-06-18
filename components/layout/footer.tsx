@@ -1,12 +1,25 @@
-import Link from 'next/link';
-import { useTranslations } from 'next-intl';
-import Logo from '@/components/ui/logo';
+'use client';
 
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { useLocale, useTranslations } from 'next-intl';
+import { Globe } from 'lucide-react';
+import Logo from '@/components/ui/logo';
 export default function Footer() {
   const t = useTranslations();
+  const locale = useLocale();
+  const pathname = usePathname();
+
+  const toggleLocale = () => {
+    const newLocale = locale === 'vi' ? 'en' : 'vi';
+    const cleanPath = pathname.replace(/^\/(vi|en)/, '');
+    window.location.href = `/${newLocale}${cleanPath}`;
+  };
+
+  if (pathname.includes('/book-demo') || pathname.includes('/contact')) return null;
 
   return (
-    <footer className="border-t border-white/5 bg-[#0a0a0f]">
+    <footer className="bg-[#0a0a0f]">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8 md:gap-12">
           {/* Col 1: Brand (2x width on desktop) */}
@@ -43,13 +56,19 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Col 4: Company */}
+          {/* Col 4: Company & Contact */}
           <div>
             <h3 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground/60 mb-4">{t('footer.company')}</h3>
-            <ul className="space-y-3">
+            <ul className="space-y-3 mb-6">
               <li><Link href="/about" className="text-sm text-muted-foreground hover:text-white transition-colors">{t('navigation.about')}</Link></li>
               <li><Link href="/security" className="text-sm text-muted-foreground hover:text-white transition-colors">Trust Center</Link></li>
               <li><Link href="/contact" className="text-sm text-muted-foreground hover:text-white transition-colors">{t('navigation.contact')}</Link></li>
+            </ul>
+            <h3 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground/60 mb-4">Contact</h3>
+            <ul className="space-y-3">
+              <li className="text-sm text-muted-foreground">hello@syrix.ai</li>
+              <li className="text-sm text-muted-foreground">+84 90 123 4567</li>
+              <li className="text-sm text-muted-foreground">Vietnam</li>
             </ul>
           </div>
 
@@ -65,10 +84,17 @@ export default function Footer() {
 
       {/* Bottom bar */}
       <div className="border-t border-white/5">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-center text-xs text-muted-foreground/50">
             {t('footer.copyright')}
           </p>
+          <button
+            onClick={toggleLocale}
+            className="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-white/5 transition-all duration-200"
+          >
+            <Globe className="h-4 w-4" />
+            <span className="uppercase tracking-wider">{locale}</span>
+          </button>
         </div>
       </div>
     </footer>

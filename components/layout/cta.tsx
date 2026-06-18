@@ -11,10 +11,10 @@ export default function CTA() {
 
       <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
-          <h2 className="mb-4 text-3xl font-bold text-foreground sm:text-4xl md:text-5xl">
+          <h2 className="mb-4 text-3xl font-bold text-foreground sm:text-4xl md:text-5xl text-balance">
             {t('headline')}
           </h2>
-          <p className="mb-8 text-lg text-muted-foreground md:text-xl">
+          <p className="mb-8 text-lg text-muted-foreground md:text-xl text-balance">
             {t('subtext')}
           </p>
           <a href="/book-demo" className="inline-flex items-center gap-2 rounded-lg bg-primary px-8 py-4 text-base font-semibold text-primary-foreground shadow-2xl transition-all hover:bg-primary/90 hover:scale-105 hover:shadow-primary/25">

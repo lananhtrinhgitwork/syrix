@@ -1,17 +1,17 @@
 'use client';
 
-import { Network } from 'lucide-react';
+import { Database, Cloud, Kanban, FileText, Slack, Users, HardDrive, Headset } from 'lucide-react';
 
 export function EcosystemGrid({ title, description }: { title?: string, description?: string }) {
   const integrations = [
-    { name: 'HubSpot', type: 'CRM' },
-    { name: 'Salesforce', type: 'CRM' },
-    { name: 'Jira', type: 'DevOps' },
-    { name: 'Confluence', type: 'Wiki' },
-    { name: 'Slack', type: 'Comms' },
-    { name: 'Teams', type: 'Comms' },
-    { name: 'Google Drive', type: 'Storage' },
-    { name: 'Zendesk', type: 'Support' },
+    { name: 'HubSpot', type: 'CRM', icon: Database },
+    { name: 'Salesforce', type: 'CRM', icon: Cloud },
+    { name: 'Jira', type: 'DevOps', icon: Kanban },
+    { name: 'Confluence', type: 'Wiki', icon: FileText },
+    { name: 'Slack', type: 'Comms', icon: Slack },
+    { name: 'Teams', type: 'Comms', icon: Users },
+    { name: 'Google Drive', type: 'Storage', icon: HardDrive },
+    { name: 'Zendesk', type: 'Support', icon: Headset },
   ];
 
   return (
@@ -26,16 +26,19 @@ export function EcosystemGrid({ title, description }: { title?: string, descript
           <div className="absolute inset-0 bg-gradient-to-r from-background via-transparent to-background z-10 pointer-events-none" />
           
           <div className="flex flex-wrap justify-center gap-4 sm:gap-6 relative z-0">
-            {integrations.map((app) => (
-              <div 
-                key={app.name}
-                className="w-[140px] h-[80px] bg-card border border-white/10 rounded-xl flex flex-col items-center justify-center shadow-sm hover:border-primary/50 hover:bg-primary/5 transition-all cursor-default"
-              >
-                <Network className="w-5 h-5 text-muted-foreground mb-1" />
-                <span className="font-semibold text-sm">{app.name}</span>
-                <span className="text-[10px] text-muted-foreground uppercase tracking-wider">{app.type}</span>
-              </div>
-            ))}
+            {integrations.map((app) => {
+              const Icon = app.icon;
+              return (
+                <div 
+                  key={app.name}
+                  className="w-[140px] h-[80px] bg-card border border-white/10 rounded-xl flex flex-col items-center justify-center shadow-sm hover:border-primary/50 hover:bg-primary/5 transition-all cursor-default"
+                >
+                  <Icon className="w-5 h-5 text-muted-foreground mb-1" />
+                  <span className="font-semibold text-sm">{app.name}</span>
+                  <span className="text-[10px] text-muted-foreground uppercase tracking-wider">{app.type}</span>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>

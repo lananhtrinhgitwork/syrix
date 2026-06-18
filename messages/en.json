@@ -27,8 +27,8 @@
     "cta": "Book Demo"
   },
   "problem": {
-    "headline": "Your enterprise has AI. Your people are still doing the manual work.",
-    "body": "Most enterprises have adopted generative AI for Q&A and content creation. But there's a fundamental gap between an AI that can answer questions and an AI that can execute business processes.",
+    "headline": "AI That Does The Work.",
+    "body": "Your enterprise has AI. Your people are still doing the manual work. Most enterprises have adopted generative AI for Q&A and content creation. But there's a fundamental gap between an AI that can answer questions and an AI that can execute business processes.",
     "before": "BEFORE",
     "after": "AFTER",
     "beforeDescription": "Sales rep gets qualified lead at 11pm\n→ AI answers product question ✓\n→ But someone still manually: creates CRM record, notifies account manager\n→ 4 manual steps. 1 human who could have been sleeping.",

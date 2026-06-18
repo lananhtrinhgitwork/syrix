@@ -5,7 +5,7 @@ import { Bot, Network, Zap, PlayCircle, Users, GitMerge, Check } from 'lucide-re
 
 export function UsageExplanation() {
   return (
-    <section className="py-24 bg-card border-y border-white/5">
+    <section className="py-24">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">Usage-Based Engines</h2>
@@ -48,8 +48,9 @@ export function UsageExplanation() {
             <div className="mt-6 pt-6 border-t border-white/10 relative z-10">
                <div className="flex justify-between items-end">
                   <div>
-                     <p className="text-3xl font-bold text-white">$45<span className="text-lg text-muted-foreground font-normal">/mo</span></p>
-                     <p className="text-xs text-muted-foreground uppercase tracking-wider">Per Concurrent Session</p>
+                     <p className="text-3xl font-bold text-white">$20<span className="text-lg text-muted-foreground font-normal">/mo</span></p>
+                     <p className="text-xs text-muted-foreground uppercase tracking-wider">Per Peak Session (Pay-as-you-go)</p>
+                     <p className="text-[10px] text-muted-foreground mt-1 uppercase tracking-widest opacity-80">Or fixed tiers: $60 (3) · $200 (10) · $600 (30)</p>
                   </div>
                </div>
             </div>
@@ -91,8 +92,8 @@ export function UsageExplanation() {
             <div className="mt-6 pt-6 border-t border-white/10 relative z-10">
                <div className="flex justify-between items-end">
                   <div>
-                     <p className="text-3xl font-bold text-white">$15<span className="text-lg text-muted-foreground font-normal">/mo</span></p>
-                     <p className="text-xs text-muted-foreground uppercase tracking-wider">Per 1,000 Runs</p>
+                     <p className="text-2xl font-bold text-white mb-1">500 <span className="text-sm text-muted-foreground font-normal">VND/run</span><span className="text-[10px] text-muted-foreground uppercase tracking-wider ml-2">(0 - 3000 runs)</span></p>
+                     <p className="text-2xl font-bold text-white">250 <span className="text-sm text-muted-foreground font-normal">VND/run</span><span className="text-[10px] text-muted-foreground uppercase tracking-wider ml-2">(3001+ runs)</span></p>
                   </div>
                </div>
             </div>

@@ -30,7 +30,7 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h1 className="mb-6 text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
+              <h1 className="mb-6 text-4xl font-bold tracking-tight md:text-[58px] md:leading-[1.1]">
                 {t('hero.headline')}
               </h1>
             </motion.div>
