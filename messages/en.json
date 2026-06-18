@@ -10,6 +10,7 @@
     "customerSupport": "Customer Support",
     "internalKnowledge": "Internal Knowledge",
     "meetingExecution": "Meeting Execution",
+    "sales": "Sales Automation",
     "realEstate": "Real Estate",
     "financialServices": "Financial Services",
     "retailEcommerce": "Retail & E-commerce",
@@ -61,7 +62,7 @@
     "cta": "Book Demo"
   },
   "products": {
-    "headline": "One Platform. Five Products. Infinite Possibilities.",
+    "headline": "One Platform. Three Products. Infinite Possibilities.",
     "subtext": "Syrix is an integrated ecosystem of AI-powered products that work together to automate your business operations end-to-end."
   },
   "helpDesk": {

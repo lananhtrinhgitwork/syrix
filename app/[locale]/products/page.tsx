@@ -75,7 +75,7 @@ export default function Products() {
       {/* Product Cards */}
       <section className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-6xl">
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-3 lg:grid-cols-5">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
             {products.map((product, index) => (
               <motion.div
                 key={product.title}

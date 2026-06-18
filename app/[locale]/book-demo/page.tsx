@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import Link from 'next/link';
 import { ArrowRight, Mail, Phone, MapPin } from 'lucide-react';
 import CTA from '@/components/layout/cta';
@@ -9,13 +9,15 @@ import Logo from '@/components/ui/logo';
 
 export default function BookDemo() {
   const t = useTranslations();
+  const locale = useLocale();
+  const localeHref = (path: string) => `/${locale}${path}`;
 
   return (
     <div className="min-h-screen flex flex-col relative overflow-hidden bg-background">
       <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-primary/5 pointer-events-none" />
       
-      <div className="relative z-10 w-full p-6">
-        <Link href="/" className="inline-block transition-opacity hover:opacity-80">
+      <div className="relative z-50 w-full p-6">
+        <Link href={localeHref('/')} className="inline-block">
           <Logo className="h-8 w-auto" />
         </Link>
       </div>
@@ -42,11 +44,11 @@ export default function BookDemo() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="rounded-2xl border border-border bg-card/50 backdrop-blur-xl p-6 sm:p-8 shadow-2xl shadow-black/50"
           >
-            <div className="space-y-4">
+            <form className="space-y-4" onSubmit={(e) => { e.preventDefault(); alert('Form submitted successfully!'); }}>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label className="mb-2 block text-sm font-medium">{t('bookDemo.form.name')}</label>
-                  <input type="text" className="w-full rounded-xl border border-white/10 bg-black/50 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary transition-all" placeholder="Your full name" />
+                  <input type="text" required className="w-full rounded-xl border border-white/10 bg-black/50 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary transition-all" placeholder="Your full name" />
                 </div>
                 <div>
                   <label className="mb-2 block text-sm font-medium">{t('bookDemo.form.jobTitle')}</label>
@@ -58,8 +60,8 @@ export default function BookDemo() {
                 <div>
                   <label className="mb-2 block text-sm font-medium">{t('bookDemo.form.industry')}</label>
                   <div className="relative">
-                    <select className="w-full rounded-xl border border-white/10 bg-black/50 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary transition-all appearance-none text-white">
-                      <option value="" disabled selected className="text-gray-500">Select your industry</option>
+                    <select required defaultValue="" className="w-full rounded-xl border border-white/10 bg-black/50 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary transition-all appearance-none text-white">
+                      <option value="" disabled className="text-gray-500">Select your industry</option>
                       <option value="Construction & Engineering" className="bg-gray-900">Construction & Engineering</option>
                       <option value="Real Estate" className="bg-gray-900">Real Estate</option>
                       <option value="Manufacturing" className="bg-gray-900">Manufacturing</option>
@@ -70,7 +72,7 @@ export default function BookDemo() {
                 </div>
                 <div>
                   <label className="mb-2 block text-sm font-medium">{t('bookDemo.form.email')}</label>
-                  <input type="email" className="w-full rounded-xl border border-white/10 bg-black/50 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary transition-all" placeholder="your@email.com" />
+                  <input type="email" required className="w-full rounded-xl border border-white/10 bg-black/50 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary transition-all" placeholder="your@email.com" />
                 </div>
               </div>
 
@@ -82,9 +84,9 @@ export default function BookDemo() {
                 <div>
                   <label className="mb-2 block text-sm font-medium">{t('bookDemo.form.companySize')}</label>
                   <div className="relative">
-                    <select className="w-full rounded-xl border border-white/10 bg-black/50 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary transition-all appearance-none text-white">
+                    <select required defaultValue="50-100" className="w-full rounded-xl border border-white/10 bg-black/50 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary transition-all appearance-none text-white">
                       <option value="20-50" className="bg-gray-900">20-50</option>
-                      <option value="50-100" className="bg-gray-900" selected>50-100</option>
+                      <option value="50-100" className="bg-gray-900">50-100</option>
                       <option value="100-500" className="bg-gray-900">100-500</option>
                       <option value="500+" className="bg-gray-900">500+</option>
                     </select>
@@ -108,10 +110,10 @@ export default function BookDemo() {
                 <textarea rows={4} className="w-full rounded-xl border border-white/10 bg-black/50 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary transition-all" placeholder="Tell us briefly about your biggest operational challenge..." />
               </div>
 
-              <button className="mt-2 w-full rounded-xl bg-primary px-6 py-4 text-sm font-bold text-primary-foreground hover:bg-primary/90 transition-colors shadow-lg shadow-primary/25">
+              <button type="submit" className="mt-2 w-full rounded-xl bg-primary px-6 py-4 text-sm font-bold text-primary-foreground hover:bg-primary/90 transition-colors shadow-lg shadow-primary/25">
                 {t('bookDemo.form.submit')}
               </button>
-            </div>
+            </form>
           </motion.div>
         </div>
       </div>

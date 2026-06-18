@@ -17,6 +17,7 @@ function DropdownMenu({
   isActive,
   localeHref,
   closeMobileMenu,
+  mainHref,
 }: {
   name: string;
   label: string;
@@ -27,19 +28,21 @@ function DropdownMenu({
   isActive: (path: string) => boolean;
   localeHref: (path: string) => string;
   closeMobileMenu: () => void;
+  mainHref?: string;
 }) {
   const localRef = useRef<HTMLDivElement>(null);
   const router = useRouter();
 
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
-      if (localRef.current && !localRef.current.contains(e.target as Node)) {
+      // Only close if we are the currently open dropdown and the click is outside us
+      if (openDropdown === name && localRef.current && !localRef.current.contains(e.target as Node)) {
         setOpenDropdown(null);
       }
     };
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, [setOpenDropdown]);
+  }, [openDropdown, name, setOpenDropdown]);
 
   return (
     <div 
@@ -48,17 +51,32 @@ function DropdownMenu({
       onMouseEnter={() => setOpenDropdown(name)}
       onMouseLeave={() => setOpenDropdown(null)}
     >
-      <button
-        onClick={() => toggleDropdown(name)}
-        className={`flex items-center gap-1 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
-          isActive(items[0]?.href?.split('/').slice(0, 2).join('/') || '')
-            ? 'text-primary'
-            : 'text-muted-foreground hover:text-foreground'
-        }`}
-      >
-        {label}
-        <ChevronDown className={`h-3.5 w-3.5 transition-transform duration-200 ${openDropdown === name ? 'rotate-180' : ''}`} />
-      </button>
+      {mainHref ? (
+        <Link
+          href={localeHref(mainHref)}
+          onClick={() => setOpenDropdown(null)}
+          className={`flex items-center gap-1 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+            isActive(mainHref)
+              ? 'text-primary'
+              : 'text-muted-foreground hover:text-foreground'
+          }`}
+        >
+          {label}
+          <ChevronDown className={`h-3.5 w-3.5 transition-transform duration-200 ${openDropdown === name ? 'rotate-180' : ''}`} />
+        </Link>
+      ) : (
+        <button
+          onClick={() => toggleDropdown(name)}
+          className={`flex items-center gap-1 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+            isActive(items[0]?.href?.split('/').slice(0, 2).join('/') || '')
+              ? 'text-primary'
+              : 'text-muted-foreground hover:text-foreground'
+          }`}
+        >
+          {label}
+          <ChevronDown className={`h-3.5 w-3.5 transition-transform duration-200 ${openDropdown === name ? 'rotate-180' : ''}`} />
+        </button>
+      )}
       {openDropdown === name && (
         <div className="absolute top-full left-0 pt-2 w-56 z-50">
           <div className="rounded-xl border border-white/10 bg-[#0a0a0f]/95 backdrop-blur-xl shadow-2xl shadow-black/50 overflow-hidden">
@@ -67,6 +85,7 @@ function DropdownMenu({
               <Link
                 key={item.href}
                 href={localeHref(item.href)}
+                onClick={() => setOpenDropdown(null)}
                 className={`block px-4 py-3 text-sm transition-all ${
                   isActive(item.href) ? 'text-primary bg-primary/5' : 'text-muted-foreground hover:text-foreground hover:bg-white/5'
                 }`}
@@ -127,6 +146,7 @@ export default function Navbar() {
             <DropdownMenu
               name="products"
               label={t('navigation.products')}
+              mainHref="/products"
               items={[
                 { label: t('navigation.helpDesk'), href: '/products/help-desk' },
                 { label: t('navigation.aiAgent'), href: '/products/ai-agent' },
@@ -142,6 +162,7 @@ export default function Navbar() {
             <DropdownMenu
               name="solutions"
               label={t('navigation.solutions')}
+              mainHref="/solutions"
               items={[
                 { label: t('navigation.customerSupport'), href: '/solutions/customer-support' },
                 { label: 'Sales Automation', href: '/solutions/sales' },

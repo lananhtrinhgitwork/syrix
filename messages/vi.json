@@ -10,6 +10,7 @@
     "customerSupport": "Hỗ trợ khách hàng",
     "internalKnowledge": "Kiến thức nội bộ",
     "meetingExecution": "Thực thi cuộc họp",
+    "sales": "Bán hàng tự động",
     "realEstate": "Bất động sản",
     "financialServices": "Dịch vụ tài chính",
     "retailEcommerce": "Thương mại điện tử",
@@ -61,7 +62,7 @@
     "cta": "Đặt Demo"
   },
   "products": {
-    "headline": "Một nền tảng. Năm sản phẩm. Vô số khả năng.",
+    "headline": "Một nền tảng. Ba sản phẩm. Vô số khả năng.",
     "subtext": "Syrix là một hệ sinh thái tích hợp của các sản phẩm hỗ trợ AI có hoạt động cùng nhau để tự động hóa các hoạt động kinh doanh của bạn từ đầu đến cuối."
   },
   "helpDesk": {
