@@ -164,17 +164,24 @@ export default function Navbar() {
               {t('navigation.pricing')}
             </Link>
             <Link
-              href={localeHref('/contact')}
+              href={localeHref('/about')}
               className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
-                isActive('/contact') ? 'text-primary' : 'text-muted-foreground hover:text-foreground'
+                isActive('/about') ? 'text-primary' : 'text-muted-foreground hover:text-foreground'
               }`}
             >
-              {t('navigation.contact')}
+              {t('navigation.about')}
             </Link>
           </div>
 
           {/* Right Side Actions */}
           <div className="hidden md:flex items-center gap-3">
+            <button
+              onClick={toggleLocale}
+              className="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-white/5 transition-all duration-200"
+            >
+              <Globe className="h-4 w-4" />
+              <span className="uppercase tracking-wider">{locale === 'en' ? 'EN' : 'VI'}</span>
+            </button>
              <Link
               href={localeHref('/book-demo')}
               className="inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition-all duration-200 hover:bg-primary/90 hover:shadow-primary/40 hover:scale-[1.02]"
@@ -213,9 +220,16 @@ export default function Navbar() {
                 { label: t('navigation.meetingExecution'), href: localeHref('/solutions/meeting-execution') },
               ]} />
               <MobileNavLink href={localeHref('/pricing')} label={t('navigation.pricing')} />
-              <MobileNavLink href={localeHref('/contact')} label={t('navigation.contact')} />
+              <MobileNavLink href={localeHref('/about')} label={t('navigation.about')} />
             </div>
             <div className="mt-auto pt-8 border-t border-white/10 space-y-3">
+              <button
+                onClick={toggleLocale}
+                className="flex items-center justify-center gap-2 w-full rounded-lg border border-white/10 px-5 py-3 text-sm font-semibold text-foreground transition-all hover:bg-white/5"
+              >
+                <Globe className="h-4 w-4" />
+                <span className="uppercase tracking-wider">{locale === 'en' ? 'English' : 'Tiếng Việt'}</span>
+              </button>
               <Link
                 href={localeHref('/book-demo')}
                 className="block w-full text-center rounded-lg bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition-all hover:bg-primary/90"

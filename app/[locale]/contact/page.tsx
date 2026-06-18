@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
-import { ArrowRight, Mail, Phone, MapPin, MessageSquare } from 'lucide-react';
+import { ArrowRight, Mail, Phone, MapPin } from 'lucide-react';
 import CTA from '@/components/layout/cta';
 import Logo from '@/components/ui/logo';
 
@@ -45,33 +45,71 @@ export default function Contact() {
             <div className="space-y-4">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="mb-2 block text-sm font-medium">{t('contact.form.name')}</label>
-                  <input type="text" className="w-full rounded-xl border border-white/10 bg-black/50 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary transition-all" />
+                  <label className="mb-2 block text-sm font-medium">{t('bookDemo.form.name')}</label>
+                  <input type="text" className="w-full rounded-xl border border-white/10 bg-black/50 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary transition-all" placeholder="Your full name" />
                 </div>
                 <div>
-                  <label className="mb-2 block text-sm font-medium">{t('contact.form.email')}</label>
-                  <input type="email" className="w-full rounded-xl border border-white/10 bg-black/50 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary transition-all" />
+                  <label className="mb-2 block text-sm font-medium">{t('bookDemo.form.jobTitle')}</label>
+                  <input type="text" className="w-full rounded-xl border border-white/10 bg-black/50 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary transition-all" placeholder="Select your position" />
                 </div>
               </div>
-              <div>
-                <label className="mb-2 block text-sm font-medium">{t('contact.form.company')}</label>
-                <input type="text" className="w-full rounded-xl border border-white/10 bg-black/50 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary transition-all" />
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label className="mb-2 block text-sm font-medium">{t('bookDemo.form.industry')}</label>
+                  <div className="relative">
+                    <select className="w-full rounded-xl border border-white/10 bg-black/50 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary transition-all appearance-none text-white">
+                      <option value="" disabled selected className="text-gray-500">Select your industry</option>
+                      <option value="Construction & Engineering" className="bg-gray-900">Construction & Engineering</option>
+                      <option value="Real Estate" className="bg-gray-900">Real Estate</option>
+                      <option value="Manufacturing" className="bg-gray-900">Manufacturing</option>
+                      <option value="Retail" className="bg-gray-900">Retail</option>
+                      <option value="Other" className="bg-gray-900">Other</option>
+                    </select>
+                  </div>
+                </div>
+                <div>
+                  <label className="mb-2 block text-sm font-medium">{t('bookDemo.form.email')}</label>
+                  <input type="email" className="w-full rounded-xl border border-white/10 bg-black/50 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary transition-all" placeholder="your@email.com" />
+                </div>
               </div>
-              <div>
-                <label className="mb-2 block text-sm font-medium">{t('contact.form.companySize')}</label>
-                <select className="w-full rounded-xl border border-white/10 bg-black/50 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary transition-all appearance-none">
-                  <option>&lt;50</option>
-                  <option>50-200</option>
-                  <option>200-1,000</option>
-                  <option>1,000+</option>
-                </select>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label className="mb-2 block text-sm font-medium">{t('bookDemo.form.company')}</label>
+                  <input type="text" className="w-full rounded-xl border border-white/10 bg-black/50 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary transition-all" placeholder="Your company name" />
+                </div>
+                <div>
+                  <label className="mb-2 block text-sm font-medium">{t('bookDemo.form.companySize')}</label>
+                  <div className="relative">
+                    <select className="w-full rounded-xl border border-white/10 bg-black/50 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary transition-all appearance-none text-white">
+                      <option value="20-50" className="bg-gray-900">20-50</option>
+                      <option value="50-100" className="bg-gray-900" selected>50-100</option>
+                      <option value="100-500" className="bg-gray-900">100-500</option>
+                      <option value="500+" className="bg-gray-900">500+</option>
+                    </select>
+                  </div>
+                </div>
               </div>
-              <div>
-                <label className="mb-2 block text-sm font-medium">{t('contact.form.challenge')}</label>
-                <textarea rows={4} className="w-full rounded-xl border border-white/10 bg-black/50 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary transition-all" />
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label className="mb-2 block text-sm font-medium">{t('bookDemo.form.preferredDate')}</label>
+                  <input type="date" className="w-full rounded-xl border border-white/10 bg-black/50 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary transition-all text-white [color-scheme:dark]" />
+                </div>
+                <div>
+                  <label className="mb-2 block text-sm font-medium">{t('bookDemo.form.preferredTime')}</label>
+                  <input type="time" className="w-full rounded-xl border border-white/10 bg-black/50 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary transition-all text-white [color-scheme:dark]" />
+                </div>
               </div>
+
+              <div>
+                <label className="mb-2 block text-sm font-medium">{t('bookDemo.form.challenge')}</label>
+                <textarea rows={4} className="w-full rounded-xl border border-white/10 bg-black/50 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary transition-all" placeholder="Tell us briefly about your biggest operational challenge..." />
+              </div>
+
               <button className="mt-2 w-full rounded-xl bg-primary px-6 py-4 text-sm font-bold text-primary-foreground hover:bg-primary/90 transition-colors shadow-lg shadow-primary/25">
-                {t('contact.form.submit')}
+                {t('bookDemo.form.submit')}
               </button>
             </div>
           </motion.div>
