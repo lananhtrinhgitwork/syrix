@@ -48,7 +48,7 @@ export function UsageExplanation() {
             <div className="mt-6 pt-6 border-t border-white/10 relative z-10">
                <div className="flex justify-between items-end">
                   <div>
-                     <p className="text-3xl font-bold text-white">$20<span className="text-lg text-muted-foreground font-normal">/mo</span></p>
+                     <p className="text-3xl font-bold text-white">$20<span className="text-lg text-muted-foreground font-normal">/session</span></p>
                      <p className="text-xs text-muted-foreground uppercase tracking-wider">Per Peak Session (Pay-as-you-go)</p>
                      <p className="text-[10px] text-muted-foreground mt-1 uppercase tracking-widest opacity-80">Or fixed tiers: $60 (3) · $200 (10) · $600 (30)</p>
                   </div>

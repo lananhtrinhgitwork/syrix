@@ -18,7 +18,7 @@
     "about": "About",
     "contact": "Contact",
     "bookDemo": "Book Demo",
-    "privacyPolicy": "Privacy Policy",
+    "privacyPolicy": "Information Security",
     "builtByXperc": "Built by Xperc"
   },
   "hero": {
@@ -836,12 +836,16 @@
     "headline": "This isn't a sales call. It's a roadmap session.",
     "subtext": "We'll understand your current stack, identify your biggest operational bottleneck, propose a tailored solution, and show you a live demo — all in under 60 minutes.",
     "form": {
-      "name": "Full Name *",
-      "email": "Work Email *",
-      "company": "Company Name *",
+      "name": "Full name *",
+      "jobTitle": "Job Title",
+      "industry": "Industry *",
+      "company": "Company Name",
       "companySize": "Company Size *",
-      "challenge": "What challenge are you solving? *",
-      "submit": "Book Demo"
+      "email": "Email Address *",
+      "preferredDate": "Preferred Date",
+      "preferredTime": "Preferred Time",
+      "challenge": "What's your biggest operational challenge right now?",
+      "submit": "Book AI Audit"
     },
     "quickContact": "Not ready for a full demo? Reach out directly:"
   },
@@ -884,7 +888,7 @@
     "information": "Information We Collect",
     "usage": "How We Use Your Information",
     "storage": "Data Storage & Security",
-    "contact": "hello@syrix.ai"
+    "contact": "info@xperc.com"
   },
   "footer": {
     "top": "AI that doesn't just answer. It executes.",

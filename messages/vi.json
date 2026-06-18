@@ -18,7 +18,7 @@
     "about": "Về chúng tôi",
     "contact": "Liên hệ",
     "bookDemo": "Đặt Demo",
-    "privacyPolicy": "Chính sách bảo mật",
+    "privacyPolicy": "An toàn thông tin",
     "builtByXperc": "Thiết kế bởi Xperc"
   },
   "hero": {
@@ -837,11 +837,15 @@
     "subtext": "Chúng tôi sẽ hiểu ngăn xếp hiện tại của bạn, xác định rào cản vận hành lớn nhất, đề xuất giải pháp được điều chỉnh và cho bạn thấy một demo trực tiếp.",
     "form": {
       "name": "Họ và tên *",
-      "email": "Email công việc *",
-      "company": "Tên công ty *",
+      "jobTitle": "Chức danh",
+      "industry": "Ngành nghề *",
+      "company": "Tên công ty",
       "companySize": "Quy mô công ty *",
-      "challenge": "Mục tiêu bạn đang giải quyết là gì? *",
-      "submit": "Đặt Demo"
+      "email": "Địa chỉ Email *",
+      "preferredDate": "Ngày ưu tiên",
+      "preferredTime": "Giờ ưu tiên",
+      "challenge": "Thử thách vận hành lớn nhất hiện tại của bạn là gì?",
+      "submit": "Book AI Audit"
     },
     "quickContact": "Không sẵn sàng cho một demo đầy đủ? Liên hệ trực tiếp:"
   },
@@ -884,7 +888,7 @@
     "information": "Thông tin chúng tôi thu thập",
     "usage": "Cách chúng tôi sử dụng thông tin của bạn",
     "storage": "Lưu trữ dữ liệu và bảo mật",
-    "contact": "Liên hệ hello@syrix.ai"
+    "contact": "Liên hệ info@xperc.com"
   },
   "footer": {
     "top": "AI không chỉ trả lời. Nó thực thi.",

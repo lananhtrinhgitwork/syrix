@@ -66,8 +66,8 @@ export default function Footer() {
             </ul>
             <h3 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground/60 mb-4">Contact</h3>
             <ul className="space-y-3">
-              <li className="text-sm text-muted-foreground">hello@syrix.ai</li>
-              <li className="text-sm text-muted-foreground">+84 90 123 4567</li>
+              <li className="text-sm text-muted-foreground hover:text-white transition-colors">info@xperc.com</li>
+              <li className="text-sm text-muted-foreground">0703 880 870 (Mr. Duy)</li>
               <li className="text-sm text-muted-foreground">Vietnam</li>
             </ul>
           </div>
