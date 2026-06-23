@@ -28,19 +28,19 @@ export default function SalesSolution() {
     <div className="flex flex-col gap-4 p-4 h-[300px] justify-center">
       <div className="bg-card p-4 rounded-xl border border-white/10 text-sm shadow-xl flex flex-col gap-3">
          <div className="flex justify-between items-center border-b border-white/5 pb-2">
-            <span className="text-muted-foreground text-xs">New Lead: ACME Corp</span>
-            <span className="text-emerald-400 text-xs">Qualifying...</span>
+            <span className="text-muted-foreground text-xs">{locale === 'vi' ? 'Lead mới: ACME Corp' : 'New Lead: ACME Corp'}</span>
+            <span className="text-emerald-400 text-xs">{locale === 'vi' ? 'Đang đánh giá...' : 'Qualifying...'}</span>
          </div>
          <div className="flex items-center gap-2">
             <Search className="w-4 h-4 text-primary" />
-            <span>Scanning 50MB RFP Document</span>
+            <span>{locale === 'vi' ? 'Đang quét tài liệu RFP 50MB' : 'Scanning 50MB RFP Document'}</span>
          </div>
          <div className="flex items-center gap-2">
             <Zap className="w-4 h-4 text-primary" />
-            <span>Calculating volume discounts</span>
+            <span>{locale === 'vi' ? 'Đang tính toán chiết khấu' : 'Calculating volume discounts'}</span>
          </div>
          <div className="mt-2 bg-emerald-500/10 text-emerald-500 p-2 rounded text-xs flex justify-between items-center border border-emerald-500/20">
-            <span>Proposal Drafted & CRM Updated</span>
+            <span>{locale === 'vi' ? 'Đã lập Báo giá & Cập nhật CRM' : 'Proposal Drafted & CRM Updated'}</span>
             <ArrowRight className="w-4 h-4" />
          </div>
       </div>
@@ -51,68 +51,76 @@ export default function SalesSolution() {
     <main className="min-h-screen pb-32">
       {/* 1. Hero */}
       <ProductHero 
-        badge="Revenue Generation"
-        title="Accelerate Deals with Autonomous Sales Engagement."
-        description="Never let a high-value lead turn cold. Syrix acts as an always-on BDR, parsing complex RFPs, calculating custom quotes, and booking meetings directly into your CRM."
-        ctaPrimary="Boost Sales Velocity"
+        badge={t('badge')}
+        title={t('heroTitle')}
+        description={t('heroDesc')}
+        ctaPrimary={locale === 'vi' ? 'Bắt đầu Tự động hóa Bán hàng' : 'Boost Sales Velocity'}
         mockupContent={HeroVisual}
       />
 
       {/* 2. Metrics */}
       <MetricsBanner 
         metrics={[
-          { value: "35%", label: "Increase in Pipeline Velocity" },
-          { value: "24/7", label: "Lead Qualification" },
-          { value: "100%", label: "CRM Sync Accuracy" }
+          { value: "35%", label: locale === 'vi' ? 'Tăng tốc độ Phễu Bán hàng' : 'Increase in Pipeline Velocity' },
+          { value: "24/7", label: locale === 'vi' ? 'Đánh giá Lead liên tục' : 'Lead Qualification' },
+          { value: "100%", label: locale === 'vi' ? 'Độ chính xác Đồng bộ CRM' : 'CRM Sync Accuracy' }
         ]}
       />
 
       {/* 3. Architecture */}
       <ArchitectureDiagram 
-        title="The Automated Sales Funnel" 
-        description="How Syrix turns raw inbound traffic into qualified, booked pipeline." 
+        title={locale === 'vi' ? 'Phễu Bán hàng Tự động hóa' : 'The Automated Sales Funnel'} 
+        description={locale === 'vi' ? 'Cách Syrix chuyển đổi lưu lượng truy cập thô thành cơ hội bán hàng đã qua đánh giá.' : 'How Syrix turns raw inbound traffic into qualified, booked pipeline.'} 
       />
 
       {/* 4. Features Tabs */}
       <FeatureTabs 
-        title="Close Deals While You Sleep"
+        title={locale === 'vi' ? 'Chốt hợp đồng ngay cả khi bạn đang ngủ' : 'Close Deals While You Sleep'}
         tabs={[
           {
             id: 'rfp',
-            title: 'Instant RFP Parsing',
-            description: 'Ingest 50MB PDF requests, cross-reference with your product specs, and generate customized responses.',
+            title: locale === 'vi' ? 'Bóc tách RFP Tức thì' : 'Instant RFP Parsing',
+            description: locale === 'vi' 
+              ? 'Xử lý các tệp PDF yêu cầu báo giá 50MB, đối chiếu với thông số kỹ thuật sản phẩm và tạo phản hồi tùy chỉnh.'
+              : 'Ingest 50MB PDF requests, cross-reference with your product specs, and generate customized responses.',
             visual: (
               <div className="p-6 flex flex-col items-center justify-center h-full">
                 <Search className="w-12 h-12 text-primary opacity-50 mb-4 animate-pulse" />
-                <span className="text-sm text-center font-mono">Extracting requirements from <br/>ACME_Requirements_v2.pdf</span>
+                <span className="text-sm text-center font-mono">
+                  {locale === 'vi' ? 'Đang trích xuất yêu cầu từ' : 'Extracting requirements from'} <br/>ACME_Requirements_v2.pdf
+                </span>
               </div>
             )
           },
           {
             id: 'quote',
-            title: 'Dynamic Quoting',
-            description: 'Syrix evaluates client size and calculates pricing tiers securely without human bottlenecks.',
+            title: locale === 'vi' ? 'Báo giá Động' : 'Dynamic Quoting',
+            description: locale === 'vi' 
+              ? 'Syrix đánh giá quy mô khách hàng và tự động tính toán biểu phí chiết khấu mà không gặp nghẽn phê duyệt thủ công.'
+              : 'Syrix evaluates client size and calculates pricing tiers securely without human bottlenecks.',
             visual: (
               <div className="w-full max-w-xs p-6 bg-card border border-white/10 rounded-lg flex flex-col gap-2">
                  <div className="flex justify-between text-xs text-muted-foreground border-b border-white/5 pb-2">
-                   <span>Enterprise Tier</span>
-                   <span>Volume: 50k</span>
+                    <span>{locale === 'vi' ? 'Gói Doanh nghiệp' : 'Enterprise Tier'}</span>
+                    <span>{locale === 'vi' ? 'Số lượng: 50k' : 'Volume: 50k'}</span>
                  </div>
                  <div className="flex justify-between text-lg font-bold text-emerald-400 pt-2">
-                   <span>Final Quote:</span>
-                   <span>$4,500/mo</span>
+                    <span>{locale === 'vi' ? 'Báo giá Cuối:' : 'Final Quote:'}</span>
+                    <span>$4,500/{locale === 'vi' ? 'tháng' : 'mo'}</span>
                  </div>
               </div>
             )
           },
           {
             id: 'booking',
-            title: 'Automated CRM Booking',
-            description: 'Locks calendar slots and updates HubSpot/Salesforce via secure MCP.',
+            title: locale === 'vi' ? 'Đặt lịch CRM Tự động' : 'Automated CRM Booking',
+            description: locale === 'vi' 
+              ? 'Khóa khung giờ trống trên lịch biểu và cập nhật dữ liệu HubSpot/Salesforce qua MCP bảo mật.'
+              : 'Locks calendar slots and updates HubSpot/Salesforce via secure MCP.',
             visual: (
               <div className="flex items-center justify-center h-full">
                  <div className="bg-emerald-500/10 text-emerald-500 border border-emerald-500/30 px-6 py-3 rounded-lg text-sm font-medium flex items-center gap-2">
-                    <CheckCircle2 className="w-5 h-5" /> Meeting Booked in HubSpot
+                    <CheckCircle2 className="w-5 h-5" /> {locale === 'vi' ? 'Đã chốt Lịch hẹn trên HubSpot' : 'Meeting Booked in HubSpot'}
                  </div>
               </div>
             )
@@ -122,15 +130,19 @@ export default function SalesSolution() {
 
       {/* 5. Use Cases */}
       <UseCaseFlow 
-        title="Always-On Revenue Pipelines"
+        title={locale === 'vi' ? 'Luồng Doanh thu Không ngừng nghỉ' : 'Always-On Revenue Pipelines'}
         useCases={[
           {
-            title: "Off-Hour Pipeline Acceleration",
-            description: "A high-value enterprise lead uploads a complex RFP at 11 PM. Delaying follow-up until morning risks losing the deal. Syrix intercepts the file, runs deep vector RAG to validate specs, calculates a 25% volume discount, and dispatches a formal proposal draft instantly.",
+            title: locale === 'vi' ? 'Đón lead & Tăng tốc ngoài giờ' : 'Off-Hour Pipeline Acceleration',
+            description: locale === 'vi' 
+              ? 'Lead doanh nghiệp lớn tải lên RFP phức tạp lúc 11 giờ đêm. Trì hoãn phản hồi đến sáng hôm sau có rủi ro mất deal. Syrix lập tức tiếp nhận tệp tin, chạy RAG xác minh yêu cầu kỹ thuật, tính toán chiết khấu 25% và gửi dự thảo báo giá chính thức ngay.'
+              : 'A high-value enterprise lead uploads a complex RFP at 11 PM. Delaying follow-up until morning risks losing the deal. Syrix intercepts the file, runs deep vector RAG to validate specs, calculates a 25% volume discount, and dispatches a formal proposal draft instantly.',
             visual: (
                <div className="p-6 text-center h-full flex flex-col items-center justify-center">
                   <TrendingUp className="w-16 h-16 text-primary mb-4" />
-                  <span className="text-lg font-bold text-white">Capture 100% of After-Hours Traffic</span>
+                  <span className="text-lg font-bold text-white">
+                    {locale === 'vi' ? 'Đón trọn 100% Traffic Ngoài giờ' : 'Capture 100% of After-Hours Traffic'}
+                  </span>
                </div>
             )
           }
@@ -138,7 +150,7 @@ export default function SalesSolution() {
       />
 
       {/* 6. Ecosystem */}
-      <EcosystemGrid title="Integrates with your Revenue Stack" />
+      <EcosystemGrid title={locale === 'vi' ? 'Tích hợp với Hệ thống Bán hàng của bạn' : 'Integrates with your Revenue Stack'} />
 
       <FAQSection title={locale === 'vi' ? "Câu hỏi thường gặp" : "Frequently Asked Questions"} faqs={faqs} />
     </main>

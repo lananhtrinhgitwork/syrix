@@ -28,16 +28,21 @@ export default function About() {
               className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-sm text-cyan-400 mb-8"
             >
               <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
-              Empowering Global Business
+              {t('aboutPage.tagline')}
             </motion.div>
             
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="mb-6 text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl text-white font-serif"
+              className="mb-6 text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl text-white"
             >
-              Building the Future of<br className="hidden md:block" /> Enterprise Software.
+              {t('aboutPage.title').split('\n').map((line, i) => (
+                <span key={i}>
+                  {line}
+                  {i < t('aboutPage.title').split('\n').length - 1 && <br className="hidden md:block" />}
+                </span>
+              ))}
             </motion.h1>
             
             <motion.p
@@ -46,7 +51,7 @@ export default function About() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="mb-10 text-xl text-gray-400 leading-relaxed max-w-2xl mx-auto"
             >
-              XPERC is a premier software development and technology services company. With over 15 years of deep expertise in Cloud, HPC, and custom IT solutions, we partner with enterprises to turn complex challenges into scalable digital realities.
+              {t('aboutPage.description')}
             </motion.p>
             
             <motion.div
@@ -55,12 +60,12 @@ export default function About() {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="flex justify-center"
             >
-              <Link href="/contact">
+              <a href="https://xperc.com" target="_blank" rel="noopener noreferrer">
                 <button className="inline-flex items-center gap-2 rounded-lg bg-blue-600 px-8 py-4 text-base font-semibold text-white shadow-[0_0_40px_rgba(37,99,235,0.3)] transition-all hover:bg-blue-500 hover:scale-105">
-                  Partner with XPERC
+                  {t('aboutPage.cta')}
                   <ArrowRight className="h-5 w-5" />
                 </button>
-              </Link>
+              </a>
             </motion.div>
           </div>
         </div>
@@ -77,32 +82,61 @@ export default function About() {
               transition={{ duration: 0.6 }}
               className="mb-16 text-center"
             >
-              <h2 className="text-sm font-bold text-blue-500 uppercase tracking-widest mb-2">Our Expertise</h2>
-              <h3 className="text-3xl font-bold text-white md:text-4xl">Engineered for Scale and Security</h3>
+              <h2 className="text-sm font-bold text-blue-500 uppercase tracking-widest mb-2">{t('aboutPage.expertiseHeader')}</h2>
+              <h3 className="text-3xl font-bold text-white md:text-4xl">{t('aboutPage.expertiseSub')}</h3>
             </motion.div>
 
             <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
               {[
-                { icon: <Code2 className="h-8 w-8 text-blue-400" />, title: 'Software Development', description: 'Dedicated development teams and professional IT consulting tailored for your specific business logic.' },
-                { icon: <Cloud className="h-8 w-8 text-cyan-400" />, title: 'Cloud Solutions', description: '15+ years of robust architecture design, cloud migrations, and highly available deployments.' },
-                { icon: <Cpu className="h-8 w-8 text-emerald-400" />, title: 'HPC Systems', description: 'High-Performance Computing infrastructure designed for intensive research and data processing.' },
-                { icon: <Server className="h-8 w-8 text-purple-400" />, title: 'xCorp Platform', description: 'Our proprietary integrated management system for Timesheets, OKRs, HR, and complete business operations.' },
-              ].map((value, index) => (
-                <motion.div
-                  key={value.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="rounded-2xl border border-white/10 bg-[#12121a]/80 backdrop-blur p-8 hover:border-white/20 transition-all group"
-                >
-                  <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-xl bg-white/5 border border-white/10 group-hover:scale-110 transition-transform">
-                    {value.icon}
-                  </div>
-                  <h3 className="mb-3 text-xl font-bold text-white">{value.title}</h3>
-                  <p className="text-sm text-gray-400 leading-relaxed">{value.description}</p>
-                </motion.div>
-              ))}
+                { icon: <Code2 className="h-8 w-8 text-blue-400" />, title: t('aboutPage.expertises.dev.title'), description: t('aboutPage.expertises.dev.desc') },
+                { icon: <Cloud className="h-8 w-8 text-cyan-400" />, title: t('aboutPage.expertises.cloud.title'), description: t('aboutPage.expertises.cloud.desc') },
+                { icon: <Cpu className="h-8 w-8 text-emerald-400" />, title: t('aboutPage.expertises.hpc.title'), description: t('aboutPage.expertises.hpc.desc') },
+                { icon: <Server className="h-8 w-8 text-purple-400" />, title: t('aboutPage.expertises.xcorp.title'), description: t('aboutPage.expertises.xcorp.desc'), href: 'https://xcorp.app/' },
+              ].map((value, index) => {
+                const CardContent = (
+                  <>
+                    <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-xl bg-white/5 border border-white/10 group-hover:scale-110 transition-transform">
+                      {value.icon}
+                    </div>
+                    <h3 className="mb-3 text-xl font-bold text-white group-hover:text-primary transition-colors">{value.title}</h3>
+                    <p className="text-sm text-gray-400 leading-relaxed">{value.description}</p>
+                  </>
+                );
+
+                const cardClassName = "rounded-2xl border border-white/10 bg-[#12121a]/80 backdrop-blur p-8 hover:border-white/20 transition-all group block text-left cursor-default";
+                const clickableClassName = "rounded-2xl border border-white/10 bg-[#12121a]/80 backdrop-blur p-8 hover:border-primary/50 hover:bg-[#151522]/80 hover:shadow-2xl hover:shadow-primary/5 hover:border-primary/30 transition-all group block text-left cursor-pointer";
+
+                if (value.href) {
+                  return (
+                    <motion.a
+                      key={value.title}
+                      href={value.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.6, delay: index * 0.1 }}
+                      className={clickableClassName}
+                    >
+                      {CardContent}
+                    </motion.a>
+                  );
+                }
+
+                return (
+                  <motion.div
+                    key={value.title}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    className={cardClassName}
+                  >
+                    {CardContent}
+                  </motion.div>
+                );
+              })}
             </div>
           </div>
         </div>
@@ -121,24 +155,20 @@ export default function About() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
               >
-                <h2 className="text-sm font-bold text-emerald-500 uppercase tracking-widest mb-2">The XPERC DNA</h2>
-                <h3 className="text-4xl font-bold text-white mb-6 font-serif">A "Win-Win" Partnership Model.</h3>
+                <h2 className="text-sm font-bold text-emerald-500 uppercase tracking-widest mb-2">{t('aboutPage.dnaHeader')}</h2>
+                <h3 className="text-4xl font-bold text-white mb-6">{t('aboutPage.dnaSub')}</h3>
                 <p className="text-gray-400 text-lg leading-relaxed mb-8">
-                  We don't just write code; we build lifelong technical alliances. From startups to global enterprises, we prioritize transparency, strict data security, and lifetime support for the solutions we deliver.
+                  {t('aboutPage.dnaDesc')}
                 </p>
                 <ul className="space-y-4">
-                  <li className="flex items-center gap-3 text-gray-300">
-                    <div className="w-6 h-6 rounded-full bg-emerald-500/20 flex items-center justify-center"><Check className="w-4 h-4 text-emerald-400" /></div>
-                    Lifetime Product Support
-                  </li>
-                  <li className="flex items-center gap-3 text-gray-300">
-                    <div className="w-6 h-6 rounded-full bg-emerald-500/20 flex items-center justify-center"><Check className="w-4 h-4 text-emerald-400" /></div>
-                    Uncompromising Security Standards
-                  </li>
-                  <li className="flex items-center gap-3 text-gray-300">
-                    <div className="w-6 h-6 rounded-full bg-emerald-500/20 flex items-center justify-center"><Check className="w-4 h-4 text-emerald-400" /></div>
-                    Transparent "Time & Materials" Engagement
-                  </li>
+                  {((t.raw('aboutPage.checkmarks') as string[]) as any[] && (t.raw('aboutPage.checkmarks') as string[])).map((text: string, i: number) => (
+                    <li key={i} className="flex items-center gap-3 text-gray-300">
+                      <div className="w-6 h-6 rounded-full bg-emerald-500/20 flex items-center justify-center">
+                        <Check className="w-4 h-4 text-emerald-400" />
+                      </div>
+                      {text}
+                    </li>
+                  ))}
                 </ul>
               </motion.div>
               
@@ -152,21 +182,21 @@ export default function About() {
                 <div className="space-y-4 mt-8">
                   <div className="bg-[#12121a] border border-white/10 p-6 rounded-2xl flex flex-col items-center justify-center text-center">
                      <span className="text-4xl font-bold text-white mb-2">15+</span>
-                     <span className="text-xs text-gray-400 uppercase tracking-wider">Years Experience</span>
+                     <span className="text-xs text-gray-400 uppercase tracking-wider">{t('aboutPage.stats.years')}</span>
                   </div>
                   <div className="bg-gradient-to-br from-blue-900/40 to-blue-600/10 border border-blue-500/30 p-6 rounded-2xl flex flex-col items-center justify-center text-center h-40">
                      <Target className="w-8 h-8 text-blue-400 mb-3" />
-                     <span className="text-sm font-bold text-white">Global Reach</span>
+                     <span className="text-sm font-bold text-white">{t('aboutPage.stats.reach')}</span>
                   </div>
                 </div>
                 <div className="space-y-4">
                   <div className="bg-gradient-to-br from-emerald-900/40 to-emerald-600/10 border border-emerald-500/30 p-6 rounded-2xl flex flex-col items-center justify-center text-center h-40">
                      <Shield className="w-8 h-8 text-emerald-400 mb-3" />
-                     <span className="text-sm font-bold text-white">Secure Systems</span>
+                     <span className="text-sm font-bold text-white">{t('aboutPage.stats.secure')}</span>
                   </div>
                   <div className="bg-[#12121a] border border-white/10 p-6 rounded-2xl flex flex-col items-center justify-center text-center">
                      <span className="text-4xl font-bold text-white mb-2">100%</span>
-                     <span className="text-xs text-gray-400 uppercase tracking-wider">Client Commitment</span>
+                     <span className="text-xs text-gray-400 uppercase tracking-wider">{t('aboutPage.stats.commitment')}</span>
                   </div>
                 </div>
               </motion.div>

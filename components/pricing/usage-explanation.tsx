@@ -2,14 +2,17 @@
 
 import { motion } from 'framer-motion';
 import { Bot, Network, Zap, PlayCircle, Users, GitMerge, Check } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 export function UsageExplanation() {
+  const t = useTranslations('pricing');
+
   return (
     <section className="py-24">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">Usage-Based Engines</h2>
-          <p className="text-lg text-muted-foreground">Pay for outcomes and system capacity, not empty human seats.</p>
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4">{t('engines.title')}</h2>
+          <p className="text-lg text-muted-foreground">{t('engines.subtitle')}</p>
         </div>
 
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -30,8 +33,8 @@ export function UsageExplanation() {
               <div className="inline-flex items-center gap-2 bg-cyan-500/10 border border-cyan-500/30 px-3 py-1 rounded-full text-xs font-semibold text-cyan-400 mb-4">
                  <Network className="w-4 h-4" /> Help Desk
               </div>
-              <h3 className="text-2xl font-bold mb-2">Concurrent Sessions</h3>
-              <p className="text-muted-foreground text-sm">You don't pay per user or per chat. You pay for the maximum number of conversations the AI handles *at the exact same second*.</p>
+              <h3 className="text-2xl font-bold mb-2">{t('engines.sessions.title')}</h3>
+              <p className="text-muted-foreground text-sm">{t('engines.sessions.desc')}</p>
             </div>
 
             <div className="bg-[#1a1a24] rounded-2xl p-6 border border-white/5 relative z-10 flex-1 flex flex-col items-center justify-center min-h-[200px]">
@@ -42,15 +45,15 @@ export function UsageExplanation() {
                   <div className="absolute bottom-4 right-4 w-12 h-12 rounded-full border border-primary/30 flex items-center justify-center animate-ping opacity-20 animation-delay-500"><Bot className="w-6 h-6 text-primary" /></div>
                   <div className="absolute top-1/2 left-0 w-12 h-12 rounded-full border border-primary/30 flex items-center justify-center animate-ping opacity-20 animation-delay-700"><Bot className="w-6 h-6 text-primary" /></div>
                </div>
-               <p className="text-center text-xs text-muted-foreground mt-4 font-mono">1 Agent cloning itself to handle a traffic spike.</p>
+               <p className="text-center text-xs text-muted-foreground mt-4 font-mono">{t('engines.sessions.visualText')}</p>
             </div>
             
             <div className="mt-6 pt-6 border-t border-white/10 relative z-10">
                <div className="flex justify-between items-end">
                   <div>
-                     <p className="text-3xl font-bold text-white">$20<span className="text-lg text-muted-foreground font-normal">/session</span></p>
+                     <p className="text-3xl font-bold text-white">$20<span className="text-lg text-muted-foreground font-normal">/{t('engines.sessions.subText')}</span></p>
                      <p className="text-xs text-muted-foreground uppercase tracking-wider">Per Peak Session (Pay-as-you-go)</p>
-                     <p className="text-[10px] text-muted-foreground mt-1 uppercase tracking-widest opacity-80">Or fixed tiers: $60 (3) · $200 (10) · $600 (30)</p>
+                     <p className="text-[10px] text-muted-foreground mt-1 uppercase tracking-widest opacity-80">{t('engines.sessions.subTextFix')}</p>
                   </div>
                </div>
             </div>
@@ -72,8 +75,8 @@ export function UsageExplanation() {
               <div className="inline-flex items-center gap-2 bg-emerald-500/10 border border-emerald-500/30 px-3 py-1 rounded-full text-xs font-semibold text-emerald-400 mb-4">
                  <Zap className="w-4 h-4" /> AI Agent & Workflows
               </div>
-              <h3 className="text-2xl font-bold mb-2">Automation Runs</h3>
-              <p className="text-muted-foreground text-sm">Pay only when a workflow successfully completes its objective. 1 Run = 1 Jira ticket created, 1 quote sent, or 1 server restarted.</p>
+              <h3 className="text-2xl font-bold mb-2">{t('engines.automation.title')}</h3>
+              <p className="text-muted-foreground text-sm">{t('engines.automation.desc')}</p>
             </div>
 
             <div className="bg-[#1a1a24] rounded-2xl p-6 border border-white/5 relative z-10 flex-1 flex flex-col items-center justify-center min-h-[200px]">
@@ -86,14 +89,14 @@ export function UsageExplanation() {
                      <Check className="w-5 h-5 text-emerald-400" />
                   </div>
                </div>
-               <p className="text-center text-xs text-emerald-400 mt-6 font-mono">+1 Run Logged</p>
+               <p className="text-center text-xs text-emerald-400 mt-6 font-mono">{t('engines.automation.visualText')}</p>
             </div>
 
             <div className="mt-6 pt-6 border-t border-white/10 relative z-10">
                <div className="flex justify-between items-end">
                   <div>
-                     <p className="text-2xl font-bold text-white mb-1">500 <span className="text-sm text-muted-foreground font-normal">VND/run</span><span className="text-[10px] text-muted-foreground uppercase tracking-wider ml-2">(0 - 3000 runs)</span></p>
-                     <p className="text-2xl font-bold text-white">250 <span className="text-sm text-muted-foreground font-normal">VND/run</span><span className="text-[10px] text-muted-foreground uppercase tracking-wider ml-2">(3001+ runs)</span></p>
+                     <p className="text-2xl font-bold text-white mb-1">500 <span className="text-sm text-muted-foreground font-normal">{t('engines.automation.priceRange1')}</span><span className="text-[10px] text-muted-foreground uppercase tracking-wider ml-2">{t('engines.automation.priceRange1Label')}</span></p>
+                     <p className="text-2xl font-bold text-white">250 <span className="text-sm text-muted-foreground font-normal">{t('engines.automation.priceRange2')}</span><span className="text-[10px] text-muted-foreground uppercase tracking-wider ml-2">{t('engines.automation.priceRange2Label')}</span></p>
                   </div>
                </div>
             </div>

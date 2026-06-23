@@ -1,0 +1,475 @@
+navigation/
+  products
+  helpDesk
+  aiAgent
+  workspace
+  asr
+  solutions
+  customerSupport
+  internalKnowledge
+  meetingExecution
+  realEstate
+  financialServices
+  retailEcommerce
+  customers
+  pricing
+  about
+  contact
+  bookDemo
+  privacyPolicy
+  builtByXperc
+hero/
+  headline
+  subheadline
+  cta
+problem/
+  headline
+  body
+  before
+  after
+  beforeDescription
+  afterDescription
+howItWorks/
+  headline
+  step1/
+    title
+    description
+  step2/
+    title
+    description
+  step3/
+    title
+    description
+productSuite/
+  headline
+metrics/
+  headline
+cta/
+  headline
+  subtext
+  cta
+products/
+  headline
+  subtext
+helpDesk/
+  hero/
+    badge
+    headline
+    subheadline
+    ctaPrimary
+    ctaSecondary
+  problem/
+    title
+    items [] (4 items)
+  solution/
+    title
+    items [] (4 items)
+  capabilities/
+    title
+    pillar1/
+      title
+      desc
+    pillar2/
+      title
+      desc
+    pillar3/
+      title
+      desc
+    pillar4/
+      title
+      desc
+  howItWorks/
+    title
+    subtitle
+    steps [] (4 items)
+  features/
+    title
+    feature1/
+      title
+      desc
+    feature2/
+      title
+      desc
+    feature3/
+      title
+      desc
+    feature4/
+      title
+      desc
+    feature5/
+      title
+      desc
+    feature6/
+      title
+      desc
+  useCases/
+    title
+    case1/
+      title
+      desc
+      cta
+    case2/
+      title
+      desc
+      cta
+    case3/
+      title
+      desc
+      cta
+    case4/
+      title
+      desc
+      cta
+  smartSuggestions/
+    title
+    desc
+  integrations/
+    title
+    desc
+  trust/
+    title
+    item1/
+      title
+      desc
+    item2/
+      title
+      desc
+    item3/
+      title
+      desc
+    item4/
+      title
+      desc
+  faq/
+    title
+    q1
+    a1
+    q2
+    a2
+    q3
+    a3
+    q4
+    a4
+    q5
+    a5
+    q6
+    a6
+    q7
+    a7
+    q8
+    a8
+  finalCta/
+    headline
+    cta
+    trust
+  workflow/
+    badge
+    heading
+    subheading
+    feature1
+    feature2
+    feature3
+    feature4
+    desc
+    cta
+aiAgent/
+  hero/
+    badge
+    title
+    description
+  metrics/
+    title
+    subtitle
+    items [] (3 items)
+  pillars/
+    title
+    builder/
+      tag
+      title
+      description
+      features [] (3 items)
+    rag/
+      tag
+      title
+      description
+      features [] (3 items)
+    mcp/
+      tag
+      title
+      description
+      features [] (3 items)
+  interactive/
+    title
+    subtitle
+    steps [] (3 items)
+  faq/
+    title
+    subtitle
+    items [] (3 items)
+workspace/
+  headline
+  subtext
+  cta
+  sentinel
+  sentinelContent
+  capabilities/
+    taskAssignment
+    summarization
+    quickActions
+  workflow
+  faq/
+    q1
+    a1
+    q2
+    a2
+    q3
+    a3
+speechToText/
+  hero/
+    badge
+    title
+    description
+  metrics/
+    title
+    subtitle
+    items [] (3 items)
+  pillars/
+    title
+    diarization/
+      tag
+      title
+      description
+      features [] (3 items)
+    vocabulary/
+      tag
+      title
+      description
+      features [] (3 items)
+  simulator/
+    title
+    subtitle
+    buttonLabel
+    statusLabel
+    transcriptSample
+    insightSummary
+  useCases/
+    title
+    items [] (2 items)
+solutions/
+  hub/
+    title
+    subtitle
+  customerSupport/
+    badge
+    heroTitle
+    heroDesc
+    tabs [] (3 items)
+  sales/
+    badge
+    heroTitle
+    heroDesc
+    tabs [] (3 items)
+  internalKnowledge/
+    badge
+    heroTitle
+    heroDesc
+    tabs [] (3 items)
+  meetingExecution/
+    badge
+    heroTitle
+    heroDesc
+    tabs [] (3 items)
+solutionsV3/
+  customerSupport/
+    badge
+    heroTitle
+    heroDesc
+    storyText
+    kpis [] (2 items)
+    tabs [] (3 items)
+  sales/
+    badge
+    heroTitle
+    heroDesc
+    storyText
+    kpis [] (2 items)
+    useCases [] (3 items)
+  internalChatbot/
+    badge
+    heroTitle
+    heroDesc
+    storyText
+    kpis [] (2 items)
+    useCases [] (3 items)
+  meetingExecution/
+    badge
+    heroTitle
+    heroDesc
+    storyText
+    kpis [] (2 items)
+    useCases [] (3 items)
+solutionsV4/
+  customerSupport/
+    badge
+    synergyTitle
+    synergyDesc
+    useCases [] (2 items)
+  sales/
+    badge
+    synergyTitle
+    synergyDesc
+    useCases [] (2 items)
+  internalKnowledge/
+    badge
+    synergyTitle
+    synergyDesc
+    useCases [] (2 items)
+  meetingExecution/
+    badge
+    synergyTitle
+    synergyDesc
+    useCases [] (2 items)
+pricing/
+  headline
+  subtext
+  tiers/
+    starter/
+      name
+      bestFor
+      price
+      includes [] (4 items)
+    growth/
+      name
+      bestFor
+      price
+      includes [] (5 items)
+    enterprise/
+      name
+      bestFor
+      price
+      includes [] (7 items)
+  usage/
+    helpdesk
+    helpdeskPrice
+    helpdeskAnalogy
+    automation
+    automationPrice
+    saas
+    saasItems [] (7 items)
+  sampleBill
+  setup/
+    helpdesk
+    okr
+    totalSetup
+  monthly/
+    helpdesk
+    automation
+    okr
+    pm
+    leave
+    timesheet
+    totalMonthly
+  comparison
+  comparisonText
+  faq/
+    q1
+    a1
+    q2
+    a2
+    q3
+    a3
+customerSupportSolution/
+  company
+  decisionMaker
+  challenge
+  before [] (6 items)
+  solution [] (7 items)
+  impact [] (6 items)
+internalKnowledgeSolution/
+  company
+  decisionMaker
+  challenge
+  before [] (6 items)
+  solution [] (6 items)
+  impact [] (6 items)
+meetingExecutionSolution/
+  company
+  decisionMaker
+  challenge
+  before [] (6 items)
+  solution [] (7 items)
+  impact [] (5 items)
+about/
+  headline
+  body
+security/
+  headline
+  subtext
+  pillars [] (6 items)
+bookDemo/
+  headline
+  subtext
+  form/
+    name
+    jobTitle
+    industry
+    company
+    companySize
+    email
+    preferredDate
+    preferredTime
+    challenge
+    submit
+  quickContact
+contact/
+  headline
+  subtext
+  form/
+    name
+    email
+    company
+    companySize
+    challenge
+    subject
+    message
+    submit
+  quickContact
+customers/
+  headline
+  subtext
+  finSprint/
+    title
+    result
+    implementation
+  landVista/
+    title
+    result
+    implementation
+  flowTech/
+    title
+    result
+    implementation
+privacyPolicy/
+  title
+  information
+  usage
+  storage
+  contact
+footer/
+  top
+  products
+  solutions
+  company
+  legal
+  builtByXperc
+  copyright
+common/
+  learnMore
+  viewDetails
+  bookDemo
+  contactSales
+  readyToStart
+  getStarted
+meta/
+  title
+  description

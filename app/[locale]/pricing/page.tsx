@@ -25,7 +25,7 @@ export default function Pricing() {
               transition={{ duration: 0.6 }}
               className="mb-6 text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl"
             >
-              Invest in Outcomes. <br className="hidden md:block" />Not Seats.
+              {t('headline')}
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -33,7 +33,7 @@ export default function Pricing() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="mb-10 max-w-3xl mx-auto text-lg text-muted-foreground md:text-xl"
             >
-              Stop paying for inactive users. Syrix aligns pricing directly with your operational velocity. You only pay for the exact volume of work the AI executes.
+              {t('subtext')}
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -42,7 +42,7 @@ export default function Pricing() {
             >
               <Link href="/book-demo">
                 <button className="inline-flex items-center gap-2 rounded-xl bg-blue-500 px-8 py-4 text-base font-bold text-white shadow-[0_0_30px_rgba(59,130,246,0.4)] transition-all hover:bg-blue-600 hover:scale-105">
-                  Calculate Your ROI
+                  {t('cta')}
                   <ArrowRight className="h-5 w-5" />
                 </button>
               </Link>
@@ -70,15 +70,19 @@ export default function Pricing() {
               <div className="flex items-center gap-6">
                  <div className="w-16 h-16 rounded-full bg-amber-500/10 flex items-center justify-center shrink-0">
                     <Server className="w-8 h-8 text-amber-500" />
-                 </div>
-                 <div>
-                    <h3 className="text-xl font-bold text-white flex items-center gap-2 mb-1">On-Premise & Dedicated VPC <Lock className="w-4 h-4 text-amber-500" /></h3>
-                    <p className="text-sm text-gray-400">For organizations with strict compliance, deploy Syrix completely isolated within your own cloud infrastructure.</p>
-                 </div>
+                  </div>
+                  <div>
+                     <h3 className="text-xl font-bold text-white flex items-center gap-2 mb-1">
+                       {t('onPremise.title')} <Lock className="w-4 h-4 text-amber-500" />
+                     </h3>
+                     <p className="text-sm text-gray-400">
+                       {t('onPremise.description')}
+                     </p>
+                  </div>
               </div>
               <Link href="/contact">
                  <button className="px-6 py-3 border border-amber-500/50 text-amber-500 rounded-lg text-sm font-semibold hover:bg-amber-500/10 transition-colors whitespace-nowrap">
-                   Contact Security Team
+                   {t('onPremise.cta')}
                  </button>
               </Link>
            </div>

@@ -23,7 +23,7 @@ export default function Security() {
               transition={{ duration: 0.6 }}
               className="mb-6 text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl"
             >
-              Trust Centre
+              {t('trustCenter.title')}
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -31,7 +31,7 @@ export default function Security() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="mb-10 text-lg text-muted-foreground md:text-xl"
             >
-              Your data never leaves your control. XPERC is designed for organizations that demand the highest standards of security, privacy, and compliance.
+              {t('trustCenter.description')}
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -40,7 +40,7 @@ export default function Security() {
             >
               <Link href="/book-demo">
                 <button className="inline-flex items-center gap-2 rounded-lg bg-primary px-8 py-4 text-base font-semibold text-primary-foreground shadow-2xl transition-all hover:bg-primary/90 hover:scale-105 hover:shadow-primary/25">
-                  Book Demo
+                  {t('trustCenter.cta')}
                   <ArrowRight className="h-5 w-5" />
                 </button>
               </Link>
@@ -60,7 +60,7 @@ export default function Security() {
               transition={{ duration: 0.6 }}
               className="mb-12 text-center"
             >
-              <h2 className="mb-4 text-3xl font-bold text-foreground">Security Pillars</h2>
+              <h2 className="mb-4 text-3xl font-bold text-foreground">{t('trustCenter.pillarsTitle')}</h2>
             </motion.div>
 
             <div className="grid grid-cols-1 gap-8 md:grid-cols-2">

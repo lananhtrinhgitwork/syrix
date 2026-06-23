@@ -11,35 +11,38 @@ export default function Products() {
 
   const products = [
     {
+      id: 'helpDesk',
       title: t('navigation.helpDesk'),
-      tagline: 'Autonomous Tier-1 Support',
+      tagline: t('productsPage.helpDesk.tagline'),
       capabilities: [
-        'RAG-powered knowledge retrieval',
-        'Autonomous CRM lead creation',
-        'Intelligent escalation',
-        'Multi-channel deployment',
+        t('productsPage.helpDesk.cap1'),
+        t('productsPage.helpDesk.cap2'),
+        t('productsPage.helpDesk.cap3'),
+        t('productsPage.helpDesk.cap4'),
       ],
       href: '/products/help-desk',
     },
     {
+      id: 'aiAgent',
       title: t('navigation.aiAgent'),
-      tagline: 'Internal Corporate Intelligence',
+      tagline: t('productsPage.aiAgent.tagline'),
       capabilities: [
-        'Private knowledge retrieval',
-        'Cross-departmental synthesis',
-        'Zero data retention',
+        t('productsPage.aiAgent.cap1'),
+        t('productsPage.aiAgent.cap2'),
+        t('productsPage.aiAgent.cap3'),
       ],
       href: '/products/ai-agent',
     },
 
     {
+      id: 'asr',
       title: t('navigation.asr'),
-      tagline: 'Speak. Syrix handles the rest.',
+      tagline: t('productsPage.asr.tagline'),
       capabilities: [
-        'Real-time transcription with speaker identification',
-        'Auto-generated meeting summaries',
-        'Voice-driven task creation',
-        'Knowledge base contribution',
+        t('productsPage.asr.cap1'),
+        t('productsPage.asr.cap2'),
+        t('productsPage.asr.cap3'),
+        t('productsPage.asr.cap4'),
       ],
       href: '/products/asr',
     },
@@ -75,7 +78,7 @@ export default function Products() {
       {/* Product Cards */}
       <section className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-6xl">
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-3 lg:grid-cols-3 justify-center">
             {products.map((product, index) => (
               <motion.div
                 key={product.title}
@@ -117,13 +120,13 @@ export default function Products() {
             transition={{ duration: 0.6 }}
             className="mb-12 text-center"
           >
-            <h2 className="mb-4 text-3xl font-bold text-foreground">Use Case Comparison</h2>
+            <h2 className="mb-4 text-3xl font-bold text-foreground">{t('productsPage.comparisonTitle')}</h2>
           </motion.div>
           <div className="overflow-x-auto rounded-xl border border-border">
             <table className="w-full text-sm">
               <thead>
                 <tr className="border-b border-border bg-card">
-                  <th className="p-4 text-left font-semibold">Use Case</th>
+                  <th className="p-4 text-left font-semibold">{t('productsPage.useCaseHeader')}</th>
                   {products.map((product) => (
                     <th key={product.title} className="p-4 text-center font-semibold">
                       {product.title}
@@ -133,19 +136,18 @@ export default function Products() {
               </thead>
               <tbody>
                 {[
-                  { useCase: 'Customer query resolution', products: ['helpDesk'] },
-                  { useCase: 'Internal policy search', products: ['aiAgent'] },
-
-                  { useCase: 'Meeting transcription & summary', products: ['asr'] },
-                  { useCase: 'Lead qualification & CRM update', products: ['helpDesk'] },
-                  { useCase: 'Cross-department knowledge synthesis', products: ['aiAgent'] },
-                  { useCase: 'Voice command task creation', products: ['asr'] },
+                  { useCase: t('productsPage.useCases.queryResolution'), products: ['helpDesk'] },
+                  { useCase: t('productsPage.useCases.policySearch'), products: ['aiAgent'] },
+                  { useCase: t('productsPage.useCases.transcriptionSummary'), products: ['asr'] },
+                  { useCase: t('productsPage.useCases.leadQualification'), products: ['helpDesk'] },
+                  { useCase: t('productsPage.useCases.knowledgeSynthesis'), products: ['aiAgent'] },
+                  { useCase: t('productsPage.useCases.voiceCommand'), products: ['asr'] },
                 ].map((row, rowIndex) => (
-                  <tr key={row.useCase} className={rowIndex % 2 === 0 ? 'bg-background' : 'bg-card'}>
+                  <tr key={rowIndex} className={rowIndex % 2 === 0 ? 'bg-background' : 'bg-card'}>
                     <td className="p-4 font-medium">{row.useCase}</td>
                     {products.map((product) => (
-                      <td key={product.title} className={`p-4 text-center ${row.products.includes(product.title.toLowerCase().split(' ')[0]) ? 'text-primary' : ''}`}>
-                        {row.products.includes(product.title.toLowerCase().split(' ')[0]) ? '✓' : ''}
+                      <td key={product.id} className={`p-4 text-center ${row.products.includes(product.id) ? 'text-primary' : ''}`}>
+                        {row.products.includes(product.id) ? '✓' : ''}
                       </td>
                     ))}
                   </tr>
@@ -155,7 +157,6 @@ export default function Products() {
           </div>
         </div>
       </section>
-
       {/* CTA */}
       <CTA />
     </div>

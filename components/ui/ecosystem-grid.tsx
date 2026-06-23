@@ -1,8 +1,11 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
 import { Database, Cloud, Kanban, FileText, Slack, Users, HardDrive, Headset } from 'lucide-react';
 
 export function EcosystemGrid({ title, description }: { title?: string, description?: string }) {
+  const t = useTranslations();
+
   const integrations = [
     { name: 'HubSpot', type: 'CRM', icon: Database },
     { name: 'Salesforce', type: 'CRM', icon: Cloud },
@@ -18,8 +21,12 @@ export function EcosystemGrid({ title, description }: { title?: string, descript
     <section className="py-24 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">{title || "Zero Rip-and-Replace Integration"}</h2>
-          <p className="text-lg text-muted-foreground">{description || "Syrix connects to your existing corporate architecture via secure MCP plugins in minutes."}</p>
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+            {title || t('home.ecosystemTitle')}
+          </h2>
+          <p className="text-lg text-muted-foreground">
+            {description || t('home.ecosystemDesc')}
+          </p>
         </div>
 
         <div className="max-w-5xl mx-auto relative">

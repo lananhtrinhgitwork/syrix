@@ -16,7 +16,7 @@ export default function Footer() {
     window.location.href = `/${newLocale}${cleanPath}`;
   };
 
-  if (pathname.includes('/book-demo') || pathname.includes('/contact')) return null;
+  if (pathname.includes('/contact')) return null;
 
   return (
     <footer className="bg-[#0a0a0f]">
@@ -50,7 +50,7 @@ export default function Footer() {
             <h3 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground/60 mb-4">{t('footer.solutions')}</h3>
             <ul className="space-y-3">
               <li><Link href="/solutions/customer-support" className="text-sm text-muted-foreground hover:text-white transition-colors">{t('navigation.customerSupport')}</Link></li>
-              <li><Link href="/solutions/sales" className="text-sm text-muted-foreground hover:text-white transition-colors">Sales Automation</Link></li>
+              <li><Link href="/solutions/sales" className="text-sm text-muted-foreground hover:text-white transition-colors">{t('navigation.sales')}</Link></li>
               <li><Link href="/solutions/internal-knowledge" className="text-sm text-muted-foreground hover:text-white transition-colors">{t('navigation.internalKnowledge')}</Link></li>
               <li><Link href="/solutions/meeting-execution" className="text-sm text-muted-foreground hover:text-white transition-colors">{t('navigation.meetingExecution')}</Link></li>
             </ul>
@@ -61,14 +61,14 @@ export default function Footer() {
             <h3 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground/60 mb-4">{t('footer.company')}</h3>
             <ul className="space-y-3 mb-6">
               <li><Link href="/about" className="text-sm text-muted-foreground hover:text-white transition-colors">{t('navigation.about')}</Link></li>
-              <li><Link href="/security" className="text-sm text-muted-foreground hover:text-white transition-colors">Trust Center</Link></li>
+              <li><Link href="/security" className="text-sm text-muted-foreground hover:text-white transition-colors">{t('navigation.security')}</Link></li>
               <li><Link href="/contact" className="text-sm text-muted-foreground hover:text-white transition-colors">{t('navigation.contact')}</Link></li>
             </ul>
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground/60 mb-4">Contact</h3>
+            <h3 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground/60 mb-4">{t('navigation.contact')}</h3>
             <ul className="space-y-3">
               <li className="text-sm text-muted-foreground hover:text-white transition-colors">info@xperc.com</li>
               <li className="text-sm text-muted-foreground">0703 880 870 (Mr. Duy)</li>
-              <li className="text-sm text-muted-foreground">Vietnam</li>
+              <li className="text-sm text-muted-foreground">{locale === 'vi' ? 'Việt Nam' : 'Vietnam'}</li>
             </ul>
           </div>
 

@@ -2,10 +2,14 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { Store, Check, ShoppingCart, Package, Headphones, DollarSign } from 'lucide-react';
+import { Store, Check } from 'lucide-react';
+import { useTranslations, useLocale } from 'next-intl';
 import CTA from '@/components/layout/cta';
 
 export default function RetailEcommerce() {
+  const t = useTranslations('industrySolutions');
+  const locale = useLocale();
+
   return (
     <div className="min-h-screen pb-32">
       <section className="relative overflow-hidden py-24">
@@ -18,7 +22,7 @@ export default function RetailEcommerce() {
               transition={{ duration: 0.6 }}
               className="mb-6 text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl"
             >
-              Retail & E-commerce Solution
+              {t('retailEcommerce.title')}
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -26,11 +30,13 @@ export default function RetailEcommerce() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="mb-10 text-lg text-muted-foreground md:text-xl"
             >
-              Scale customer support and automate post-purchase workflows.
+              {locale === 'vi' 
+                ? 'Mở rộng quy mô hỗ trợ khách hàng và tự động hóa quy trình sau mua hàng.'
+                : 'Scale customer support and automate post-purchase workflows.'}
             </motion.p>
             <Link href="/book-demo">
               <button className="inline-flex items-center gap-2 rounded-lg bg-primary px-8 py-4 text-base font-semibold text-primary-foreground shadow-2xl transition-all hover:bg-primary/90 hover:scale-105 hover:shadow-primary/25">
-                Contact Sales
+                {t('contactSales')}
                 <Store className="h-5 w-5" />
               </button>
             </Link>
@@ -43,29 +49,29 @@ export default function RetailEcommerce() {
           <div className="mx-auto max-w-6xl">
             <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
               <div className="rounded-xl border border-border bg-card p-8">
-                <h2 className="mb-6 text-2xl font-bold">Challenge</h2>
+                <h2 className="mb-6 text-2xl font-bold">{t('challenge')}</h2>
                 <p className="text-muted-foreground">
-                  Retail and e-commerce businesses face high volume customer interactions, order management complexity, and the need for fast, accurate support at scale.
+                  {t('retailEcommerce.challengeDesc')}
                 </p>
               </div>
               <div className="rounded-xl border border-border bg-card p-8">
-                <h2 className="mb-6 text-2xl font-bold">Solution</h2>
+                <h2 className="mb-6 text-2xl font-bold">{t('solution')}</h2>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3">
                     <Check className="h-5 w-5 shrink-0 text-primary mt-0.5" />
-                    <span className="text-sm">24/7 customer support automation</span>
+                    <span className="text-sm">{t('retailEcommerce.bullet1')}</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <Check className="h-5 w-5 shrink-0 text-primary mt-0.5" />
-                    <span className="text-sm">Automated order status inquiries</span>
+                    <span className="text-sm">{t('retailEcommerce.bullet2')}</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <Check className="h-5 w-5 shrink-0 text-primary mt-0.5" />
-                    <span className="text-sm">Post-purchase workflow automation</span>
+                    <span className="text-sm">{t('retailEcommerce.bullet3')}</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <Check className="h-5 w-5 shrink-0 text-primary mt-0.5" />
-                    <span className="text-sm">Integration with major e-commerce platforms</span>
+                    <span className="text-sm">{t('retailEcommerce.bullet4')}</span>
                   </li>
                 </ul>
               </div>

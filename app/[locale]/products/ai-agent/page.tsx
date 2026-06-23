@@ -46,53 +46,53 @@ export default function AIAgentPage() {
     <main className="min-h-screen pb-32">
       {/* 1. Hero */}
       <ProductHero 
-        badge="Enterprise AI Agent"
-        title="Your company's single source of truth."
-        description="Stop losing 30% of employee productivity to information searching. Syrix AI Agent unifies your engineering wikis, HR policies, and Slack history into an isolated, secure RAG repository."
-        ctaPrimary="Build Your Agent"
+        badge={t('hero.badge')}
+        title={t('hero.title')}
+        description={t('hero.description')}
+        ctaPrimary={t('hero.ctaPrimary')}
         mockupContent={HeroMockup}
       />
 
       {/* 2. Metrics */}
       <MetricsBanner 
         metrics={[
-          { value: "5hrs", label: "Saved per employee / week" },
-          { value: "100%", label: "Tenant Data Isolation" },
-          { value: "0", label: "Hallucinations on Policies" }
+          { value: "5hrs", label: t('metrics.savedPerWeek') },
+          { value: "100%", label: t('metrics.isolation') },
+          { value: "0", label: t('metrics.hallucinations') }
         ]}
       />
 
       {/* 3. Architecture */}
       <ArchitectureDiagram 
-        title="The Internal Brain Architecture" 
-        description="Securely ingest disparate silos and output perfect contextual answers for your team." 
+        title={t('architecture.title')} 
+        description={t('architecture.description')} 
       />
 
       {/* 4. Features Tabs */}
       <FeatureTabs 
-        title="Engineered for Enterprise Intelligence"
+        title={t('features.title')}
         tabs={[
           {
             id: 'rbac',
-            title: 'Enterprise RBAC Mapping',
-            description: 'Employees only see what they have permissions for. Total compliance.',
+            title: t('features.rbacTitle'),
+            description: t('features.rbacDesc'),
             visual: (
               <div className="flex flex-col gap-4 p-6 w-full max-w-sm">
                 <div className="bg-emerald-500/10 border border-emerald-500/30 p-4 rounded-lg flex items-center justify-between">
-                   <div className="text-sm">Public Policy Hub</div>
+                   <div className="text-sm">{t('features.rbacPublicPolicy')}</div>
                    <ShieldCheck className="w-5 h-5 text-emerald-500" />
                 </div>
                 <div className="bg-destructive/10 border border-destructive/30 p-4 rounded-lg flex items-center justify-between opacity-50">
-                   <div className="text-sm line-through">Executive Payroll Data</div>
-                   <div className="text-xs text-destructive border border-destructive/30 px-2 rounded">Access Denied</div>
+                   <div className="text-sm line-through">{t('features.rbacExecutivePayroll')}</div>
+                   <div className="text-xs text-destructive border border-destructive/30 px-2 rounded">{t('features.rbacAccessDenied')}</div>
                 </div>
               </div>
             )
           },
           {
             id: 'cross-silo',
-            title: 'Cross-Silo Search',
-            description: 'Queries retrieve answers simultaneously from Jira tickets, Slack threads, and Google Drive PDFs.',
+            title: t('features.searchTitle'),
+            description: t('features.searchDesc'),
             visual: (
               <div className="p-6">
                  <Search className="w-12 h-12 text-primary mx-auto mb-6 opacity-50 animate-pulse" />
@@ -105,13 +105,13 @@ export default function AIAgentPage() {
           },
           {
             id: 'execution',
-            title: 'Internal Tool Execution',
-            description: 'Not just read-only. The Agent can trigger scripts or update tickets internally.',
+            title: t('features.executionTitle'),
+            description: t('features.executionDesc'),
             visual: (
               <div className="p-6 bg-black/50 border border-white/10 rounded-xl">
                  <div className="text-sm text-muted-foreground mb-4 font-mono">$ reset-staging-server --force</div>
                  <div className="flex items-center gap-2 text-emerald-400 text-sm">
-                    <ServerCog className="w-4 h-4" /> Container restarted successfully
+                    <ServerCog className="w-4 h-4" /> {t('features.executionSuccess')}
                  </div>
               </div>
             )
@@ -121,17 +121,17 @@ export default function AIAgentPage() {
 
       {/* 5. Use Cases */}
       <UseCaseFlow 
-        title="Unblocking Internal Bottlenecks"
+        title={t('useCase.title')}
         useCases={[
           {
-            title: "IT Operations & Onboarding",
-            description: "New hires don't need to ask senior engineers where the repository keys are. They ask the Syrix Agent directly in Slack, getting immediate instructions complete with source links.",
+            title: t('useCase.itTitle'),
+            description: t('useCase.itDesc'),
             visual: (
               <div className="p-6 bg-card border border-white/10 rounded-lg flex flex-col gap-2">
-                 <div className="text-xs text-muted-foreground">Slack Workspace</div>
-                 <div className="bg-white/5 p-3 rounded text-sm text-gray-300">@Syrix where is the AWS staging key?</div>
+                 <div className="text-xs text-muted-foreground">{t('useCase.slackWorkspace')}</div>
+                 <div className="bg-white/5 p-3 rounded text-sm text-gray-300">{t('useCase.slackQuestion')}</div>
                  <div className="bg-primary/20 p-3 rounded text-sm text-gray-200 border border-primary/30 mt-2">
-                   According to the <span className="text-primary">DevOps Wiki</span>, the key is located in 1Password Vault "Engineering". 
+                   {t('useCase.slackAnswer')}
                  </div>
               </div>
             )
@@ -140,7 +140,7 @@ export default function AIAgentPage() {
       />
 
       {/* 6. Ecosystem */}
-      <EcosystemGrid title="Connects to your Internal Stack" />
+      <EcosystemGrid title={t('ecosystemTitle')} />
 
       <FAQSection title={locale === 'vi' ? "Câu hỏi thường gặp" : "Frequently Asked Questions"} faqs={faqs} />
     </main>

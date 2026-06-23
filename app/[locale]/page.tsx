@@ -96,8 +96,8 @@ export default function Home() {
 
       {/* Act 3: The Engine (Architecture) */}
       <ArchitectureDiagram 
-        title="The Intelligence Engine" 
-        description="How Syrix bridges the gap between conversational AI and enterprise backend execution."
+        title={t('home.architectureTitle')} 
+        description={t('home.architectureDesc')} 
       />
 
       {/* Act 4: The Arsenal (Product Bento) */}
@@ -107,14 +107,17 @@ export default function Home() {
       <SolutionsShowcase />
 
       {/* Act 6: Ecosystem */}
-      <EcosystemGrid />
+      <EcosystemGrid 
+        title={t('home.ecosystemTitle')}
+        description={t('home.ecosystemDesc')}
+      />
 
       {/* Act 7: Metrics & Proof */}
       <MetricsBanner 
         metrics={[
-          { value: '70%', label: 'Handling Time Reduced' },
-          { value: '95%', label: 'Automated Resolution' },
-          { value: '40%', label: 'Internal Search Time Saved' },
+          { value: '70%', label: t('home.metrics.handlingTime') },
+          { value: '95%', label: t('home.metrics.resolution') },
+          { value: '40%', label: t('home.metrics.searchTime') },
         ]}
       />
 

@@ -48,74 +48,74 @@ export default function SpeechToTextPage() {
     <main className="min-h-screen pb-32">
       {/* 1. Hero */}
       <ProductHero 
-        badge="Enterprise Speech AI"
-        title="Turn conversations into completed tasks."
-        description="Transcribe multi-speaker meetings with 99% accuracy, extract action items, and push updates directly to Jira or Slack via the AI Agent pipeline."
-        ctaPrimary="Start Transcribing"
+        badge={t('hero.badge')}
+        title={t('hero.title')}
+        description={t('hero.description')}
+        ctaPrimary={t('hero.ctaPrimary')}
         mockupContent={HeroMockup}
       />
 
       {/* 2. Metrics */}
       <MetricsBanner 
         metrics={[
-          { value: "99.2%", label: "Accuracy on Tech Jargon" },
-          { value: "<200ms", label: "Real-time Streaming Latency" },
-          { value: "0", label: "Manual Meeting Notes Taken" }
+          { value: "99.2%", label: t('metricsPage.accuracy') },
+          { value: "<200ms", label: t('metricsPage.latency') },
+          { value: "0", label: t('metricsPage.notes') }
         ]}
       />
 
       {/* 3. Architecture */}
       <ArchitectureDiagram 
-        title="From Voice to Velocity" 
-        description="How unstructured audio becomes structured database actions." 
+        title={t('architecturePage.title')} 
+        description={t('architecturePage.description')} 
       />
 
       {/* 4. Features Tabs */}
       <FeatureTabs 
-        title="Next-Gen Diarization & Execution"
+        title={t('featuresPage.title')}
         tabs={[
           {
             id: 'diarization',
-            title: 'Multi-Speaker Diarization',
-            description: 'Accurately separates overlapping voices, labeling Speaker A vs Speaker B flawlessly.',
+            title: t('featuresPage.diarizationTitle'),
+            description: t('featuresPage.diarizationDesc'),
             visual: (
               <div className="p-6 flex flex-col gap-4 w-full">
                 <div className="bg-card p-3 rounded-lg border-l-2 border-blue-500">
-                   <span className="text-xs text-blue-400 font-bold">Speaker 1:</span>
-                   <p className="text-sm">Let's approve the Q3 budget.</p>
+                   <span className="text-xs text-blue-400 font-bold">{t('featuresPage.diarizationSpk1')}</span>
+                   <p className="text-sm">{t('featuresPage.diarizationSpk1Txt')}</p>
                 </div>
                 <div className="bg-card p-3 rounded-lg border-l-2 border-purple-500 ml-8">
-                   <span className="text-xs text-purple-400 font-bold">Speaker 2:</span>
-                   <p className="text-sm">Agreed. I'll send it to finance.</p>
+                   <span className="text-xs text-purple-400 font-bold">{t('featuresPage.diarizationSpk2')}</span>
+                   <p className="text-sm">{t('featuresPage.diarizationSpk2Txt')}</p>
                 </div>
               </div>
             )
           },
           {
             id: 'extraction',
-            title: 'Action Item Extraction',
-            description: 'Syrix listens to the context and pulls out structured tasks, deadlines, and owners.',
+            title: t('featuresPage.extractionTitle'),
+            description: t('featuresPage.extractionDesc'),
             visual: (
-              <div className="p-6 bg-[#0a0a0f] border border-white/5 rounded-lg font-mono text-xs text-emerald-400 text-left">
+              <div className="p-6 bg-[#0a0a0f] border border-white/5 rounded-xl font-mono text-xs text-emerald-400 text-left">
                 {`{
-  "task": "Approve Q3 Budget",
-  "owner": "Speaker 2",
-  "department": "Finance",
-  "status": "Pending Creation"
+  "task": "${locale === 'vi' ? 'Phê duyệt ngân sách Q3' : 'Approve Q3 Budget'}",
+  "owner": "${locale === 'vi' ? 'Người nói 2' : 'Speaker 2'}",
+  "department": "${locale === 'vi' ? 'Tài chính' : 'Finance'}",
+  "status": "${locale === 'vi' ? 'Đang tạo' : 'Pending Creation'}"
 }`}
               </div>
             )
           },
           {
             id: 'voice-command',
-            title: 'On-the-Go Voice Commands',
-            description: 'Record a quick memo while commuting. Syrix transcribes it and commands the AI agent.',
+            title: t('featuresPage.commandsTitle'),
+            description: t('featuresPage.commandsDesc'),
             visual: (
               <div className="p-6 flex flex-col items-center justify-center h-full">
                  <div className="w-20 h-20 rounded-full bg-primary/20 border border-primary/50 flex items-center justify-center animate-pulse mb-4">
                     <Mic className="w-8 h-8 text-primary" />
                  </div>
-                 <div className="text-sm text-center">Listening for commands...</div>
+                 <div className="text-sm text-center">{t('featuresPage.commandsListening')}</div>
               </div>
             )
           }
@@ -124,16 +124,16 @@ export default function SpeechToTextPage() {
 
       {/* 5. Use Cases */}
       <UseCaseFlow 
-        title="Zero-Friction Operations"
+        title={t('useCasesPage.title')}
         useCases={[
           {
-            title: "Automated Meeting Execution",
-            description: "Following 2-hour strategic meetings, assistants spend hours compiling summaries. Syrix Speech to Text processes raw audio, structures the conversation into an executive checklist, and calls MCP tools to deploy engineering tasks into Jira automatically.",
+            title: t('useCasesPage.meetingTitle'),
+            description: t('useCasesPage.meetingDesc'),
             visual: (
               <div className="p-6 h-full flex flex-col justify-center gap-4">
-                 <div className="flex gap-2 text-sm text-muted-foreground"><div className="w-2 h-2 rounded-full bg-blue-500 mt-1.5" /> <span>Discussed Q3 Roadmap</span></div>
+                 <div className="flex gap-2 text-sm text-muted-foreground"><div className="w-2 h-2 rounded-full bg-blue-500 mt-1.5" /> <span>{t('useCasesPage.visualDiscuss')}</span></div>
                  <div className="p-4 bg-emerald-500/10 border border-emerald-500/20 rounded-lg text-sm text-emerald-500 flex items-center justify-between">
-                    <span>Task Created: Update Roadmap</span>
+                    <span>{t('useCasesPage.visualCreated')}</span>
                     <Send className="w-4 h-4" />
                  </div>
               </div>
@@ -143,7 +143,7 @@ export default function SpeechToTextPage() {
       />
 
       {/* 6. Ecosystem */}
-      <EcosystemGrid title="Connects with your Meeting Stack" />
+      <EcosystemGrid title={t('ecosystemTitle')} />
 
       <FAQSection title={locale === 'vi' ? "Câu hỏi thường gặp" : "Frequently Asked Questions"} faqs={faqs} />
     </main>

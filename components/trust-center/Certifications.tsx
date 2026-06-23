@@ -2,8 +2,11 @@
 
 import { motion } from 'framer-motion';
 import { Check } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 export default function Certifications() {
+  const t = useTranslations();
+
   return (
     <section className="py-24 bg-[#0a0a0f] border-t border-white/5">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -18,10 +21,15 @@ export default function Certifications() {
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-6 font-serif">
-                Certifications &<br />Credentials
+                {t('trustCenter.certificationsTitle').split('\n').map((line, i) => (
+                  <span key={i}>
+                    {line}
+                    {i < t('trustCenter.certificationsTitle').split('\n').length - 1 && <br />}
+                  </span>
+                ))}
               </h2>
               <p className="text-lg text-gray-400 max-w-md">
-                XPERC use management systems as a driver for continual improvement.
+                {t('trustCenter.certificationsSubtitle')}
               </p>
             </motion.div>
 
@@ -59,11 +67,7 @@ export default function Certifications() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="space-y-8 max-w-5xl"
           >
-            {[
-              "Our certified systems underpin the work the business undertakes, to ensure our products and services meet or exceed both XPERC' and our customers' needs and expectations.",
-              "Our Management System has been an important strategical area, helping us, through certifications, to ensure the continuous improvement of software development and engineering processes.",
-              "This strategy has been helping also on achieving excellent international recognition for our organizational and process maturity."
-            ].map((text, i) => (
+            {((t.raw('trustCenter.certifications') as string[]) as any[] && (t.raw('trustCenter.certifications') as string[])).map((text, i) => (
               <div key={i} className="flex items-start gap-4">
                 <div className="mt-1 flex-shrink-0">
                   <Check className="w-5 h-5 text-gray-400" />

@@ -2,10 +2,14 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { Home, Users, DollarSign, Check, Shield } from 'lucide-react';
+import { Home, Check } from 'lucide-react';
+import { useTranslations, useLocale } from 'next-intl';
 import CTA from '@/components/layout/cta';
 
 export default function RealEstate() {
+  const t = useTranslations('industrySolutions');
+  const locale = useLocale();
+
   return (
     <div className="min-h-screen pb-32">
       <section className="relative overflow-hidden py-24">
@@ -18,7 +22,7 @@ export default function RealEstate() {
               transition={{ duration: 0.6 }}
               className="mb-6 text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl"
             >
-              Real Estate Solution
+              {t('realEstate.title')}
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -26,11 +30,11 @@ export default function RealEstate() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="mb-10 text-lg text-muted-foreground md:text-xl"
             >
-              Automate lead qualification, property inquiries, and transaction workflows.
+              {t('realEstate.challengeDesc')}
             </motion.p>
             <Link href="/book-demo">
               <button className="inline-flex items-center gap-2 rounded-lg bg-primary px-8 py-4 text-base font-semibold text-primary-foreground shadow-2xl transition-all hover:bg-primary/90 hover:scale-105 hover:shadow-primary/25">
-                Contact Sales
+                {t('contactSales')}
                 <Home className="h-5 w-5" />
               </button>
             </Link>
@@ -43,29 +47,29 @@ export default function RealEstate() {
           <div className="mx-auto max-w-6xl">
             <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
               <div className="rounded-xl border border-border bg-card p-8">
-                <h2 className="mb-6 text-2xl font-bold">Challenge</h2>
+                <h2 className="mb-6 text-2xl font-bold">{t('challenge')}</h2>
                 <p className="text-muted-foreground">
-                  High volume of property inquiries and complex transaction processes require immediate attention and accurate documentation.
+                  {t('realEstate.challengeDesc')}
                 </p>
               </div>
               <div className="rounded-xl border border-border bg-card p-8">
-                <h2 className="mb-6 text-2xl font-bold">Solution</h2>
+                <h2 className="mb-6 text-2xl font-bold">{t('solution')}</h2>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3">
                     <Check className="h-5 w-5 shrink-0 text-primary mt-0.5" />
-                    <span className="text-sm">Automated lead qualification and property inquiry responses</span>
+                    <span className="text-sm">{t('realEstate.bullet1')}</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <Check className="h-5 w-5 shrink-0 text-primary mt-0.5" />
-                    <span className="text-sm">Real-time property information retrieval from listings</span>
+                    <span className="text-sm">{t('realEstate.bullet2')}</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <Check className="h-5 w-5 shrink-0 text-primary mt-0.5" />
-                    <span className="text-sm">Automated transaction workflow management</span>
+                    <span className="text-sm">{t('realEstate.bullet3')}</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <Check className="h-5 w-5 shrink-0 text-primary mt-0.5" />
-                    <span className="text-sm">Multi-channel support (phone, chat, email)</span>
+                    <span className="text-sm">{t('realEstate.bullet4')}</span>
                   </li>
                 </ul>
               </div>

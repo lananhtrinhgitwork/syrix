@@ -5,7 +5,6 @@
     "aiAgent": "Trí tuệ nhân tạo",
     "workspace": "Không gian làm việc",
     "asr": "Nhận diện giọng nói",
-
     "solutions": "Giải pháp",
     "customerSupport": "Hỗ trợ khách hàng",
     "internalKnowledge": "Kiến thức nội bộ",
@@ -20,7 +19,9 @@
     "contact": "Liên hệ",
     "bookDemo": "Đặt Demo",
     "privacyPolicy": "An toàn thông tin",
-    "builtByXperc": "Thiết kế bởi Xperc"
+    "builtByXperc": "Thiết kế bởi Xperc",
+    "sales": "Tự động hóa Bán hàng",
+    "security": "Trung tâm Tin cậy"
   },
   "hero": {
     "headline": "AI của bạn không chỉ nên trả lời câu hỏi. Nó nên hoàn thành công việc.",
@@ -251,22 +252,80 @@
       "feature4": "Kích hoạt workflow từ hội thoại agent",
       "desc": "Trong khi MCP xử lý từng lời gọi công cụ riêng lẻ, XCorp Workflow cho phép bạn kết nối chúng thành luồng tự động hoá đa bước mạnh mẽ — mà không cần viết một dòng code nào. Xây dựng logic kinh doanh phù hợp với nhu cầu chính xác của bạn.",
       "cta": "🚀 Khám phá Workflow tại xcorp.app →"
-    }
+    },
+    "heroPage": {
+      "badge": "Trung tâm Hỗ trợ Tự chủ",
+      "title": "Hỗ trợ bằng hành động, không chỉ trò chuyện.",
+      "description": "Ngừng chuyển hướng ticket bằng các bài viết FAQ. Syrix đọc các chính sách nội bộ của bạn và thực thi các thay đổi tài khoản thực tế qua các API bảo mật—giải quyết tự động 80% yêu cầu hỗ trợ tier-1.",
+      "ctaPrimary": "Xem Bản demo",
+      "userMessage": "Hủy gói đăng ký pro của tôi và hoàn tiền về thẻ ban đầu.",
+      "systemChecking": "Đang kiểm tra Stripe Billing API...",
+      "systemResponse": "Tôi đã hủy gói đăng ký Pro thành công. Giao dịch hoàn tiền $49.00 đã được thực hiện tới thẻ Visa đuôi 4242. Tiền sẽ về tài khoản sau 3-5 ngày làm việc."
+    },
+    "metricsPage": {
+      "resolved": "Yêu cầu được giải quyết ngay",
+      "coverage": "Hỗ trợ toàn cầu 24/7",
+      "latency": "Độ trễ phản hồi"
+    },
+    "architecturePage": {
+      "title": "Vòng lặp Trí tuệ",
+      "description": "Cách Syrix thu hẹp khoảng cách giữa kiến thức tĩnh và việc thực thi backend thời gian thực."
+    },
+    "featuresPage": {
+      "title": "Không chỉ là Chatbot",
+      "subtitle": "Các tính năng cốt lõi được xây dựng cho trải nghiệm khách hàng cấp doanh nghiệp.",
+      "ragTitle": "Câu trả lời chính xác tuyệt đối",
+      "ragDesc": "Câu trả lời được tạo ra hoàn toàn từ tài liệu PDF được quản trị viên tải lên. Không phỏng đoán.",
+      "ragQuote": "Theo Chính sách Trả hàng v2.pdf, bạn có 30 ngày để trả lại sản phẩm.",
+      "ragVerified": "Nguồn trích dẫn đã xác minh",
+      "mcpTitle": "Thực thi API Tự chủ",
+      "mcpDesc": "Agent cập nhật hồ sơ CRM, hoàn tiền hoặc kiểm tra tồn kho thời gian thực một cách an toàn.",
+      "mcpApi": "Kích hoạt API: /v1/stripe/refund",
+      "mcpOk": "200 OK: Đã hoàn tiền",
+      "handoffTitle": "Chuyển giao cho Nhân sự mượt mà",
+      "handoffDesc": "Chuyển ngay các vấn đề phức tạp cho nhân sự với đầy đủ ngữ cảnh kèm theo.",
+      "handoffStatus": "Chỉ số cảm xúc giảm. Đang chuyển sang hàng chờ Nhân sự Tier 2...",
+      "handoffPacket": "[Đã gửi gói ngữ cảnh] Khách hàng: \"Tôi rất tức giận về sự chậm trễ này...\""
+    },
+    "useCasePage": {
+      "title": "Được xây dựng cho Tuyến đầu",
+      "slaTitle": "Đảm bảo cam kết SLA ca đêm",
+      "slaDesc": "Giải quyết lượng ticket tăng vọt lúc 3 giờ sáng. Syrix xử lý trả hàng, trả lời các truy vấn kỹ thuật và cập nhật đơn hàng trong khi nhân viên của bạn đang ngủ—đảm bảo đạt mục tiêu cam kết chất lượng dịch vụ SLA toàn cầu.",
+      "chats": "500+ Cuộc chat đồng thời",
+      "autoProcessed": "Được xử lý tự động"
+    },
+    "ecosystemTitle": "Kết nối trực tiếp vào hệ thống của bạn"
   },
   "aiAgent": {
     "hero": {
       "badge": "Syrix Agent Builder v2.5",
       "title": "Khởi Tạo Agent AI Tự Động Cho Vận Hành Doanh Nghiệp.",
-      "description": "Dừng lãng phí 30% hiệu suất lao động vào các kho lưu trữ tri thức phân mảnh và quy trình nội bộ thủ công. Syrix AI Agent đóng vai trò là bộ não nội bộ bảo mật\u2014kết nối trực tiếp với các kho dữ liệu, thống nhất tri thức Kỹ thuật/HR/Vận hành và tự động thực thi các tác vụ liên nền tảng."
+      "description": "Dừng lãng phí 30% hiệu suất lao động vào các kho lưu trữ tri thức phân mảnh và quy trình nội bộ thủ công. Syrix AI Agent đóng vai trò là bộ não nội bộ bảo mật—kết nối trực tiếp với các kho dữ liệu, thống nhất tri thức Kỹ thuật/HR/Vận hành và tự động thực thi các tác vụ liên nền tảng.",
+      "ctaPrimary": "Khởi tạo Agent"
     },
     "metrics": {
       "title": "Thống Nhất Trí Tuệ Tập Thể Doanh Nghiệp",
       "subtitle": "Thay thế hệ thống tra cứu tài liệu lỗi thời và hàng đợi ticket nặng nề bằng các đồng nghiệp kỹ thuật số tự chủ.",
       "items": [
-        { "label": "Tốc độ Tra cứu Tri thức", "old": "25 Phút tìm kiếm chéo giữa các thư mục", "new": "Phản hồi RAG Ngữ cảnh tức thì < 2 Giây" },
-        { "label": "Xử lý Yêu cầu Nội bộ", "old": "Hàng dài ticket IT/HR tồn đọng kéo dài", "new": "80% Tự động hóa Giải quyết Tự phục vụ" },
-        { "label": "Chủ quyền Dữ liệu Doanh nghiệp", "old": "Rủi ro rò rỉ thông tin ra mô hình công cộng", "new": "100% Cô lập Bảo mật Vector Đa người dùng" }
-      ]
+        {
+          "label": "Tốc độ Tra cứu Tri thức",
+          "old": "25 Phút tìm kiếm chéo giữa các thư mục",
+          "new": "Phản hồi RAG Ngữ cảnh tức thì < 2 Giây"
+        },
+        {
+          "label": "Xử lý Yêu cầu Nội bộ",
+          "old": "Hàng dài ticket IT/HR tồn đọng kéo dài",
+          "new": "80% Tự động hóa Giải quyết Tự phục vụ"
+        },
+        {
+          "label": "Chủ quyền Dữ liệu Doanh nghiệp",
+          "old": "Rủi ro rò rỉ thông tin ra mô hình công cộng",
+          "new": "100% Cô lập Bảo mật Vector Đa người dùng"
+        }
+      ],
+      "savedPerWeek": "Tiết kiệm mỗi nhân sự / tuần",
+      "isolation": "Cô lập dữ liệu khách thuê",
+      "hallucinations": "Thông tin sai lệch về chính sách"
     },
     "pillars": {
       "title": "Nền Tảng Bộ Não Nội Bộ Tối Ưu",
@@ -274,19 +333,31 @@
         "tag": "Khung Kiến Trúc Agentforce Builder",
         "title": "Giao Diện Khởi Tạo Agent Thấp Code (Low-Code)",
         "description": "Cấp quyền cho các nhà quản lý vận hành hoặc Giám đốc CNTT tự cấu hình đồng nghiệp số mà không cần chuyên môn lập trình sâu. Định nghĩa các Chủ đề (Topics) chuyên biệt, phân quyền chi tiết trong không gian làm việc, thiết lập ranh giới thực thi và chạy thử nghiệm giả lập ngay trên một trung tâm điều khiển tập trung.",
-        "features": ["Bảng vẽ trực quan định nghĩa chủ đề", "Ranh giới mã token truy cập chi tiết", "Môi trường giả lập kiểm thử thời gian thực"]
+        "features": [
+          "Bảng vẽ trực quan định nghĩa chủ đề",
+          "Ranh giới mã token truy cập chi tiết",
+          "Môi trường giả lập kiểm thử thời gian thực"
+        ]
       },
       "rag": {
         "tag": "Đồng Bộ Tri Thức Chuẩn Glean",
         "title": "Đồng Bộ Hóa Tri Thức Liên Hệ Thống",
         "description": "Syrix kết nối ngay lập tức với các kho lưu trữ tệp, kho mã nguồn, wiki Confluence, lịch sử Slack và các file PDF quy chuẩn kỹ thuật lên đến 50MB. Sử dụng công nghệ Vector RAG chuyên sâu, Agent trích xuất câu trả lời chính xác đi kèm đường dẫn nguồn trích dẫn minh bạch.",
-        "features": ["Chỉ mục tuân thủ chế độ Read-only", "Phân tích tài liệu không giới hạn định dạng", "Phân quyền truy cập nghiêm ngặt theo vai trò"]
+        "features": [
+          "Chỉ mục tuân thủ chế độ Read-only",
+          "Phân tích tài liệu không giới hạn định dạng",
+          "Phân quyền truy cập nghiêm ngặt theo vai trò"
+        ]
       },
       "mcp": {
         "tag": "Tự Động Hóa Tác Vụ Nội Bộ",
         "title": "Tự Động Hóa Hệ Thống Nội Bộ Qua MCP",
-        "description": "Agent nội bộ của bạn không chỉ xử lý văn bản đơn thuần\u2014nó thực thi hành động. Thông qua các trình xử lý Model Context Protocol (MCP) bảo mật, Agent tự động kích hoạt các tiến trình triển khai CNTT, cập nhật tiến độ dự án trên Jira, xử lý hồ sơ nhân sự hoặc cấp khóa truy cập phần mềm.",
-        "features": ["Bắt tay kết nối hai chiều công cụ nội bộ", "Tự phục hồi lỗi khi gián đoạn mạng", "Môi trường sandbox thực thi hành động tách biệt"]
+        "description": "Agent nội bộ của bạn không chỉ xử lý văn bản đơn thuần—nó thực thi hành động. Thông qua các trình xử lý Model Context Protocol (MCP) bảo mật, Agent tự động kích hoạt các tiến trình triển khai CNTT, cập nhật tiến độ dự án trên Jira, xử lý hồ sơ nhân sự hoặc cấp khóa truy cập phần mềm.",
+        "features": [
+          "Bắt tay kết nối hai chiều công cụ nội bộ",
+          "Tự phục hồi lỗi khi gián đoạn mạng",
+          "Môi trường sandbox thực thi hành động tách biệt"
+        ]
       }
     },
     "interactive": {
@@ -324,7 +395,33 @@
           "a": "Cập nhật có hiệu lực gần như thời gian thực. Vì hệ thống sử dụng đường ống dẫn vector động thay vì tái huấn luyện mô hình tĩnh, việc thay đổi chính sách đơn giản là lưu đè file mới. Ngay khi file SOP sửa đổi được đưa vào Bộ sưu tập, các node cũ bị hủy và các truy vấn tiếp theo của nhân viên sẽ đọc dữ liệu mới sau vài mili-giây."
         }
       ]
-    }
+    },
+    "architecture": {
+      "title": "Kiến trúc Bộ não Nội bộ",
+      "description": "Thu nhận dữ liệu phân mảnh một cách an toàn và xuất ra các câu trả lời chính xác theo ngữ cảnh cho đội ngũ của bạn."
+    },
+    "features": {
+      "title": "Được thiết kế cho Trí tuệ Doanh nghiệp",
+      "rbacTitle": "Ánh xạ Phân quyền RBAC Doanh nghiệp",
+      "rbacDesc": "Nhân viên chỉ thấy những gì họ được cấp quyền. Tuân thủ tuyệt đối.",
+      "rbacPublicPolicy": "Trung tâm chính sách công cộng",
+      "rbacExecutivePayroll": "Dữ liệu lương ban điều hành",
+      "rbacAccessDenied": "Truy cập bị từ chối",
+      "searchTitle": "Tìm kiếm chéo hệ thống",
+      "searchDesc": "Truy vấn lấy câu trả lời đồng thời từ các ticket Jira, luồng Slack và PDF trên Google Drive.",
+      "executionTitle": "Thực thi công cụ nội bộ",
+      "executionDesc": "Không chỉ đọc. Agent có thể kích hoạt các script hoặc cập nhật ticket nội bộ.",
+      "executionSuccess": "Khởi động lại container thành công"
+    },
+    "useCase": {
+      "title": "Giải quyết điểm nghẽn nội bộ",
+      "itTitle": "Vận hành IT & Hội nhập nhân sự mới",
+      "itDesc": "Nhân viên mới không cần hỏi kỹ sư cấp cao về khóa kho lưu trữ. Họ hỏi trực tiếp Syrix Agent trong Slack và nhận được hướng dẫn ngay lập tức cùng liên kết nguồn.",
+      "slackWorkspace": "Không gian làm việc Slack",
+      "slackQuestion": "@Syrix khóa AWS staging ở đâu?",
+      "slackAnswer": "Theo DevOps Wiki, khóa nằm trong 1Password Vault \"Engineering\"."
+    },
+    "ecosystemTitle": "Kết nối với Hệ thống Công nghệ Nội bộ"
   },
   "workspace": {
     "headline": "Một trung tâm. Mọi agent. Tất cả quy trình làm việc của bạn.",
@@ -349,17 +446,30 @@
   },
   "speechToText": {
     "hero": {
-      "badge": "Syrix Speech to Text Core",
-      "title": "Chuyển Đổi Luồng Thoại Thành Dữ Liệu Doanh Nghiệp Minh Bạch.",
-      "description": "Đừng để các cuộc gọi tổng đài và tương tác thoại của đối tác biến mất vô ích. Syrix Speech to Text tự động chuyển đổi các cuộc gọi hỗ trợ, phiên tư vấn và cuộc họp nội bộ thành văn bản thời gian thực với độ chính xác lên tới 99.2%\u2014đảm bảo mọi thông tin cốt lõi đều được lưu trữ."
+      "badge": "AI Giọng nói Doanh nghiệp",
+      "title": "Chuyển hội thoại thành công việc hoàn thành.",
+      "description": "Bản dịch cuộc họp đa người nói với độ chính xác 99%, trích xuất công việc và đẩy cập nhật trực tiếp lên Jira hoặc Slack qua luồng AI Agent.",
+      "ctaPrimary": "Bắt đầu chuyển âm"
     },
     "metrics": {
       "title": "Chỉ Số Đo Lường Trí Tuệ Thoại",
       "subtitle": "Cách thức chuyển dịch từ việc lấy mẫu kiểm định thủ công sang tự động hóa xử lý âm thanh giúp mở rộng kiểm soát vận hành.",
       "items": [
-        { "label": "Tỷ lệ Chính xác Chuyển đổi", "old": "Dễ sai lệch từ ngữ với các bộ đọc giọng nói thông thường", "new": "Rõ ràng tuyệt đối nhờ bộ từ vựng chuyên ngành doanh nghiệp" },
-        { "label": "Tốc độ Xử lý Luồng Thoại", "old": "Hàng giờ trì hoãn xử lý trong các hàng chờ tệp tin", "new": "Đầu ra văn bản streaming tức thì dưới 200ms" },
-        { "label": "Chi phí Kiểm định Tuân thủ", "old": "Tốn nhiều giờ nghe ghi âm xác suất thủ công", "new": "100% Tự động phân tích từ khóa và lập chỉ mục văn bản" }
+        {
+          "label": "Tỷ lệ Chính xác Chuyển đổi",
+          "old": "Dễ sai lệch từ ngữ với các bộ đọc giọng nói thông thường",
+          "new": "Rõ ràng tuyệt đối nhờ bộ từ vựng chuyên ngành doanh nghiệp"
+        },
+        {
+          "label": "Tốc độ Xử lý Luồng Thoại",
+          "old": "Hàng giờ trì hoãn xử lý trong các hàng chờ tệp tin",
+          "new": "Đầu ra văn bản streaming tức thì dưới 200ms"
+        },
+        {
+          "label": "Chi phí Kiểm định Tuân thủ",
+          "old": "Tốn nhiều giờ nghe ghi âm xác suất thủ công",
+          "new": "100% Tự động phân tích từ khóa và lập chỉ mục văn bản"
+        }
       ]
     },
     "pillars": {
@@ -368,13 +478,21 @@
         "tag": "Tách Kênh Người Nói",
         "title": "Phân Tách Đa Người Nói & Theo Dõi Ý Định",
         "description": "Syrix tự động nhận diện và bóc tách các giọng nói khác nhau trong cùng cuộc gọi. Hệ thống tách biệt rõ ràng câu hỏi của khách hàng và câu trả lời của chuyên viên, sắp xếp thành một kịch bản sạch sẽ kèm mốc thời gian chi tiết.",
-        "features": ["Xử lý hội thoại nói đè nhau", "Đồng bộ âm học theo tông giọng", "Đóng dấu mốc thời gian chính xác mili-giây"]
+        "features": [
+          "Xử lý hội thoại nói đè nhau",
+          "Đồng bộ âm học theo tông giọng",
+          "Đóng dấu mốc thời gian chính xác mili-giây"
+        ]
       },
       "vocabulary": {
         "tag": "Từ Vựng Thông Minh",
         "title": "Tối Ưu Từ Vựng Chuyên Ngành Doanh Nghiệp",
         "description": "Các công cụ đọc tiếng nói thông thường luôn viết sai tên mã linh kiện kỹ thuật, mã phần mềm nội bộ hay tên thương hiệu. Syrix tự học các thuật ngữ riêng biệt này ngay lập tức bằng cách đọc qua các bộ sưu tập tài liệu bạn tải lên.",
-        "features": ["Lọc chuẩn chuỗi ký tự và số series", "Tự động viết hoa từ viết tắt viết tắt", "Phân tích cụm từ đa ngôn ngữ thông minh"]
+        "features": [
+          "Lọc chuẩn chuỗi ký tự và số series",
+          "Tự động viết hoa từ viết tắt viết tắt",
+          "Phân tích cụm từ đa ngôn ngữ thông minh"
+        ]
       }
     },
     "simulator": {
@@ -392,16 +510,47 @@
           "id": "meeting",
           "tag": "Ghi Chép Cuộc Họp Tự Động",
           "title": "Tóm Tắt Cuộc Họp Thông Minh & Trích Xuất Hành Động",
-          "desc": "Syrix Speech to Text tự động tham gia lịch họp của bạn, ghi lại lời nói của từng người tham dự theo thời gian thực, và trích xuất các tóm tắt có cấu trúc\u2014quyết định, mục hành động và câu hỏi mở. Kết quả được đẩy trực tiếp vào cơ sở tri thức của Internal AI Agent và gửi qua Slack thông qua công cụ MCP, giúp mọi cuộc họp trở thành tài sản tài liệu có thể tìm kiếm."
+          "desc": "Syrix Speech to Text tự động tham gia lịch họp của bạn, ghi lại lời nói của từng người tham dự theo thời gian thực, và trích xuất các tóm tắt có cấu trúc—quyết định, mục hành động và câu hỏi mở. Kết quả được đẩy trực tiếp vào cơ sở tri thức của Internal AI Agent và gửi qua Slack thông qua công cụ MCP, giúp mọi cuộc họp trở thành tài sản tài liệu có thể tìm kiếm."
         },
         {
           "id": "executive",
           "tag": "Quy Trình Điều Hành Bằng Giọng Nói",
           "title": "Tác Vụ Điều Hành Qua Internal AI Agent & Slack",
-          "desc": "Lãnh đạo và quản lý có thể đọc yêu cầu rảnh tay: 'Tóm tắt dự báo Q3 và gửi cho nhóm tài chính.' Syrix ghi lại lệnh thoại, định tuyến qua Internal AI Agent để truy xuất ngữ cảnh và suy luận, sau đó thực thi các hành động\u2014cập nhật bản ghi CRM, gửi thông báo Slack hoặc kích hoạt luồng phê duyệt\u2014tất cả qua kết nối MCP bảo mật."
+          "desc": "Lãnh đạo và quản lý có thể đọc yêu cầu rảnh tay: 'Tóm tắt dự báo Q3 và gửi cho nhóm tài chính.' Syrix ghi lại lệnh thoại, định tuyến qua Internal AI Agent để truy xuất ngữ cảnh và suy luận, sau đó thực thi các hành động—cập nhật bản ghi CRM, gửi thông báo Slack hoặc kích hoạt luồng phê duyệt—tất cả qua kết nối MCP bảo mật."
         }
       ]
-    }
+    },
+    "metricsPage": {
+      "accuracy": "Độ chính xác thuật ngữ kỹ thuật",
+      "latency": "Độ trễ truyền phát thời gian thực",
+      "notes": "Biên bản cuộc họp viết thủ công"
+    },
+    "architecturePage": {
+      "title": "Từ giọng nói đến hành động",
+      "description": "Cách âm thanh phi cấu trúc trở thành các hành động cơ sở dữ liệu có cấu trúc."
+    },
+    "featuresPage": {
+      "title": "Phân tách người nói & Thực thi thế hệ mới",
+      "diarizationTitle": "Nhận dạng phân tách người nói",
+      "diarizationDesc": "Phân biệt chính xác các giọng nói chồng chéo, dán nhãn Người nói A và Người nói B một cách hoàn hảo.",
+      "diarizationSpk1": "Người nói 1:",
+      "diarizationSpk1Txt": "Hãy phê duyệt ngân sách Q3.",
+      "diarizationSpk2": "Người nói 2:",
+      "diarizationSpk2Txt": "Đồng ý. Tôi sẽ gửi cho ban tài chính.",
+      "extractionTitle": "Trích xuất mục hành động",
+      "extractionDesc": "Syrix lắng nghe ngữ cảnh và trích xuất các công việc cấu trúc, thời hạn và người chịu trách nhiệm.",
+      "commandsTitle": "Mệnh lệnh giọng nói di động",
+      "commandsDesc": "Ghi âm nhanh một ghi chú khi đang đi làm. Syrix chuyển âm và ra lệnh cho AI agent.",
+      "commandsListening": "Đang lắng nghe mệnh lệnh..."
+    },
+    "useCasesPage": {
+      "title": "Vận hành không ma sát",
+      "meetingTitle": "Tự động hóa thực thi cuộc họp",
+      "meetingDesc": "Sau các cuộc họp chiến lược kéo dài 2 tiếng, các trợ lý phải mất nhiều giờ để tổng hợp biên bản. Syrix Speech to Text xử lý âm thanh thô, cấu trúc cuộc hội thoại thành danh sách kiểm tra điều hành và gọi công cụ MCP để triển khai công việc trên Jira tự động.",
+      "visualDiscuss": "Đã thảo luận Lộ trình Q3",
+      "visualCreated": "Đã tạo Task: Cập nhật Lộ trình"
+    },
+    "ecosystemTitle": "Kết nối với Hệ thống Cuộc họp của bạn"
   },
   "solutions": {
     "hub": {
@@ -411,21 +560,39 @@
     "customerSupport": {
       "badge": "Vận hành & Hỗ trợ",
       "heroTitle": "Tự Động Hóa 80% Ticket Hỗ Trợ Doanh Nghiệp Không Dùng Kịch Bản.",
-      "heroDesc": "Tái cấu trúc bộ phận hậu mãi. Syrix độc lập xử lý các yêu cầu chăm sóc đối tác đa kênh\u2014tự đọc file log hệ thống, xác minh điều khoản qua RAG và thực thi chỉnh sửa tài khoản an toàn qua cổng kết nối Model Context Protocol (MCP).",
+      "heroDesc": "Tái cấu trúc bộ phận hậu mãi. Syrix độc lập xử lý các yêu cầu chăm sóc đối tác đa kênh—tự đọc file log hệ thống, xác minh điều khoản qua RAG và thực thi chỉnh sửa tài khoản an toàn qua cổng kết nối Model Context Protocol (MCP).",
       "tabs": [
-        { "title": "Tự động hóa Tiếp nhận", "desc": "Phân tích và xử lý các yêu cầu kỹ thuật B2B phức tạp dưới 2 giây với màng lọc cô lập dữ liệu bảo mật." },
-        { "title": "Thực thi Tác vụ API", "desc": "Cấp quyền cho Agent tương tác với cổng ERP/hóa đơn nội bộ để xử lý đổi địa chỉ hoặc tính lại bill trực tiếp." },
-        { "title": "Chuyển giao Hoàn hảo", "desc": "Cơ chế can thiệp im lặng của con người đi kèm bản tóm tắt tóm tắt tự động do AI lập để đảm bảo khách không phải chờ đợi." }
+        {
+          "title": "Tự động hóa Tiếp nhận",
+          "desc": "Phân tích và xử lý các yêu cầu kỹ thuật B2B phức tạp dưới 2 giây với màng lọc cô lập dữ liệu bảo mật."
+        },
+        {
+          "title": "Thực thi Tác vụ API",
+          "desc": "Cấp quyền cho Agent tương tác với cổng ERP/hóa đơn nội bộ để xử lý đổi địa chỉ hoặc tính lại bill trực tiếp."
+        },
+        {
+          "title": "Chuyển giao Hoàn hảo",
+          "desc": "Cơ chế can thiệp im lặng của con người đi kèm bản tóm tắt tóm tắt tự động do AI lập để đảm bảo khách không phải chờ đợi."
+        }
       ]
     },
     "sales": {
       "badge": "Tăng Trưởng Doanh Thu",
       "heroTitle": "Bứt Phá Tốc Độ Chốt Deal Với AI Agent Thúc Đẩy Doanh Số.",
-      "heroDesc": "Tuyệt đối không để bất kỳ cơ hội kinh doanh nào bị nguội lạnh. Syrix Sales Agent đóng vai trò là chuyên viên phát triển doanh nghiệp tuyến đầu\u2014tự bóc tách tài liệu đấu thầu RFP/RFI lên tới 50MB, tự phân tích nỗi đau đối tác, đối chiếu bảng giá chiết khấu doanh nghiệp và soạn thảo hợp đồng nháp kết nối thẳng với HubSpot/Salesforce CRM.",
+      "heroDesc": "Tuyệt đối không để bất kỳ cơ hội kinh doanh nào bị nguội lạnh. Syrix Sales Agent đóng vai trò là chuyên viên phát triển doanh nghiệp tuyến đầu—tự bóc tách tài liệu đấu thầu RFP/RFI lên tới 50MB, tự phân tích nỗi đau đối tác, đối chiếu bảng giá chiết khấu doanh nghiệp và soạn thảo hợp đồng nháp kết nối thẳng với HubSpot/Salesforce CRM.",
       "tabs": [
-        { "title": "Bóc tách Hồ sơ Đấu thầu", "desc": "Phân tích tức thì các tập tài liệu yêu cầu báo giá phức tạp của tập đoàn đối tác và trích xuất các tiêu chuẩn tính năng khớp với Specs." },
-        { "title": "Ma trận Giá Thông minh", "desc": "Đánh giá các tham số quy mô người dùng để tự động tính toán biên độ chiết khấu hợp đồng theo năm từ cơ sở tri thức." },
-        { "title": "Thực thi Công cụ CRM", "desc": "Tự động đổ thông tin Lead vào pipeline, ghi nhận lịch sử trao đổi và phát hành hợp đồng điện tử nháp qua giao thức MCP." }
+        {
+          "title": "Bóc tách Hồ sơ Đấu thầu",
+          "desc": "Phân tích tức thì các tập tài liệu yêu cầu báo giá phức tạp của tập đoàn đối tác và trích xuất các tiêu chuẩn tính năng khớp với Specs."
+        },
+        {
+          "title": "Ma trận Giá Thông minh",
+          "desc": "Đánh giá các tham số quy mô người dùng để tự động tính toán biên độ chiết khấu hợp đồng theo năm từ cơ sở tri thức."
+        },
+        {
+          "title": "Thực thi Công cụ CRM",
+          "desc": "Tự động đổ thông tin Lead vào pipeline, ghi nhận lịch sử trao đổi và phát hành hợp đồng điện tử nháp qua giao thức MCP."
+        }
       ]
     },
     "internalKnowledge": {
@@ -433,9 +600,18 @@
       "heroTitle": "Hợp Nhất Kho Tri Thức Phân Mảnh Thành Bộ Não Bảo Mật.",
       "heroDesc": "Dừng lãng phí 30% hiệu suất làm việc của nhân sự vào việc tìm kiếm thông tin chéo silo. Syrix Internal Knowledge Agent thống nhất toàn bộ mã nguồn kỹ thuật, chính sách nhân sự, database Confluence và Slack log vào một kho dữ liệu RAG Vector cô lập.",
       "tabs": [
-        { "title": "Tra cứu Liên Hệ Thống", "desc": "Tìm kiếm đồng thời trên toàn bộ ứng dụng lưu trữ của doanh nghiệp và trích xuất câu trả lời chuẩn xác kèm đường dẫn nguồn minh bạch." },
-        { "title": "Phân quyền Bảo mật Sâu", "desc": "Phản chiếu chính xác mô hình phân quyền dựa trên vai trò (RBAC) của công ty\u2014nhân viên chỉ tiếp cận thông tin được phép đọc." },
-        { "title": "Cập nhật Tri thức Real-Time", "desc": "Thả file quy trình SOPs sửa đổi mới vào bộ sưu tập, bộ não AI tự động cập nhật lập chỉ mục sau vài mili-giây không cần training lại." }
+        {
+          "title": "Tra cứu Liên Hệ Thống",
+          "desc": "Tìm kiếm đồng thời trên toàn bộ ứng dụng lưu trữ của doanh nghiệp và trích xuất câu trả lời chuẩn xác kèm đường dẫn nguồn minh bạch."
+        },
+        {
+          "title": "Phân quyền Bảo mật Sâu",
+          "desc": "Phản chiếu chính xác mô hình phân quyền dựa trên vai trò (RBAC) của công ty—nhân viên chỉ tiếp cận thông tin được phép đọc."
+        },
+        {
+          "title": "Cập nhật Tri thức Real-Time",
+          "desc": "Thả file quy trình SOPs sửa đổi mới vào bộ sưu tập, bộ não AI tự động cập nhật lập chỉ mục sau vài mili-giây không cần training lại."
+        }
       ]
     },
     "meetingExecution": {
@@ -443,9 +619,18 @@
       "heroTitle": "Chuyển Đổi Luồng Thoại Cuộc Họp Thành Mệnh Lệnh Hệ Thống.",
       "heroDesc": "Định nghĩa lại sự đồng bộ tổ chức. Syrix tiếp nhận tệp ghi âm cuộc họp, bóc tách kênh người nói chính xác và phối hợp cùng trợ lý nội bộ để tự động kích hoạt các mã lệnh triển khai tác vụ liên nền tảng.",
       "tabs": [
-        { "title": "Biên bản Họp Tự động", "desc": "Loại bỏ việc ghi chép thủ công. Chuyển đổi cuộc thoại 2 tiếng thành một bảng tóm tắt điều hành gồm các checkbox đầu việc gọn gàng." },
-        { "title": "Đồng bộ Jira & Slack", "desc": "Agent tự đọc các hành động được trích xuất và độc lập gọi tool MCP để tạo task kỹ thuật trên Jira hoặc bắn chỉ thị sạch vào Slack." },
-        { "title": "Mệnh lệnh Di động", "desc": "Quay nhanh voice thoại khi đang trên đường đi làm; Syrix tự dịch thoại tức thì và chỉ huy AI Agent thực thi luồng nghiệp vụ nội bộ." }
+        {
+          "title": "Biên bản Họp Tự động",
+          "desc": "Loại bỏ việc ghi chép thủ công. Chuyển đổi cuộc thoại 2 tiếng thành một bảng tóm tắt điều hành gồm các checkbox đầu việc gọn gàng."
+        },
+        {
+          "title": "Đồng bộ Jira & Slack",
+          "desc": "Agent tự đọc các hành động được trích xuất và độc lập gọi tool MCP để tạo task kỹ thuật trên Jira hoặc bắn chỉ thị sạch vào Slack."
+        },
+        {
+          "title": "Mệnh lệnh Di động",
+          "desc": "Quay nhanh voice thoại khi đang trên đường đi làm; Syrix tự dịch thoại tức thì và chỉ huy AI Agent thực thi luồng nghiệp vụ nội bộ."
+        }
       ]
     }
   },
@@ -456,13 +641,33 @@
       "heroDesc": "Hãy tưởng tượng một khách hàng B2B của bạn gặp sự cố đơn hàng vào lúc 2 giờ sáng. Thay vì phải chờ đợi trong bất lực đến giờ hành chính, Syrix Help Desk lập tức xuất hiện. Không kịch bản cứng nhắc, không nói dối (Hallucination), AI tự đọc tài liệu hướng dẫn sản phẩm bạn cung cấp để giải đáp chính xác, đồng thời tự động gọi công cụ MCP kết nối trực tiếp vào cơ sở dữ liệu để kiểm tra và sửa đổi thông tin đơn hàng cho khách chỉ trong 2 giây.",
       "storyText": "Câu chuyện thành công: Giảm 80% áp lực ticket hàng chờ, nâng tỷ lệ hài lòng của khách hàng (CSAT) lên 98% và cắt giảm toàn bộ chi phí vận hành ca đêm của doanh nghiệp.",
       "kpis": [
-        { "label": "Tốc độ phản hồi", "old": "Chờ đợi 45 phút trong hàng đợi ca đêm", "new": "Giải quyết ngay lập tức < 2 giây" },
-        { "label": "Chỉ số hài lòng (CSAT)", "old": "72% do chatbot cũ trả lời sai lệch", "new": "Đạt 98% nhờ trích xuất RAG chính xác" }
+        {
+          "label": "Tốc độ phản hồi",
+          "old": "Chờ đợi 45 phút trong hàng đợi ca đêm",
+          "new": "Giải quyết ngay lập tức < 2 giây"
+        },
+        {
+          "label": "Chỉ số hài lòng (CSAT)",
+          "old": "72% do chatbot cũ trả lời sai lệch",
+          "new": "Đạt 98% nhờ trích xuất RAG chính xác"
+        }
       ],
       "tabs": [
-        { "tab": "Nỗi đau vận hành", "title": "Hàng chờ nghẽn và rủi ro mất khách hàng", "desc": "Khách hàng ca đêm hoặc đối tác quốc tế liên tục rời bỏ thương hiệu vì các chatbot cũ chỉ biết trả lời FAQ câu chữ vô tri, trong khi nhân sự con người không thể trực tuyến để cover toàn bộ khung giờ." },
-        { "tab": "Cách Syrix giải quyết", "title": "Đồng nghiệp số tự chủ thực thi qua MCP", "desc": "Syrix tiếp nhận yêu cầu, bóc tách chính xác tài liệu chính sách qua RAG để đưa ra câu trả lời minh bạch, sau đó tự kích hoạt hàm API kết nối database để xử lý tận gốc vấn đề cho khách hàng." },
-        { "tab": "Giá trị mang lại", "title": "Trải nghiệm vượt trội & Tối ưu dòng tiền", "desc": "Tạo dựng niềm tin tuyệt đối với đối tác chiến lược nhờ sự hỗ trợ chuẩn Enterprise liên tục không ma sát, giải phóng nhân sự core để tập trung xử lý các case khủng hoảng lớn." }
+        {
+          "tab": "Nỗi đau vận hành",
+          "title": "Hàng chờ nghẽn và rủi ro mất khách hàng",
+          "desc": "Khách hàng ca đêm hoặc đối tác quốc tế liên tục rời bỏ thương hiệu vì các chatbot cũ chỉ biết trả lời FAQ câu chữ vô tri, trong khi nhân sự con người không thể trực tuyến để cover toàn bộ khung giờ."
+        },
+        {
+          "tab": "Cách Syrix giải quyết",
+          "title": "Đồng nghiệp số tự chủ thực thi qua MCP",
+          "desc": "Syrix tiếp nhận yêu cầu, bóc tách chính xác tài liệu chính sách qua RAG để đưa ra câu trả lời minh bạch, sau đó tự kích hoạt hàm API kết nối database để xử lý tận gốc vấn đề cho khách hàng."
+        },
+        {
+          "tab": "Giá trị mang lại",
+          "title": "Trải nghiệm vượt trội & Tối ưu dòng tiền",
+          "desc": "Tạo dựng niềm tin tuyệt đối với đối tác chiến lược nhờ sự hỗ trợ chuẩn Enterprise liên tục không ma sát, giải phóng nhân sự core để tập trung xử lý các case khủng hoảng lớn."
+        }
       ]
     },
     "sales": {
@@ -471,13 +676,33 @@
       "heroDesc": "Khách hàng tiềm năng truy cập website của bạn vào lúc nửa đêm để tìm hiểu dịch vụ. Nếu sử dụng nhân sự Sales truyền thống, bạn sẽ tốn một khoản chi phí nhân sự khổng lồ nhưng vẫn bỏ lỡ những khách hàng inbox ngoài giờ hành chính. Syrix Sales Agent xuất hiện như một chiến thần doanh số luôn túc trực: Tự phân tích nhu cầu đối tác, tự tra cứu tài liệu sản phẩm để tư vấn, và tự động đặt lịch xem nhà, lịch tư vấn chuyên sâu cho khách thông qua cổng kết nối MCP với CRM HubSpot.",
       "storyText": "Câu chuyện thành công: Bứt phá tỷ lệ chuyển đổi (Conversion Rate) lên 35%, tối ưu hóa điểm số ROI doanh nghiệp bằng cách chuyển hóa mọi truy cập ngoài giờ thành cơ hội chốt deal thực tế.",
       "kpis": [
-        { "label": "Tỷ lệ chuyển đổi", "old": "Bỏ sót 40% lead ngoài giờ hành chính", "new": "Tăng trưởng 35% doanh số chuyển đổi" },
-        { "label": "Hiệu suất chi phí (ROI)", "old": "Gánh nặng ngân sách trực tổng đài lớn", "new": "Tối đa hóa ROI với 1 Agent cân vạn khách" }
+        {
+          "label": "Tỷ lệ chuyển đổi",
+          "old": "Bỏ sót 40% lead ngoài giờ hành chính",
+          "new": "Tăng trưởng 35% doanh số chuyển đổi"
+        },
+        {
+          "label": "Hiệu suất chi phí (ROI)",
+          "old": "Gánh nặng ngân sách trực tổng đài lớn",
+          "new": "Tối đa hóa ROI với 1 Agent cân vạn khách"
+        }
       ],
       "useCases": [
-        { "tab": "Nỗi đau của sếp", "title": "Lead bị nguội và lãng phí ngân sách marketing", "desc": "Đổ tiền chạy quảng cáo nhưng lead đổ về vào buổi tối hoặc ngày lễ không có ai tư vấn kịp thời, khiến đối tác mất kiên nhẫn và chuyển sang lựa chọn đối thủ cạnh tranh." },
-        { "tab": "Cách Syrix giải quyết", "title": "Tự động tư vấn và chốt lịch hẹn qua CRM", "desc": "Sales Agent tự động bóc tách hồ sơ thắc mắc của đối tác, đối chiếu bảng giá chiết khấu, hiển thị lịch trống từ HubSpot và chốt ngay slot hẹn tư vấn hoặc đặt lịch xem bất động sản trực quan cho khách." },
-        { "tab": "Giá trị mang lại", "title": "Dòng chảy doanh thu không bao giờ ngủ", "desc": "Hệ thống vận hành liên tục xuyên biên giới quốc gia, tối ưu hóa chi phí trên mỗi lead thu về và nhân bản năng lực của best-seller lên quy mô toàn doanh nghiệp." }
+        {
+          "tab": "Nỗi đau của sếp",
+          "title": "Lead bị nguội và lãng phí ngân sách marketing",
+          "desc": "Đổ tiền chạy quảng cáo nhưng lead đổ về vào buổi tối hoặc ngày lễ không có ai tư vấn kịp thời, khiến đối tác mất kiên nhẫn và chuyển sang lựa chọn đối thủ cạnh tranh."
+        },
+        {
+          "tab": "Cách Syrix giải quyết",
+          "title": "Tự động tư vấn và chốt lịch hẹn qua CRM",
+          "desc": "Sales Agent tự động bóc tách hồ sơ thắc mắc của đối tác, đối chiếu bảng giá chiết khấu, hiển thị lịch trống từ HubSpot và chốt ngay slot hẹn tư vấn hoặc đặt lịch xem bất động sản trực quan cho khách."
+        },
+        {
+          "tab": "Giá trị mang lại",
+          "title": "Dòng chảy doanh thu không bao giờ ngủ",
+          "desc": "Hệ thống vận hành liên tục xuyên biên giới quốc gia, tối ưu hóa chi phí trên mỗi lead thu về và nhân bản năng lực của best-seller lên quy mô toàn doanh nghiệp."
+        }
       ]
     },
     "internalChatbot": {
@@ -486,13 +711,33 @@
       "heroDesc": "Mỗi ngày, nhân sự của bạn mất tới 30% thời gian chỉ để đi tìm các file quy trình cũ, hoặc mệt mỏi chờ đợi phòng IT/HR duyệt ticket cấp quyền phần mềm. Syrix Internal Chatbot luôn hiện hữu để chấm dứt sự lãng phí đó. Nạp toàn bộ kho dữ liệu công ty cho AI, nhân viên chỉ cần đặt câu hỏi là có câu trả lời chính xác kèm link file gốc nội bộ. Thậm chí, nhờ sức mạnh MCP, Agent tự truy cập thẳng vào hệ thống Jira hoặc XCORP để check trạng thái task và tự tay tạo ticket xử lý lỗi cho nhân sự.",
       "storyText": "Câu chuyện thành công: Giải quyết 70% các yêu cầu tự phục vụ (Self-service), giải phóng phòng IT/HR khỏi đống ticket vụn vặt để tập trung vào các dự án hạ tầng cốt lõi.",
       "kpis": [
-        { "label": "Thời gian tra cứu", "old": "25 phút mò mẫm chéo giữa các thư mục", "new": "Trả lời chính xác dưới 2 giây qua RAG" },
-        { "label": "Tỷ lệ giảm tải ticket", "old": "Hàng dài ticket nội bộ tồn đọng kéo dài", "new": "Tự động hóa xử lý hoàn toàn 70%" }
+        {
+          "label": "Thời gian tra cứu",
+          "old": "25 phút mò mẫm chéo giữa các thư mục",
+          "new": "Trả lời chính xác dưới 2 giây qua RAG"
+        },
+        {
+          "label": "Tỷ lệ giảm tải ticket",
+          "old": "Hàng dài ticket nội bộ tồn đọng kéo dài",
+          "new": "Tự động hóa xử lý hoàn toàn 70%"
+        }
       ],
       "useCases": [
-        { "tab": "Nỗi đau nhân sự", "title": "Bị bủa vây bởi thủ tục và phân mảnh tri thức", "desc": "Nhân viên mới ngập lụt trong đống file SOPs, kỹ sư mất thời gian tra cứu log lỗi cũ, phòng ban vận hành bị tắc nghẽn giao tiếp vì dữ liệu nằm rải rác." },
-        { "tab": "Cách Syrix giải quyết", "title": "Kết nối sâu vào Slack, Jira và XCORP", "desc": "Trợ lý ảo tích hợp thẳng vào không gian làm việc như Slack. Nhân viên ra lệnh bốc tài liệu, check tiến độ dự án hay nhờ tạo task, AI tự gọi tool MCP thực thi trực tiếp trên hệ thống Jira." },
-        { "tab": "Giá trị mang lại", "title": "Bảo mật tuyệt đối & Vận hành tinh gọn", "desc": "Phản chiếu mô hình phân quyền RBAC nghiêm ngặt đảm bảo an toàn dữ liệu nội bộ, đồng thời thúc đẩy hiệu suất lao động toàn công ty lên một tầm cao mới." }
+        {
+          "tab": "Nỗi đau nhân sự",
+          "title": "Bị bủa vây bởi thủ tục và phân mảnh tri thức",
+          "desc": "Nhân viên mới ngập lụt trong đống file SOPs, kỹ sư mất thời gian tra cứu log lỗi cũ, phòng ban vận hành bị tắc nghẽn giao tiếp vì dữ liệu nằm rải rác."
+        },
+        {
+          "tab": "Cách Syrix giải quyết",
+          "title": "Kết nối sâu vào Slack, Jira và XCORP",
+          "desc": "Trợ lý ảo tích hợp thẳng vào không gian làm việc như Slack. Nhân viên ra lệnh bốc tài liệu, check tiến độ dự án hay nhờ tạo task, AI tự gọi tool MCP thực thi trực tiếp trên hệ thống Jira."
+        },
+        {
+          "tab": "Giá trị mang lại",
+          "title": "Bảo mật tuyệt đối & Vận hành tinh gọn",
+          "desc": "Phản chiếu mô hình phân quyền RBAC nghiêm ngặt đảm bảo an toàn dữ liệu nội bộ, đồng thời thúc đẩy hiệu suất lao động toàn công ty lên một tầm cao mới."
+        }
       ]
     },
     "meetingExecution": {
@@ -501,20 +746,40 @@
       "heroDesc": "Dành riêng cho các nhà quản lý và lãnh đạo bận rộn luôn phải di chuyển trên đường. Thay vì mất hàng giờ viết biên bản tổng hợp sau cuộc họp 2 tiếng, Syrix Speech to Text tự động nghe, phân tách kênh giọng nói và tóm tắt cuộc họp thành ma trận checklist công việc sạch sẽ. Đặc biệt, khi đang đi xe trên đường và nảy ra ý tưởng khẩn cấp, Sếp chỉ cần quay một đoạn voice ngắn gửi đi; Syrix tự dịch thoại dưới 200ms, phối hợp cùng AI Agent gọi tool MCP để tự động chia task, tạo ticket trên Jira và bắn chỉ thị đẹp mắt vào Slack cho đội ngũ kỹ sư.",
       "storyText": "Câu chuyện thành công: Cắt giảm hoàn toàn ma sát giao việc từ xa, giữ cho guồng quay tiến độ hạ tầng của tổng công ty luôn chuyển động liên tục không có độ trễ.",
       "kpis": [
-        { "label": "Biên bản cuộc họp", "old": "Tốn 3 tiếng tổng hợp ghi chép thủ công", "new": "Khởi tạo ma trận checklist tự động tức thì" },
-        { "label": "Ma sát giao việc", "old": "Phải gõ chữ mở ticket trên mobile khi đang đi đường", "new": "Chuyển hóa giọng nói thành mã lệnh API hệ thống" }
+        {
+          "label": "Biên bản cuộc họp",
+          "old": "Tốn 3 tiếng tổng hợp ghi chép thủ công",
+          "new": "Khởi tạo ma trận checklist tự động tức thì"
+        },
+        {
+          "label": "Ma sát giao việc",
+          "old": "Phải gõ chữ mở ticket trên mobile khi đang đi đường",
+          "new": "Chuyển hóa giọng nói thành mã lệnh API hệ thống"
+        }
       ],
       "useCases": [
-        { "tab": "Nỗi đau lãnh đạo", "title": "Quá tải thông tin và mất dấu chỉ thị khẩn", "desc": "Các Sếp không có thời gian ngồi gõ từng dòng giao việc khi đang di chuyển, dẫn đến các ý tưởng chiến lược hoặc chỉ thị nóng bị trì hoãn, làm chậm tiến độ toàn đội ngũ." },
-        { "tab": "Cách Syrix giải quyết", "title": "Hợp lực mạnh mẽ giữa Dịch thoại & AI Agent", "desc": "Hệ thống tiếp nhận file ghi âm cuộc họp hoặc voice thoại di động, dịch chuẩn xác thuật ngữ chuyên ngành và chỉ huy AI nội bộ tự động chia việc vào đúng luồng pipeline hệ thống." },
-        { "tab": "Giá trị mang lại", "title": "Giải phóng thời gian điều hành tối đa", "desc": "Tiết kiệm hơn 5 giờ mỗi tuần cho mỗi Manager, đạt tỷ lệ lưu giữ và thực thi cam kết kỹ thuật 100%, nâng cao tốc độ phản ứng của doanh nghiệp trước biến động." }
+        {
+          "tab": "Nỗi đau lãnh đạo",
+          "title": "Quá tải thông tin và mất dấu chỉ thị khẩn",
+          "desc": "Các Sếp không có thời gian ngồi gõ từng dòng giao việc khi đang di chuyển, dẫn đến các ý tưởng chiến lược hoặc chỉ thị nóng bị trì hoãn, làm chậm tiến độ toàn đội ngũ."
+        },
+        {
+          "tab": "Cách Syrix giải quyết",
+          "title": "Hợp lực mạnh mẽ giữa Dịch thoại & AI Agent",
+          "desc": "Hệ thống tiếp nhận file ghi âm cuộc họp hoặc voice thoại di động, dịch chuẩn xác thuật ngữ chuyên ngành và chỉ huy AI nội bộ tự động chia việc vào đúng luồng pipeline hệ thống."
+        },
+        {
+          "tab": "Giá trị mang lại",
+          "title": "Giải phóng thời gian điều hành tối đa",
+          "desc": "Tiết kiệm hơn 5 giờ mỗi tuần cho mỗi Manager, đạt tỷ lệ lưu giữ và thực thi cam kết kỹ thuật 100%, nâng cao tốc độ phản ứng của doanh nghiệp trước biến động."
+        }
       ]
     }
   },
   "solutionsV4": {
     "customerSupport": {
       "badge": "Giải Pháp Hậu Mãi & CSAT",
-      "synergyTitle": "Hợp Lực: Syrix Help Desk \u00d7 Giao Thức Kết Nối MCP",
+      "synergyTitle": "Hợp Lực: Syrix Help Desk × Giao Thức Kết Nối MCP",
       "synergyDesc": "Sự kết hợp hoàn hảo giữa giao diện Widget tuyến đầu và các cổng API thực thi hệ thống, biến khung chat thông thường thành một nhân viên xử lý nghiệp vụ tự chủ 24/7.",
       "useCases": [
         {
@@ -537,7 +802,7 @@
     },
     "sales": {
       "badge": "Bứt Phá Doanh Thu",
-      "synergyTitle": "Hợp Lực: Syrix Help Desk \u00d7 AI Agent Core \u00d7 HubSpot CRM",
+      "synergyTitle": "Hợp Lực: Syrix Help Desk × AI Agent Core × HubSpot CRM",
       "synergyDesc": "Động cơ Sales khép kín: Tự động tiếp cận lead ngoài giờ, tư vấn sản phẩm chuyên sâu qua RAG và chốt lịch hẹn trực tiếp vào phễu CRM.",
       "useCases": [
         {
@@ -560,7 +825,7 @@
     },
     "internalKnowledge": {
       "badge": "Quản Trị Tri Thức & Bảo Mật",
-      "synergyTitle": "Hợp Lực: Syrix AI Agent \u00d7 Kho Dữ Liệu Vector Hệ Thống",
+      "synergyTitle": "Hợp Lực: Syrix AI Agent × Kho Dữ Liệu Vector Hệ Thống",
       "synergyDesc": "Bộ não tri thức nội bộ cô lập, thống nhất toàn bộ tài nguyên công ty vào một điểm truy cập duy nhất, phân quyền nghiêm ngặt.",
       "useCases": [
         {
@@ -583,7 +848,7 @@
     },
     "meetingExecution": {
       "badge": "Hiệu Suất Ban Điều Hành",
-      "synergyTitle": "Hợp Lực: Speech to Text \u00d7 Lõi Xử Lý AI Agent \u00d7 Cổng Công Cụ MCP",
+      "synergyTitle": "Hợp Lực: Speech to Text × Lõi Xử Lý AI Agent × Cổng Công Cụ MCP",
       "synergyDesc": "Hạ tầng chuyển đổi giọng nói thành chuỗi mã lệnh API, giúp ban lãnh đạo điều hành toàn bộ guồng quay doanh nghiệp rảnh tay từ xa.",
       "useCases": [
         {
@@ -606,109 +871,90 @@
     }
   },
   "pricing": {
-    "headline": "Bảng giá minh bạch. Trả cho những gì bạn sử dụng.",
-    "subtext": "Syrix kết hợp cấp phép cơ sở với thanh toán dựa trên mức sử dụng. Không phí ẩn.",
+    "headline": "Đầu tư vào kết quả. Không phải chỗ ngồi.",
+    "subtext": "Ngừng trả tiền cho những tài khoản không hoạt động. Syrix căn chỉnh chi phí trực tiếp với tốc độ vận hành của bạn. Bạn chỉ trả tiền cho khối lượng công việc thực tế mà AI thực thi.",
+    "cta": "Tính toán ROI của bạn",
+    "onPremise": {
+      "title": "On-Premise & VPC riêng biệt",
+      "description": "Dành cho các tổ chức có yêu cầu tuân thủ nghiêm ngặt, triển khai Syrix hoàn toàn cô lập trong hạ tầng đám mây của riêng bạn.",
+      "cta": "Liên hệ Đội Bảo mật"
+    },
     "tiers": {
-      "starter": {
-        "name": "Starter",
-        "bestFor": "Nhóm nhỏ bắt đầu với AI",
-        "price": "Liên hệ chúng tôi",
+      "audit": {
+        "name": "AI Audit",
+        "subtitle": "Điểm bắt đầu AI không ràng buộc",
+        "price": "MIỄN PHÍ",
+        "duration": "60 phút",
+        "deliverable": {
+          "title": "Sản phẩm bàn giao",
+          "desc": "Bản đồ cơ hội AI — một lộ trình AI cụ thể, thực tế dành riêng cho doanh nghiệp của bạn"
+        },
         "includes": [
-          "1 giải pháp AI (Help Desk, AI Agent hoặc ASR)",
-          "Tối đa 3 phiên đồng thời",
-          "Hỗ trợ tiêu chuẩn (phản hồi < 24h)",
-          "Cài đặt tích hợp cơ bản"
-        ]
+          "Phiên làm việc 1-on-1 trong 60 phút với chuyên gia AI.",
+          "Phân tích sâu sắc về các điểm nghẽn của bạn.",
+          "Lộ trình cụ thể kèm ước tính ROI.",
+          "Đề xuất bước đầu tiên rõ ràng.",
+          "Không ràng buộc với giai đoạn tiếp theo."
+        ],
+        "buttonLabel": "Đặt ngay"
       },
-      "growth": {
-        "name": "Growth",
-        "bestFor": "Các công ty mid-market đang phát triển",
-        "price": "Liên hệ chúng tôi",
+      "quickStart": {
+        "name": "AI Bắt đầu nhanh",
+        "subtitle": "Giai đoạn triển khai — những thắng lợi đầu tiên",
+        "price": "25Tr VND+",
+        "duration": "3–6 tuần",
+        "deliverable": {
+          "title": "Sản phẩm bàn giao",
+          "desc": "1–2 giải pháp AI được triển khai và chạy thực tế trong hoạt động của bạn kèm đào tạo đầy đủ."
+        },
         "includes": [
-          "Tối đa 2 giải pháp AI",
-          "Tối đa 10 phiên đồng thời",
-          "Hỗ trợ ưu tiên (phản hồi < 4h)",
-          "Thêm SaaS sẵn có",
-          "Hypercare 30 ngày sau triển khai"
-        ]
+          "Lập kế hoạch kiến trúc & triển khai.",
+          "1–2 giải pháp AI hoạt động thực tế.",
+          "Đào tạo nhân sự & tài liệu đầy đủ.",
+          "Đồng bộ & điều chỉnh hàng tuần.",
+          "Hỗ trợ 30 ngày sau khi ra mắt."
+        ],
+        "buttonLabel": "Đặt ngay"
       },
-      "enterprise": {
-        "name": "Enterprise",
-        "bestFor": "Các tổ chức lớn ở quy mô",
-        "price": "Tùy chỉnh",
+      "scale": {
+        "name": "AI Quy mô",
+        "subtitle": "Lớp AI cố định trong vận hành của bạn",
+        "price": "23Tr VND+",
+        "priceSuffix": "/tháng",
+        "duration": "Retainer hàng tháng",
+        "deliverable": {
+          "title": "Sản phẩm bàn giao",
+          "desc": "AI trở thành một phần nhúng sâu trong cách công ty vận hành hàng ngày — tối ưu hóa liên tục."
+        },
         "includes": [
-          "Vô hạn giải pháp AI",
-          "Sức chứa phiên đồng thời tùy chỉnh",
-          "Tư vấn AI riêng",
-          "Triển khai VPC + SSO",
-          "Báo cáo hiệu suất hàng tháng",
-          "Đánh giá chiến lược hàng quý",
-          "SLA: phản hồi < 2 giờ"
-        ]
+          "Triển khai agent AI không giới hạn.",
+          "Tích hợp & tối ưu hóa liên tục.",
+          "Đánh giá chiến lược hàng quý.",
+          "Hỗ trợ ưu tiên & cải tiến.",
+          "Quyền tiếp cận các khả năng AI mới ngay khi xuất hiện."
+        ],
+        "buttonLabel": "Đặt ngay"
       }
     },
-    "usage": {
-      "helpdesk": "AI Helpdesk — trả theo phiên đồng thời đỉnh",
-      "helpdeskPrice": "$20/concurrent session/month",
-      "helpdeskAnalogy": "Hãy tưởng tượng đường dây điện thoại. Mua 10 đường, 10 khách hàng chat đồng thời.",
-      "automation": "Tự động hóa — trả theo lần chạy",
-      "automationPrice": "Lần chạy đầu tiên 3,000: 500 VND/run (~$0.02)\n3,001+ lần chạy: 250 VND/run (~$0.01)",
-      "saas": "Thêm SaaS — theo người mỗi tháng",
-      "saasItems": [
-        {
-          "name": "OKR",
-          "price": "$1-3/user/month"
-        },
-        {
-          "name": "PM",
-          "price": "$1-3/user/month"
-        },
-        {
-          "name": "Leave Management",
-          "price": "$1/user/month"
-        },
-        {
-          "name": "Timesheet",
-          "price": "$1/user/month"
-        },
-        {
-          "name": "Basic Ops Bundle",
-          "price": "$2/user"
-        },
-        {
-          "name": "Full Ops Bundle",
-          "price": "$4/user"
-        },
-        {
-          "name": "Advanced Ops Bundle",
-          "price": "$8/user"
-        }
-      ]
-    },
-    "sampleBill": "Ví dụ: Công ty bất động sản, 30 nhân viên",
-    "setup": {
-      "helpdesk": "AI Helpdesk (Medium): 40,000,000 VND",
-      "okr": "Thêm SaaS OKR: +20,000,000 VND",
-      "totalSetup": "Tổng thiết lập: 60,000,000 VND"
-    },
-    "monthly": {
-      "helpdesk": "Help Desk (8 phiên đỉnh): ~4,000,000 VND",
-      "automation": "Tự động hóa (2,500 lần chạy): ~1,250,000 VND",
-      "okr": "OKR Basic (30 người × $1): ~750,000 VND",
-      "pm": "PM Basic (30 người × $1): ~750,000 VND",
-      "leave": "Leave (30 người × $1): ~750,000 VND",
-      "timesheet": "Timesheet (30 người × $1): ~750,000 VND",
-      "totalMonthly": "Tổng tháng: ~8,250,000 VND"
-    },
-    "comparison": "So sánh thị trường",
-    "comparisonText": "• AI Helpdesk: Lên đến 50 lần rẻ hơn theo giá per-conversation\n• Tự động hóa: Cạnh tranh với các lựa chọn mã nguồn mở\n• OKR software: 60-80% rẻ hơn các công cụ chuyên biệt\n• PM software: 70-90% rẻ hơn các công cụ chuyên biệt\n\nCác triển khai doanh nghiệp thường thấy tiết kiệm chi phí 40-60%.",
-    "faq": {
-      "q1": "Thời hạn hợp đồng là bao lâu?",
-      "a1": "Starter và Growth theo tháng. Enterprise tối thiểu 3 tháng cam kết.",
-      "q2": "Có bản dùng thử miễn phí không?",
-      "a2": "Chúng tôi không cung cấp bản dùng thử tự phục vụ. Chúng tôi bắt đầu với Audit AI miễn phí.",
-      "q3": "Bạn chấp nhận phương thức thanh toán nào?",
-      "a3": "Chuyển khoản ngân hàng cho phí thiết lập. Sử dụng được invoiced hàng tháng với net-7."
+    "engines": {
+      "title": "Động cơ dựa trên sử dụng thực tế (Usage-Based)",
+      "subtitle": "Trả tiền cho kết quả và năng lực hệ thống, không phải tài khoản nhân sự trống.",
+      "sessions": {
+        "title": "Số phiên đồng thời (Concurrent Sessions)",
+        "desc": "Bạn không trả tiền theo người dùng hay theo đoạn chat. Bạn trả tiền cho số lượng cuộc hội thoại tối đa mà AI xử lý *tại cùng một giây*.",
+        "visualText": "1 Agent tự nhân bản để xử lý lưu lượng truy cập tăng đột biến.",
+        "subText": "phiên",
+        "subTextFix": "Hoặc các gói cố định: $60 (3) · $200 (10) · $600 (30)"
+      },
+      "automation": {
+        "title": "Lượt chạy tự động (Automation Runs)",
+        "desc": "Chỉ trả tiền khi quy trình công việc hoàn thành thành công mục tiêu của nó. 1 Lượt chạy = 1 ticket Jira được tạo, 1 báo giá được gửi hoặc 1 máy chủ được khởi động lại.",
+        "visualText": "+1 Lượt chạy ghi nhận",
+        "priceRange1": "VND/lượt",
+        "priceRange1Label": "(0 - 3000 lượt)",
+        "priceRange2": "VND/lượt",
+        "priceRange2Label": "(3001+ lượt)"
+      }
     }
   },
   "customerSupportSolution": {
@@ -836,6 +1082,14 @@
   "bookDemo": {
     "headline": "Đây không phải là cuộc gọi bán hàng. Đây là phiên bản bản đồ lộ trình.",
     "subtext": "Chúng tôi sẽ hiểu ngăn xếp hiện tại của bạn, xác định rào cản vận hành lớn nhất, đề xuất giải pháp được điều chỉnh và cho bạn thấy một demo trực tiếp.",
+    "auditHeadline": "Đặt lịch tư vấn AI Audit miễn phí",
+    "auditTagline": "Chiến lược & Tư vấn",
+    "benefits": [
+      "60 phút trao đổi 1-on-1 cùng chuyên gia AI.",
+      "Phân tích các điểm nghẽn vận hành của bạn.",
+      "Bản đồ cơ hội AI được thiết kế riêng cho doanh nghiệp của bạn.",
+      "Các bước tiếp theo rõ ràng và được ưu tiên."
+    ],
     "form": {
       "name": "Họ và tên *",
       "jobTitle": "Chức danh",
@@ -846,7 +1100,34 @@
       "preferredDate": "Ngày ưu tiên",
       "preferredTime": "Giờ ưu tiên",
       "challenge": "Thử thách vận hành lớn nhất hiện tại của bạn là gì?",
-      "submit": "Book AI Audit"
+      "submit": "Book AI Audit",
+      "submitting": "Đang đăng ký...",
+      "successTitle": "Đăng ký thành công!",
+      "successDesc": "Buổi tư vấn roadmap của bạn đã được ghi nhận. Chúng tôi sẽ sớm liên hệ với bạn theo thông tin đã đăng ký.",
+      "errorTitle": "Gửi yêu cầu thất bại",
+      "errorDefault": "Đã có lỗi xảy ra. Vui lòng thử lại sau.",
+      "errorEmailExists": "Email này đã tồn tại trong hệ thống của chúng tôi.",
+      "validationError": "Vui lòng điền đầy đủ các thông tin bắt buộc có dấu *.",
+      "backToHome": "Quay lại trang chủ",
+      "namePlaceholder": "Họ và tên của bạn",
+      "jobTitlePlaceholder": "Chọn chức vụ của bạn",
+      "industryPlaceholder": "Chọn ngành nghề của bạn",
+      "emailPlaceholder": "your@email.com",
+      "companyPlaceholder": "Tên công ty của bạn",
+      "challengePlaceholder": "Chia sẻ ngắn gọn về thử thách vận hành lớn nhất của bạn...",
+      "industryOptions": {
+        "construction": "Xây dựng & Kỹ thuật",
+        "realestate": "Bất động sản",
+        "manufacturing": "Sản xuất",
+        "retail": "Bán lẻ & Thương mại điện tử",
+        "finance": "Dịch vụ Tài chính",
+        "tech": "Công nghệ & Phần mềm",
+        "healthcare": "Y tế & Chăm sóc sức khỏe",
+        "logistics": "Vận tải & Chuỗi cung ứng",
+        "education": "Giáo dục",
+        "services": "Dịch vụ Chuyên nghiệp",
+        "other": "Khác"
+      }
     },
     "quickContact": "Không sẵn sàng cho một demo đầy đủ? Liên hệ trực tiếp:"
   },
@@ -908,8 +1189,240 @@
     "readyToStart": "Sẵn sàng bắt đầu?",
     "getStarted": "Bắt đầu ngay"
   },
+  "home": {
+    "title": "Một Công Cụ. Đội Ngũ Vô Hạn.",
+    "subtitle": "Bộ sản phẩm Syrix chuyển đổi mọi điểm chạm kỹ thuật số thành trí tuệ tự chủ, định hướng hành động.",
+    "architectureTitle": "Động Cơ Trí Tuệ Nhân Tạo",
+    "architectureDesc": "Cách Syrix kết nối giữa AI hội thoại và khả năng thực thi hệ thống backend doanh nghiệp.",
+    "solutionsTitle": "Giải pháp cho mọi phòng ban",
+    "solutionsDesc": "Syrix thích ứng với các silo vận hành của bạn, chuyển đổi các quy trình phi cấu trúc thành hiệu suất tự chủ.",
+    "ecosystemTitle": "Tích hợp không cần thay thế hệ thống cũ",
+    "ecosystemDesc": "Syrix kết nối với cấu trúc doanh nghiệp hiện có của bạn thông qua các plugin MCP bảo mật chỉ trong vài phút.",
+    "metrics": {
+      "handlingTime": "Giảm thời gian xử lý",
+      "resolution": "Tự động hóa giải quyết",
+      "searchTime": "Tiết kiệm thời gian tìm kiếm nội bộ"
+    },
+    "productBento": {
+      "helpdeskDesc": "Giải quyết 80% ticket hỗ trợ ngay lập tức. Đọc chính sách, tính toán hoàn tiền và thao tác ERP an toàn.",
+      "helpdeskUser": "Hoàn tiền đơn hàng mới nhất của tôi.",
+      "helpdeskSystem": "Đang xử lý API Stripe... Đã hoàn tiền $49 thành công.",
+      "aiAgentDesc": "Trí tuệ doanh nghiệp nội bộ của bạn. Thống nhất wikis & Jira.",
+      "aiAgentSearch": "Đang tìm kiếm 1.2M tài liệu",
+      "asrDesc": "Trích xuất công việc trực tiếp từ luồng âm thanh cuộc họp."
+    },
+    "solutionsShowcase": {
+      "customerSupport": "Biến trung tâm hỗ trợ thành công cụ sinh lời. Tự động hóa 80% yêu cầu tier-1 đồng thời thực thi đổi hóa đơn ERP trực tiếp.",
+      "sales": "Đại diện kinh doanh hoạt động 24/7 không ngừng nghỉ. Phân tích RFP, tính báo giá chiết khấu doanh nghiệp và đặt lịch họp 24/7.",
+      "internal": "Thống nhất Jira, Wiki và Google Drive thành một bộ não bảo mật duy nhất với phân quyền RBAC nghiêm ngặt.",
+      "meetings": "Trích xuất các mục hành động từ các cuộc họp đa người nói và tự động triển khai các công việc trên Jira."
+    }
+  },
   "meta": {
-    "title": "Syrix AI — AI Execution Platform for Enterprises",
-    "description": "Your AI shouldn't just answer questions. It should complete the work."
+    "title": "Syrix AI — Nền tảng AI thực thi cho doanh nghiệp",
+    "description": "AI của bạn không chỉ nên trả lời câu hỏi. Nó nên hoàn thành công việc."
+  },
+  "productsPage": {
+    "comparisonTitle": "So sánh tình huống sử dụng",
+    "useCaseHeader": "Tình huống sử dụng",
+    "useCases": {
+      "queryResolution": "Giải quyết yêu cầu khách hàng",
+      "policySearch": "Tìm kiếm chính sách nội bộ",
+      "transcriptionSummary": "Ghi âm & Tóm tắt cuộc họp",
+      "leadQualification": "Đánh giá Lead & Cập nhật CRM",
+      "knowledgeSynthesis": "Tổng hợp tri thức liên phòng ban",
+      "voiceCommand": "Tạo công việc bằng giọng nói"
+    },
+    "helpDesk": {
+      "tagline": "Hỗ trợ khách hàng tự động",
+      "cap1": "Truy xuất tri thức bằng RAG",
+      "cap2": "Tự tạo Lead trên CRM",
+      "cap3": "Chuyển giao thông minh",
+      "cap4": "Triển khai đa kênh"
+    },
+    "aiAgent": {
+      "tagline": "Trí tuệ doanh nghiệp nội bộ",
+      "cap1": "Truy xuất tri thức riêng tư",
+      "cap2": "Tổng hợp thông tin liên phòng ban",
+      "cap3": "Không lưu giữ dữ liệu"
+    },
+    "asr": {
+      "tagline": "Chỉ cần nói. Syrix lo phần còn lại.",
+      "cap1": "Phiên dịch thời gian thực & nhận dạng người nói",
+      "cap2": "Tự động tóm tắt cuộc họp",
+      "cap3": "Tạo công việc bằng giọng nói",
+      "cap4": "Đóng góp cho kho tri thức"
+    }
+  },
+  "solutionsPage": {
+    "categories": {
+      "useCases": "Tình huống sử dụng",
+      "industries": "Ngành nghề"
+    },
+    "descriptions": {
+      "customerSupport": "Tự động hóa hỗ trợ khách hàng đa kênh với RAG và thực thi công cụ MCP.",
+      "sales": "Tăng tốc độ chốt hợp đồng với bóc tách RFP, công cụ định giá và thực thi CRM.",
+      "internalKnowledge": "Hợp nhất kho lưu trữ tri thức thành một thư viện Vector RAG bảo mật.",
+      "meetingExecution": "Chuyển đổi luồng giọng nói thành các task Jira và thông báo Slack.",
+      "realEstate": "Tự động hóa đánh giá lead, giải đáp bất động sản và quy trình giao dịch.",
+      "financialServices": "Xử lý tương tác khách hàng yêu cầu tuân thủ với AI không nói dối.",
+      "retailEcommerce": "Mở rộng hỗ trợ khách hàng và tự động hóa quy trình sau mua hàng."
+    },
+    "simulator": {
+      "title": "Trực quan hóa Quy trình Tự chủ",
+      "subtitle": "Chọn một kịch bản vận hành bên dưới để theo dõi cách Syrix đọc dữ liệu doanh nghiệp, suy luận và tự động thực thi các hành động bảo mật.",
+      "inputLabel": "Đầu vào Người dùng",
+      "thoughtLabel": "Phân tích Nhận thức RAG",
+      "actionLabel": "Thực thi Hành động MCP",
+      "outputLabel": "Kết quả Thực thi",
+      "tabs": {
+        "support": "Hỗ trợ Khách hàng",
+        "sales": "Tự động hóa Bán hàng",
+        "knowledge": "Kiến thức Nội bộ",
+        "meetings": "Thực thi Cuộc họp"
+      },
+      "flows": {
+        "support": {
+          "input": "Khách: 'Hoàn tiền cho đơn hàng #1042 mới nhất của tôi do giao hàng chậm.'",
+          "thought1": "Đang quét cơ sở dữ liệu CRM để tìm lịch sử giao dịch đơn hàng #1042.",
+          "thought2": "Xác minh các nguyên tắc trả hàng trong Return_Policy_v2.pdf (đã xác minh nguồn).",
+          "action1": "Khởi chạy hàm xử lý hoàn tiền của API Stripe...",
+          "action2": "Cập nhật trạng thái vòng đời đơn hàng trên Salesforce thành 'Đã hoàn tiền'.",
+          "output": "Đã xử lý hoàn tiền $49.00 trên Stripe thành công. Đã gửi email xác nhận cho khách hàng."
+        },
+        "sales": {
+          "input": "Quản lý: 'Quét tài liệu RFP của ACME Corp và chuẩn bị báo giá tùy chỉnh.'",
+          "thought1": "Đang trích xuất các yêu cầu kỹ thuật và số lượng đặt hàng từ ACME_RFP.pdf.",
+          "thought2": "Đối chiếu danh mục giá SKU sản phẩm và cấu trúc chiết khấu theo số lượng.",
+          "action1": "Gọi API HubSpot để tạo thẻ Deal mới trong Phễu bán hàng...",
+          "action2": "Tạo bản thảo đề xuất chiết khấu v1.pdf qua cổng MCP.",
+          "output": "Đã tạo thẻ deal trên HubSpot. Đã áp dụng chiết khấu 20%. Đã tạo bản thảo đề xuất giá."
+        },
+        "knowledge": {
+          "input": "Nhân viên: 'Làm thế nào để thiết lập container cơ sở dữ liệu staging?'",
+          "thought1": "Đang tìm kiếm trên hệ thống wiki kỹ thuật và các thư mục triển khai Docker.",
+          "thought2": "Đối chiếu truy vấn với tài liệu Docker_Staging_SOP_v3.pdf - Dòng 84.",
+          "action1": "Xác minh token phân quyền của người dùng khớp với phạm vi truy cập database...",
+          "action2": "Lấy thông số dòng lệnh docker run chính xác.",
+          "output": "Tìm thấy câu trả lời: 'docker run -d --name db-staging -p 5432:5432 postgres:15' (Nguồn: Docker_SOP.md)"
+        },
+        "meetings": {
+          "input": "File ghi âm: 'Mở ticket Jira ưu tiên cao sửa lỗi rớt kết nối database staging HCM.'",
+          "thought1": "Phân tích âm thanh đầu vào sử dụng công nghệ tách biệt người nói (diarization).",
+          "thought2": "Trích xuất phạm vi ticket, mức độ ưu tiên và siêu dữ liệu máy chủ mục tiêu.",
+          "action1": "Xác thực phiên làm việc và gọi API tạo Issue trên hệ thống Jira...",
+          "action2": "Gửi thẻ xác nhận ticket vào kênh Slack #engineering.",
+          "output": "Đã tạo ticket Jira SY-942 với độ ưu tiên Cao. Đã gửi thông báo tóm tắt vào Slack."
+        }
+      }
+    },
+    "security": {
+      "title": "Kiến trúc An toàn & Bảo mật Tuyệt đối",
+      "subtitle": "Được thiết kế cho các môi trường doanh nghiệp nghiêm ngặt, nơi bảo mật dữ liệu và kiểm soát truy cập là ưu tiên hàng đầu.",
+      "vpc": {
+        "title": "Cô lập Hoàn toàn trên VPC",
+        "desc": "Triển khai hoàn toàn trong mạng đám mây riêng của bạn. Dữ liệu tri thức và chỉ mục vector không bao giờ đi ra ngoài."
+      },
+      "rag": {
+        "title": "Trích dẫn RAG Xác minh được",
+        "desc": "Mọi câu trả lời được AI tạo ra đều trích dẫn chính xác đường dẫn file nguồn và dòng đối chiếu, loại bỏ hoàn toàn ảo giác AI."
+      },
+      "mcp": {
+        "title": "Kết nối MCP trong Sandbox",
+        "desc": "Các hành động kích hoạt API chạy trong môi trường sandbox cô lập có thể kiểm toán, giới hạn quyền đọc/ghi nghiêm ngặt."
+      }
+    }
+  },
+  "industrySolutions": {
+    "challenge": "Thách thức",
+    "solution": "Giải pháp",
+    "contactSales": "Liên hệ Bán hàng",
+    "realEstate": {
+      "title": "Giải pháp Bất động sản",
+      "challengeDesc": "Khối lượng lớn các yêu cầu thông tin bất động sản và quy trình giao dịch phức tạp đòi hỏi sự phản hồi ngay lập tức và hồ sơ tài liệu chính xác.",
+      "bullet1": "Tự động hóa đánh giá lead và phản hồi yêu cầu thông tin dự án",
+      "bullet2": "Truy xuất thông tin bất động sản thời gian thực từ cơ sở dữ liệu",
+      "bullet3": "Tự động hóa quản lý luồng quy trình giao dịch",
+      "bullet4": "Hỗ trợ đa kênh (điện thoại, chat, email)"
+    },
+    "financialServices": {
+      "title": "Giải pháp Dịch vụ Tài chính",
+      "challengeDesc": "Ngành dịch vụ tài chính đòi hỏi tính chính xác và tuân thủ cao trong mọi tương tác khách hàng. Các giải pháp AI thông thường có thể tạo thông tin sai lệch gây rủi ro pháp chế.",
+      "bullet1": "AI chính xác tuyệt đối, không nói dối nhờ công nghệ RAG",
+      "bullet2": "Nhật ký kiểm toán đầy đủ phục vụ yêu cầu tuân thủ",
+      "bullet3": "Triển khai riêng tư cô lập với VPC",
+      "bullet4": "Tích hợp SSO với hệ thống định danh doanh nghiệp"
+    },
+    "retailEcommerce": {
+      "title": "Giải pháp Bán lẻ & Thương mại Điện tử",
+      "challengeDesc": "Doanh nghiệp bán lẻ và TMĐT đối mặt với lượng lớn tương tác khách hàng, tính phức tạp của quản lý đơn hàng, và nhu cầu hỗ trợ nhanh chóng ở quy mô lớn.",
+      "bullet1": "Tự động hóa hỗ trợ khách hàng liên tục 24/7",
+      "bullet2": "Tự động hóa tra cứu và phản hồi trạng thái đơn hàng",
+      "bullet3": "Tự động hóa quy trình hậu mãi và sau mua hàng",
+      "bullet4": "Tích hợp mượt mà với các nền tảng thương mại điện tử lớn"
+    }
+  },
+  "trustCenter": {
+    "title": "Trung tâm Tin cậy",
+    "description": "Dữ liệu của bạn không bao giờ rời khỏi tầm kiểm soát. XPERC được thiết kế cho các tổ chức yêu cầu tiêu chuẩn cao nhất về bảo mật, riêng tư và tuân thủ.",
+    "cta": "Đặt lịch Demo",
+    "pillarsTitle": "Trụ cột Bảo mật",
+    "certificationsTitle": "Chứng chỉ &\nChứng nhận",
+    "certificationsSubtitle": "XPERC sử dụng hệ thống quản lý như một động lực để cải tiến liên tục.",
+    "certifications": [
+      "Hệ thống được chứng nhận của chúng tôi làm cơ sở cho mọi hoạt động của doanh nghiệp, đảm bảo các sản phẩm và dịch vụ đáp ứng hoặc vượt mong đợi của cả XPERC và khách hàng.",
+      "Hệ thống Quản lý là một phần chiến lược quan trọng, giúp chúng tôi thông qua các chứng nhận để đảm bảo cải tiến liên tục các quy trình phát triển và thiết kế phần mềm.",
+      "Chiến lược này cũng giúp chúng tôi đạt được sự công nhận quốc tế vượt trội về mức độ trưởng thành của tổ chức và quy trình."
+    ]
+  },
+  "aboutPage": {
+    "tagline": "Thúc đẩy doanh nghiệp toàn cầu",
+    "title": "Xây dựng tương lai cho\nPhần mềm Doanh nghiệp.",
+    "description": "XPERC là công ty phát triển phần mềm và dịch vụ công nghệ hàng đầu. Với hơn 15 năm kinh nghiệm chuyên sâu về Điện toán đám mây, HPC và các giải pháp CNTT tùy chỉnh, chúng tôi đồng hành cùng doanh nghiệp để chuyển đổi các thách thức phức tạp thành thực tế số có thể mở rộng.",
+    "cta": "Hợp tác với XPERC",
+    "expertiseHeader": "Năng lực của chúng tôi",
+    "expertiseSub": "Được thiết kế cho quy mô và bảo mật",
+    "expertises": {
+      "dev": {
+        "title": "Phát triển Phần mềm",
+        "desc": "Đội ngũ phát triển chuyên biệt và tư vấn CNTT chuyên nghiệp phù hợp với logic kinh doanh cụ thể của bạn."
+      },
+      "cloud": {
+        "title": "Giải pháp Đám mây",
+        "desc": "Hơn 15 năm thiết kế kiến trúc vững chắc, di chuyển dữ liệu đám mây và triển khai tính sẵn sàng cao."
+      },
+      "hpc": {
+        "title": "Hệ thống HPC",
+        "desc": "Hạ tầng tính toán hiệu năng cao được thiết kế cho nghiên cứu chuyên sâu và xử lý dữ liệu."
+      },
+      "xcorp": {
+        "title": "Nền tảng xCorp",
+        "desc": "Hệ thống quản lý tích hợp độc quyền của chúng tôi cho Timesheets, OKRs, Nhân sự và toàn bộ hoạt động doanh nghiệp."
+      }
+    },
+    "dnaHeader": "DNA của XPERC",
+    "dnaSub": "Mô hình hợp tác Win-Win.",
+    "dnaDesc": "Chúng tôi không chỉ viết mã nguồn; chúng tôi xây dựng liên minh công nghệ lâu dài. Từ các công ty khởi nghiệp đến các doanh nghiệp toàn cầu, chúng tôi ưu tiên tính minh bạch, bảo mật dữ liệu nghiêm ngặt và hỗ trợ trọn đời cho các giải pháp mà mình bàn giao.",
+    "checkmarks": [
+      "Hỗ trợ sản phẩm trọn đời",
+      "Tiêu chuẩn bảo mật không thỏa hiệp",
+      "Mô hình hợp tác Time & Materials minh bạch"
+    ],
+    "stats": {
+      "years": "Năm kinh nghiệm",
+      "reach": "Quy mô toàn cầu",
+      "secure": "Hệ thống bảo mật",
+      "commitment": "Cam kết với khách hàng"
+    }
+  },
+  "architectureDiagram": {
+    "defaultTitle": "Cách thức hoạt động của Trí tuệ Nhân tạo Syrix",
+    "defaultDescription": "Chu trình tự chủ hoàn chỉnh từ dữ liệu phi cấu trúc đến các tác vụ được thực thi.",
+    "step1Title": "1. Nạp dữ liệu",
+    "step1Desc": "Kết nối an toàn Confluence, Jira, G-Drive và wiki nội bộ thông qua đồng bộ hóa vector sâu.",
+    "step2Title": "2. Suy luận (RAG)",
+    "step2Desc": "AI Agent cô lập ý định, tuân thủ phân quyền RBAC và trích xuất ngữ cảnh chính xác với các nguồn trích dẫn.",
+    "step3Title": "3. Thực thi MCP",
+    "step3Desc": "Kích hoạt các API hệ thống an toàn—cập nhật CRM, gửi cảnh báo Slack hoặc thiết lập lại trạng thái máy chủ."
   }
 }

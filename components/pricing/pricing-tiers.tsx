@@ -3,67 +3,55 @@
 import { motion } from 'framer-motion';
 import { Check, Diamond } from 'lucide-react';
 import Link from 'next/link';
+import { useTranslations, useLocale } from 'next-intl';
 
 export function PricingTiers() {
+  const t = useTranslations('pricing.tiers');
+  const locale = useLocale();
+
+  const includesLabel = locale === 'vi' ? 'Bao gồm:' : 'Includes:';
+
   const tiers = [
     {
-      name: 'AI Audit',
-      subtitle: 'Your no-commitment AI entry point',
-      price: 'FREE',
-      duration: '60 minutes',
+      name: t('audit.name'),
+      subtitle: t('audit.subtitle'),
+      price: t('audit.price'),
+      duration: t('audit.duration'),
       deliverable: {
-        title: 'Deliverable',
-        desc: 'AI Opportunity Map — a concrete, business-specific AI roadmap tailored to your operations'
+        title: t('audit.deliverable.title'),
+        desc: t('audit.deliverable.desc')
       },
-      includes: [
-        '60-minute 1-on-1 session with AI specialist.',
-        'Deep analysis of your bottlenecks.',
-        'Concrete roadmap with ROI estimates.',
-        'Clear first-step recommendation.',
-        'No commitment to next phase.'
-      ],
-      buttonLabel: 'Book Now',
+      includes: t.raw('audit.includes') as string[],
+      buttonLabel: t('audit.buttonLabel'),
       buttonPrimary: true,
       highlight: true
     },
     {
-      name: 'AI Quick Start',
-      subtitle: 'Implementation phase — first wins',
-      price: '25M VND+',
-      duration: '3–6 weeks',
+      name: t('quickStart.name'),
+      subtitle: t('quickStart.subtitle'),
+      price: t('quickStart.price'),
+      duration: t('quickStart.duration'),
       deliverable: {
-        title: 'Deliverable',
-        desc: '1–2 AI solutions deployed and running in your real operations with full training.'
+        title: t('quickStart.deliverable.title'),
+        desc: t('quickStart.deliverable.desc')
       },
-      includes: [
-        'Architecture & implementation planning.',
-        '1–2 AI solutions deployed live.',
-        'Full staff training & documentation.',
-        'Weekly sync & adjustments.',
-        '30-day post-launch support.'
-      ],
-      buttonLabel: 'Book Now',
+      includes: t.raw('quickStart.includes') as string[],
+      buttonLabel: t('quickStart.buttonLabel'),
       buttonPrimary: false,
       highlight: false
     },
     {
-      name: 'AI Scale',
-      subtitle: 'Permanent AI layer in your ops',
-      price: '23M VND+',
-      priceSuffix: '/month',
-      duration: 'Monthly retainer',
+      name: t('scale.name'),
+      subtitle: t('scale.subtitle'),
+      price: t('scale.price'),
+      priceSuffix: t('scale.priceSuffix'),
+      duration: t('scale.duration'),
       deliverable: {
-        title: 'Deliverable',
-        desc: 'AI becomes embedded in how your company operates daily — continuous optimization.'
+        title: t('scale.deliverable.title'),
+        desc: t('scale.deliverable.desc')
       },
-      includes: [
-        'Unlimited AI agent deployment.',
-        'Ongoing integration & optimization.',
-        'Quarterly strategy reviews.',
-        'Priority support & iteration.',
-        'Access to new AI capabilities as they emerge.'
-      ],
-      buttonLabel: 'Book Now',
+      includes: t.raw('scale.includes') as string[],
+      buttonLabel: t('scale.buttonLabel'),
       buttonPrimary: false,
       highlight: false
     }
@@ -108,9 +96,9 @@ export function PricingTiers() {
                 </div>
 
                 <div className="mb-8 flex-1">
-                  <p className="text-sm text-gray-400 mb-4">Includes:</p>
+                  <p className="text-sm text-gray-400 mb-4">{includesLabel}</p>
                   <ul className="space-y-4">
-                    {tier.includes.map((item, i) => (
+                    {tier.includes && Array.isArray(tier.includes) && tier.includes.map((item, i) => (
                       <li key={i} className="flex items-start gap-3">
                         <Check className="w-5 h-5 shrink-0 text-blue-500 mt-0.5" />
                         <span className="text-sm text-gray-300 leading-snug">{item}</span>

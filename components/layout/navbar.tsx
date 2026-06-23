@@ -130,7 +130,7 @@ export default function Navbar() {
     return cleanPath === path || cleanPath.startsWith(path + '/');
   };
 
-  if (pathname.includes('/book-demo') || pathname.includes('/contact')) return null;
+  if (pathname.includes('/contact')) return null;
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0a0a0f]/80 backdrop-blur-md border-b border-white/5">
@@ -165,7 +165,7 @@ export default function Navbar() {
               mainHref="/solutions"
               items={[
                 { label: t('navigation.customerSupport'), href: '/solutions/customer-support' },
-                { label: 'Sales Automation', href: '/solutions/sales' },
+                { label: t('navigation.sales'), href: '/solutions/sales' },
                 { label: t('navigation.internalKnowledge'), href: '/solutions/internal-knowledge' },
                 { label: t('navigation.meetingExecution'), href: '/solutions/meeting-execution' },
               ]}
@@ -236,7 +236,7 @@ export default function Navbar() {
               ]} />
               <MobileNavSection title={t('navigation.solutions')} items={[
                 { label: t('navigation.customerSupport'), href: localeHref('/solutions/customer-support') },
-                { label: 'Sales Automation', href: localeHref('/solutions/sales') },
+                { label: t('navigation.sales'), href: localeHref('/solutions/sales') },
                 { label: t('navigation.internalKnowledge'), href: localeHref('/solutions/internal-knowledge') },
                 { label: t('navigation.meetingExecution'), href: localeHref('/solutions/meeting-execution') },
               ]} />
